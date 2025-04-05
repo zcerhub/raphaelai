@@ -44,7 +44,7 @@ function App() {
             transition={{ duration: 0.8 }}
           >
             {/* Logo Section */}
-            <div className="flex items-center justify-center mb-10">
+            <div className="flex items-center justify-center mb-5">
               <div className="flex items-center bg-[rgb(33,26,20)] px-8 py-4 rounded-lg border border-white/10">
                 <img
                   src="/logo.webp"
@@ -58,10 +58,10 @@ function App() {
               </div>
             </div>
 
-            <h1 className="text-2xl md:text-2xl font-bold mb-4 text-[rgb(216,214,202)]">
+            <h1 className="text-2xl md:text-2xl font-bold mb-2 text-[rgb(216,214,202)]">
               Create stunning AI-generated images in seconds
             </h1>
-            <p className="text-xl text-yellow-500 mb-8 flex items-center justify-center gap-2">
+            <p className="text-xl text-yellow-500 mb-4 flex items-center justify-center gap-2">
               ✨ World's First Unlimited Free AI Image Generator ✨
             </p>
             
