@@ -12,7 +12,7 @@ function App() {
             <div className="flex items-center space-x-8">
               <div className="flex items-center">
                 <img src="/logo.webp" alt="Raphael AI" className="w-8 h-8 rounded-full" />
-                <span className="ml-2 text-xl font-bold">Raphael AI</span>
+                <span className="ml-2 text-xl font-bold text-[rgb(204,144,92)]">Raphael AI</span>
               </div>
               <div className="hidden md:flex items-center space-x-6">
                 <a href="#features" className="text-gray-300 hover:text-white transition">Features</a>
