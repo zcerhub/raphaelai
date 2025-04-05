@@ -72,15 +72,17 @@ function App() {
               <span className="px-3 py-1 rounded-full bg-[rgb(33,26,20)] text-purple-500 text-sm">Unlimited Generations</span>
             </div>
 
-            <div className="bg-[rgb(33,26,20)] rounded-xl p-6 pl-4 mb-12">
+            <div className="bg-[rgb(33,26,20)] rounded-xl p-6 pl-4 mb-12 relative">
               <h2 className="text-2xl font-bold mb-8 text-left" style={{ marginLeft: '-30px' }}>AI Image Generator</h2>
+              <div className="absolute right-6 bottom-[calc(100%-56px)]">
+                <button className="text-gray-400 hover:text-white bg-[rgb(48,38,30)] p-2 rounded-full flex items-center justify-center">
+                  <Image className="w-5 h-5" />
+                </button>
+              </div>
               <div className="space-y-6">
                 <div>
                   <div className="flex justify-between mb-2">
                     <label className="text-sm text-gray-400" style={{ marginLeft: '-20px' }}>Description prompt</label>
-                    <button className="text-gray-400 hover:text-white bg-[rgb(48,38,30)] p-2 rounded-full flex items-center justify-center">
-                      <Image className="w-5 h-5" />
-                    </button>
                   </div>
                   <textarea
                     placeholder="What do you want to see?"
