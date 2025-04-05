@@ -72,12 +72,15 @@ function App() {
               <span className="px-3 py-1 rounded-full bg-[rgb(33,26,20)] text-purple-500 text-sm">Unlimited Generations</span>
             </div>
 
-            <div className="bg-[rgb(33,26,20)] rounded-xl p-6 pl-4 mb-12">
-              <h2 className="text-2xl font-bold mb-8 text-left -ml-4">AI Image Generator</h2>
+            <div className="bg-[rgb(33,26,20)] rounded-xl p-6 pl-4 mb-12 relative">
+              <div style={{ position: 'absolute', left: '-75px', top: '24px' }}>
+                <h2 className="text-2xl font-bold">AI Image Generator</h2>
+              </div>
+              <div style={{ height: '48px' }}></div>
               <div className="space-y-6">
                 <div>
                   <div className="flex justify-between mb-2">
-                    <label className="text-sm text-gray-400">Description prompt</label>
+                    <label className="text-sm text-gray-400" style={{ marginLeft: '-20px' }}>Description prompt</label>
                     <button className="text-gray-400 hover:text-white">
                       <Image className="w-5 h-5" />
                     </button>
