@@ -74,7 +74,7 @@ function App() {
 
             <div className="bg-[rgb(33,26,20)] rounded-xl p-6 pl-4 mb-12 relative">
               <div style={{ position: 'absolute', left: '-75px', top: '24px' }}>
-                <h2 className="text-2xl font-bold">AI Image Generator</h2>
+                <h2 className="text-3xl font-bold">AI Image Generator</h2>
               </div>
               <div style={{ height: '48px' }}></div>
               <div className="space-y-6">
