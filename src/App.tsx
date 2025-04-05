@@ -11,7 +11,7 @@ function App() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
               <div className="flex items-center">
-                <Brush className="w-8 h-8 text-purple-500" />
+                <img src="/logo.webp" alt="Raphael AI" className="w-8 h-8 rounded-full" />
                 <span className="ml-2 text-xl font-bold">Raphael AI</span>
               </div>
               <div className="hidden md:flex items-center space-x-6">
@@ -45,11 +45,17 @@ function App() {
           >
             {/* Logo Section */}
             <div className="flex items-center justify-center mb-6">
-              <img
-                src="/logo.webp"
-                alt="Raphael AI"
-                className="w-10 h-10 rounded-full"
-              />
+              <div className="flex items-center">
+                <img
+                  src="/logo.webp"
+                  alt="Raphael AI"
+                  className="w-10 h-10 rounded-full"
+                />
+                <div className="ml-3 flex items-baseline">
+                  <span className="text-4xl font-bold text-[#FFA500]">Raphael</span>
+                  <span className="text-4xl font-bold text-[#808080] ml-1">AI</span>
+                </div>
+              </div>
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -479,7 +485,7 @@ function App() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                   <div className="col-span-1 md:col-span-2">
                     <div className="flex items-center mb-4">
-                      <Brush className="w-8 h-8 text-purple-500" />
+                      <img src="/logo.webp" alt="Raphael AI" className="w-8 h-8 rounded-full" />
                       <span className="ml-2 text-xl font-bold">Raphael AI</span>
                     </div>
                     <p className="text-gray-400 mb-4">
