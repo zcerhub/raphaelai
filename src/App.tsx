@@ -66,10 +66,10 @@ function App() {
             </p>
             
             <div className="flex flex-wrap justify-center gap-3 mb-8">
-              <span className="px-4 py-1.5 rounded-full bg-[rgb(33,26,20)] text-yellow-500">100% Free</span>
-              <span className="px-4 py-1.5 rounded-full bg-[rgb(33,26,20)] text-emerald-500">Powered by Flux.1 Dev</span>
-              <span className="px-4 py-1.5 rounded-full bg-[rgb(33,26,20)] text-blue-500">No Login Required</span>
-              <span className="px-4 py-1.5 rounded-full bg-[rgb(33,26,20)] text-purple-500">Unlimited Generations</span>
+              <span className="px-4 py-1.5 rounded-full bg-[rgb(33,26,20)] text-yellow-500 text-sm">100% Free</span>
+              <span className="px-4 py-1.5 rounded-full bg-[rgb(33,26,20)] text-emerald-500 text-sm">Powered by Flux.1 Dev</span>
+              <span className="px-4 py-1.5 rounded-full bg-[rgb(33,26,20)] text-blue-500 text-sm">No Login Required</span>
+              <span className="px-4 py-1.5 rounded-full bg-[rgb(33,26,20)] text-purple-500 text-sm">Unlimited Generations</span>
             </div>
 
             <div className="bg-[rgb(33,26,20)] rounded-xl p-6 mb-12">
