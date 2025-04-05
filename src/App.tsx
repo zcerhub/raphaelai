@@ -15,7 +15,7 @@ function App() {
                 <span className="ml-2 text-xl font-bold text-[rgb(204,144,92)]">Raphael AI</span>
               </div>
               <div className="hidden md:flex items-center space-x-6">
-                <a href="#features" className="text-[rgb(163,152,143)] hover:text-white transition">Features</a>
+                <a href="#features" className="text-[rgb(163,152,143)] hover:bg-[#E5B06E] hover:text-white px-4 py-2 rounded-full transition">Features</a>
                 <a href="#faqs" className="text-[rgb(163,152,143)] hover:text-white transition">FAQs</a>
                 <a href="#pricing" className="text-[rgb(163,152,143)] hover:text-white transition">Pricing</a>
                 <a href="#expand" className="text-[rgb(163,152,143)] hover:text-white transition">Expand Image</a>
