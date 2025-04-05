@@ -72,8 +72,8 @@ function App() {
               <span className="px-3 py-1 rounded-full bg-[rgb(33,26,20)] text-purple-500 text-sm">Unlimited Generations</span>
             </div>
 
-            <div className="bg-[rgb(33,26,20)] rounded-xl p-6 mb-12">
-              <h2 className="text-2xl font-bold mb-8 text-left">AI Image Generator</h2>
+            <div className="bg-[rgb(33,26,20)] rounded-xl p-6 pl-4 mb-12">
+              <h2 className="text-2xl font-bold mb-8 text-left -ml-4">AI Image Generator</h2>
               <div className="space-y-6">
                 <div>
                   <div className="flex justify-between mb-2">
