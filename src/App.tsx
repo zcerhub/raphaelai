@@ -44,21 +44,21 @@ function App() {
             transition={{ duration: 0.8 }}
           >
             {/* Logo Section */}
-            <div className="flex items-center justify-center mb-6">
-              <div className="flex items-center bg-[rgb(33,26,20)] px-6 py-3 rounded-lg border border-white/10">
+            <div className="flex items-center justify-center mb-10">
+              <div className="flex items-center bg-[rgb(33,26,20)] px-8 py-4 rounded-lg border border-white/10">
                 <img
                   src="/logo.webp"
                   alt="Raphael AI"
-                  className="w-10 h-10 rounded-full"
+                  className="w-16 h-16 rounded-full"
                 />
-                <div className="ml-3 flex items-baseline">
-                  <span className="text-4xl font-bold text-[#FFA500]">Raphael</span>
-                  <span className="text-4xl font-bold text-[#808080] ml-1">AI</span>
+                <div className="ml-4 flex items-baseline">
+                  <span className="text-5xl font-bold text-[#FFA500]">Raphael</span>
+                  <span className="text-5xl font-bold text-[#808080] ml-2">AI</span>
                 </div>
               </div>
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-2xl md:text-2xl font-bold mb-4">
               Create stunning AI-generated images in seconds
             </h1>
             <p className="text-xl text-yellow-500 mb-8 flex items-center justify-center gap-2">
