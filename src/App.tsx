@@ -47,7 +47,7 @@ function App() {
             <div className="flex items-center justify-center mb-6">
               <div className="flex items-center bg-[#2A2A2A] px-6 py-3 rounded-lg border border-white/10">
                 <img
-                  src="https://raphael.app/raphael.png"
+                  src="public/logo.webp"
                   alt="Raphael AI"
                   className="w-10 h-10 rounded-full"
                 />

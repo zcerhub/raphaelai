@@ -1,0 +1,1 @@
+<img src="/logo.webp" alt="Raphael AI" class="w-10 h-10 rounded-full"> 
