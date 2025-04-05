@@ -14,11 +14,11 @@ function App() {
                 <img src="/logo.webp" alt="Raphael AI" className="w-8 h-8 rounded-full" />
                 <span className="ml-2 text-xl font-bold text-[rgb(204,144,92)]">Raphael AI</span>
               </div>
-              <div className="hidden md:flex items-center space-x-6">
-                <a href="#features" className="text-[rgb(163,152,143)] hover:bg-[#E5B06E] hover:text-white px-4 py-2 rounded-lg transition">Features</a>
-                <a href="#faqs" className="text-[rgb(163,152,143)] hover:bg-[#E5B06E] hover:text-white px-4 py-2 rounded-lg transition">FAQs</a>
-                <a href="#pricing" className="text-[rgb(163,152,143)] hover:bg-[#E5B06E] hover:text-white px-4 py-2 rounded-lg transition">Pricing</a>
-                <a href="#expand" className="text-[rgb(163,152,143)] hover:bg-[#E5B06E] hover:text-white px-4 py-2 rounded-lg transition">Expand Image</a>
+              <div className="hidden md:flex items-center space-x-4">
+                <a href="#features" className="text-[rgb(163,152,143)] hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">Features</a>
+                <a href="#faqs" className="text-[rgb(163,152,143)] hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">FAQs</a>
+                <a href="#pricing" className="text-[rgb(163,152,143)] hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">Pricing</a>
+                <a href="#expand" className="text-[rgb(163,152,143)] hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">Expand Image</a>
               </div>
             </div>
             <div className="flex items-center space-x-4">
