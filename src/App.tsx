@@ -65,7 +65,7 @@ function App() {
               ✨ World's First Unlimited Free AI Image Generator ✨
             </p>
             
-            <div className="flex flex-wrap justify-center gap-2 mb-8">
+            <div className="flex flex-wrap justify-center gap-1 mb-8">
               <span className="px-3 py-1 rounded-full bg-[rgb(33,26,20)] text-yellow-500 text-sm">100% Free</span>
               <span className="px-3 py-1 rounded-full bg-[rgb(33,26,20)] text-emerald-500 text-sm">Powered by Flux.1 Dev</span>
               <span className="px-3 py-1 rounded-full bg-[rgb(33,26,20)] text-blue-500 text-sm">No Login Required</span>
