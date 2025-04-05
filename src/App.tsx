@@ -23,9 +23,9 @@ function App() {
             </div>
             <div className="flex items-center space-x-4">
               <button className="flex items-center space-x-1 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition">
-                <Globe className="w-4 h-4" />
-                <span>English</span>
-                <ChevronDown className="w-4 h-4" />
+                <Globe className="w-4 h-4 text-[rgb(160,148,140)]" />
+                <span className="text-[rgb(160,148,140)]">English</span>
+                <ChevronDown className="w-4 h-4 text-[rgb(160,148,140)]" />
               </button>
               <button className="px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-90 transition">
                 ce
