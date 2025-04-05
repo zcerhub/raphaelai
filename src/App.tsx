@@ -16,9 +16,9 @@ function App() {
               </div>
               <div className="hidden md:flex items-center space-x-6">
                 <a href="#features" className="text-[rgb(163,152,143)] hover:bg-[#E5B06E] hover:text-white px-4 py-2 rounded-lg transition">Features</a>
-                <a href="#faqs" className="text-[rgb(163,152,143)] hover:text-white transition">FAQs</a>
-                <a href="#pricing" className="text-[rgb(163,152,143)] hover:text-white transition">Pricing</a>
-                <a href="#expand" className="text-[rgb(163,152,143)] hover:text-white transition">Expand Image</a>
+                <a href="#faqs" className="text-[rgb(163,152,143)] hover:bg-[#E5B06E] hover:text-white px-4 py-2 rounded-lg transition">FAQs</a>
+                <a href="#pricing" className="text-[rgb(163,152,143)] hover:bg-[#E5B06E] hover:text-white px-4 py-2 rounded-lg transition">Pricing</a>
+                <a href="#expand" className="text-[rgb(163,152,143)] hover:bg-[#E5B06E] hover:text-white px-4 py-2 rounded-lg transition">Expand Image</a>
               </div>
             </div>
             <div className="flex items-center space-x-4">
