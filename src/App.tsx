@@ -4,9 +4,9 @@ import { Brush, Code2, Palette, Sparkles, Download, ChevronRight, Globe, Chevron
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#1A1A1A] text-white">
+    <div className="min-h-screen bg-[rgb(33,26,20)] text-white">
       {/* Navigation */}
-      <nav className="fixed w-full z-50 bg-[#1A1A1A]/80 backdrop-blur-lg border-b border-white/10">
+      <nav className="fixed w-full z-50 bg-[rgb(33,26,20)]/80 backdrop-blur-lg border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
@@ -45,7 +45,7 @@ function App() {
           >
             {/* Logo Section */}
             <div className="flex items-center justify-center mb-6">
-              <div className="flex items-center">
+              <div className="flex items-center bg-[rgb(33,26,20)] px-6 py-3 rounded-lg border border-white/10">
                 <img
                   src="/logo.webp"
                   alt="Raphael AI"
@@ -66,13 +66,13 @@ function App() {
             </p>
             
             <div className="flex flex-wrap justify-center gap-3 mb-8">
-              <span className="px-4 py-1.5 rounded-full bg-[#2A2A2A] text-yellow-500">100% Free</span>
-              <span className="px-4 py-1.5 rounded-full bg-[#2A2A2A] text-emerald-500">Powered by Flux.1 Dev</span>
-              <span className="px-4 py-1.5 rounded-full bg-[#2A2A2A] text-blue-500">No Login Required</span>
-              <span className="px-4 py-1.5 rounded-full bg-[#2A2A2A] text-purple-500">Unlimited Generations</span>
+              <span className="px-4 py-1.5 rounded-full bg-[rgb(33,26,20)] text-yellow-500">100% Free</span>
+              <span className="px-4 py-1.5 rounded-full bg-[rgb(33,26,20)] text-emerald-500">Powered by Flux.1 Dev</span>
+              <span className="px-4 py-1.5 rounded-full bg-[rgb(33,26,20)] text-blue-500">No Login Required</span>
+              <span className="px-4 py-1.5 rounded-full bg-[rgb(33,26,20)] text-purple-500">Unlimited Generations</span>
             </div>
 
-            <div className="bg-[#2A2A2A] rounded-xl p-6 mb-12">
+            <div className="bg-[rgb(33,26,20)] rounded-xl p-6 mb-12">
               <h2 className="text-2xl font-bold mb-8">AI Image Generator</h2>
               <div className="space-y-6">
                 <div>
@@ -84,24 +84,24 @@ function App() {
                   </div>
                   <textarea
                     placeholder="What do you want to see?"
-                    className="w-full h-32 bg-[#1A1A1A] rounded-lg p-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="w-full h-32 bg-[rgb(33,26,20)] rounded-lg p-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
                   />
                 </div>
 
                 <div className="flex flex-wrap gap-3">
-                  <button className="px-4 py-2 rounded-lg bg-[#1A1A1A] text-gray-400 hover:bg-[#333333] transition">
+                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
                     Square Aspect
                   </button>
-                  <button className="px-4 py-2 rounded-lg bg-[#1A1A1A] text-gray-400 hover:bg-[#333333] transition">
+                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
                     No Style
                   </button>
-                  <button className="px-4 py-2 rounded-lg bg-[#1A1A1A] text-gray-400 hover:bg-[#333333] transition">
+                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
                     No Color
                   </button>
-                  <button className="px-4 py-2 rounded-lg bg-[#1A1A1A] text-gray-400 hover:bg-[#333333] transition">
+                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
                     No Lighting
                   </button>
-                  <button className="px-4 py-2 rounded-lg bg-[#1A1A1A] text-gray-400 hover:bg-[#333333] transition">
+                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
                     No Composition
                   </button>
                 </div>
@@ -109,19 +109,19 @@ function App() {
                 <div className="flex items-center justify-between">
                   <div className="flex gap-4">
                     <label className="flex items-center gap-2 cursor-pointer">
-                      <input type="checkbox" className="form-checkbox bg-[#1A1A1A] rounded border-gray-600" />
+                      <input type="checkbox" className="form-checkbox bg-[rgb(33,26,20)] rounded border-gray-600" />
                       <span className="text-gray-400">Negative Prompt</span>
                     </label>
                     <label className="flex items-center gap-2 cursor-pointer">
-                      <input type="checkbox" className="form-checkbox bg-[#1A1A1A] rounded border-gray-600" />
+                      <input type="checkbox" className="form-checkbox bg-[rgb(33,26,20)] rounded border-gray-600" />
                       <span className="text-gray-400">High Quality</span>
                     </label>
                   </div>
                   <div className="flex gap-3">
-                    <button className="px-4 py-2 rounded-lg bg-[#1A1A1A] text-gray-400 hover:bg-[#333333] transition">
+                    <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
                       Clear
                     </button>
-                    <button className="px-4 py-2 rounded-lg bg-[#1A1A1A] text-gray-400 hover:bg-[#333333] transition flex items-center gap-2">
+                    <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition flex items-center gap-2">
                       <Shuffle className="w-4 h-4" /> Random
                     </button>
                     <button className="px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-600 to-yellow-700 text-white hover:opacity-90 transition">
@@ -138,7 +138,7 @@ function App() {
             </p>
 
             {/* Key Features Section */}
-            <div className="py-20 bg-[#1A1A1A]">
+            <div className="py-20 bg-[rgb(33,26,20)]">
               <div className="max-w-7xl mx-auto">
                 <h2 className="text-4xl font-bold mb-4">Key Features of Raphael</h2>
                 <p className="text-xl text-gray-400 mb-16">
@@ -240,7 +240,7 @@ function App() {
             </div>
 
             {/* Trusted by Millions Section */}
-            <div className="py-20 bg-[#1A1A1A]">
+            <div className="py-20 bg-[rgb(33,26,20)]">
               <div className="max-w-7xl mx-auto text-center">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -292,7 +292,7 @@ function App() {
             </div>
 
             {/* Testimonials Section */}
-            <div className="py-20 bg-[#1A1A1A]">
+            <div className="py-20 bg-[rgb(33,26,20)]">
               <div className="max-w-7xl mx-auto text-center">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -310,7 +310,7 @@ function App() {
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5 }}
-                      className="bg-[#2A2A2A] p-6 rounded-xl"
+                      className="bg-[rgb(33,26,20)] p-6 rounded-xl"
                     >
                       <div className="flex items-center mb-4">
                         <img
@@ -337,7 +337,7 @@ function App() {
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: 0.2 }}
-                      className="bg-[#2A2A2A] p-6 rounded-xl"
+                      className="bg-[rgb(33,26,20)] p-6 rounded-xl"
                     >
                       <div className="flex items-center mb-4">
                         <img
@@ -364,7 +364,7 @@ function App() {
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: 0.4 }}
-                      className="bg-[#2A2A2A] p-6 rounded-xl"
+                      className="bg-[rgb(33,26,20)] p-6 rounded-xl"
                     >
                       <div className="flex items-center mb-4">
                         <img
@@ -392,7 +392,7 @@ function App() {
             </div>
 
             {/* Pricing Section */}
-            <div className="py-20 bg-[#1A1A1A]">
+            <div className="py-20 bg-[rgb(33,26,20)]">
               <div className="max-w-7xl mx-auto text-center">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -410,7 +410,7 @@ function App() {
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5 }}
-                      className="bg-[#2A2A2A] p-8 rounded-xl border border-white/10"
+                      className="bg-[rgb(33,26,20)] p-8 rounded-xl border border-white/10"
                     >
                       <h3 className="text-2xl font-bold mb-2">Free</h3>
                       <p className="text-gray-400 mb-6">Perfect for everyone</p>
@@ -480,7 +480,7 @@ function App() {
             </div>
 
             {/* Footer */}
-            <footer className="bg-[#1A1A1A] border-t border-white/10 mt-20">
+            <footer className="bg-[rgb(33,26,20)] border-t border-white/10 mt-20">
               <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                   <div className="col-span-1 md:col-span-2">
