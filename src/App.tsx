@@ -61,7 +61,7 @@ function App() {
             <h1 className="text-2xl md:text-2xl font-bold mb-2 text-[rgb(216,214,202)]">
               Create stunning AI-generated images in seconds
             </h1>
-            <p className="text-xl text-yellow-500 mb-4 flex items-center justify-center gap-2">
+            <p className="text-lg text-yellow-500 mb-4 flex items-center justify-center gap-2 ">
               ✨ World's First Unlimited Free AI Image Generator ✨
             </p>
             
