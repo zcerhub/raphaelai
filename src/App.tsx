@@ -45,17 +45,11 @@ function App() {
           >
             {/* Logo Section */}
             <div className="flex items-center justify-center mb-6">
-              <div className="flex items-center bg-[#2A2A2A] px-6 py-3 rounded-lg border border-white/10">
-                <img
-                  src="public/logo.webp"
-                  alt="Raphael AI"
-                  className="w-10 h-10 rounded-full"
-                />
-                <div className="ml-3 flex items-baseline">
-                  <span className="text-2xl font-bold text-yellow-500">Raphael</span>
-                  <span className="text-2xl font-bold text-white ml-1">AI</span>
-                </div>
-              </div>
+              <img
+                src="/logo.webp"
+                alt="Raphael AI"
+                className="w-10 h-10 rounded-full"
+              />
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
