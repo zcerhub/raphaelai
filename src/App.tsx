@@ -308,7 +308,7 @@ function App() {
                   style={{
                     width: "1500px",
                     height: "3000px",
-                    top: "-240px",
+                    top: "-210px",
                     left: "50%",
                     transform: "translateX(-50%) scale(0.9)",
                     transformOrigin: "top center",
