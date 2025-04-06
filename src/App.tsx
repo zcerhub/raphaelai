@@ -322,6 +322,52 @@ function App() {
                   allow="clipboard-write; fullscreen"
                 ></iframe>
                 
+                {/* 覆盖iframe中的"What will you create? 你将创造什么？"文字 */}
+                <div 
+                  className="absolute top-[70px] left-0 right-0 z-50 bg-white" 
+                  style={{ 
+                    height: "40px",
+                    width: "80%",
+                    margin: "0 auto",
+                    boxShadow: "none",
+                    border: "0"
+                  }}
+                >
+                  <div className="flex items-center justify-center h-full text-gray-800 text-lg font-medium">
+                    <span>创建您的AI艺术作品</span>
+                  </div>
+                </div>
+                
+                {/* 覆盖iframe中Generate按钮下方的内容 */}
+                <div 
+                  className="absolute top-[310px] left-0 right-0 z-50 bg-white" 
+                  style={{ 
+                    height: "150px",
+                    width: "95%",
+                    margin: "0 auto",
+                    boxShadow: "none",
+                    border: "0"
+                  }}
+                >
+                </div>
+                
+                {/* 左侧容器，覆盖iframe内容 */}
+                <div 
+                  className="absolute bottom-0 left-auto right-[51%] z-50 bg-white" 
+                  style={{ 
+                    height: "40px",
+                    width: "90%",
+                    margin: "0 20px 0 0",
+                    boxShadow: "none",
+                    border: "0"
+                  }}
+                >
+                  {/* 可以添加自定义内容 */}
+                  <div className="flex items-center justify-center h-full text-gray-600 text-sm">
+                    <span>Image processing by Raphael</span>
+                  </div>
+                </div>
+                
                 {/* 广告覆盖层 - 精确定位在底部广告区域上 */}
                 <div 
                   className="absolute bottom-0 right-0 z-50 bg-white" 
