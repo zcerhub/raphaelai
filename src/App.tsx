@@ -5,6 +5,8 @@ import { Brush, Code2, Palette, Sparkles, Download, ChevronRight, Globe, Chevron
 function App() {
   const [prompt, setPrompt] = React.useState('');
   const [currentTestimonial, setCurrentTestimonial] = React.useState(0);
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [result, setResult] = React.useState<{data?: Array<{url: string}>} | null>(null);
   
   const promptOptions = [
     "A polar fox walking through a snowy landscape, with pristine white fur and alert eyes.",
@@ -38,6 +40,40 @@ function App() {
   const handleRandom = () => {
     const randomIndex = Math.floor(Math.random() * promptOptions.length);
     setPrompt(promptOptions[randomIndex]);
+  };
+
+  const handleGenerate = () => {
+    if (!prompt) return;
+    
+    setIsLoading(true);
+    
+    const options = {
+      method: 'POST',
+      headers: {
+        Authorization: 'Bearer sk-cscehhzqtcwadqkrlwffdhxkdsnudasnvxrprxwahmcwjvsi',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        model: "Kwai-Kolors/Kolors",
+        prompt: prompt,
+        image_size: "1024x1024",
+        batch_size: 4,
+        num_inference_steps: 20,
+        guidance_scale: 7.5
+      })
+    };
+
+    fetch('https://api.siliconflow.cn/v1/images/generations', options)
+      .then(response => response.json())
+      .then(response => {
+        console.log(response);
+        setResult(response);
+        setIsLoading(false);
+      })
+      .catch(err => {
+        console.error(err);
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -143,11 +179,28 @@ function App() {
                     >
                       <Shuffle className="w-4 h-4" /> Random
                     </button>
-                    <button className="px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-600 to-yellow-700 text-white hover:opacity-90 transition">
-                      Generate
+                    <button 
+                      className="px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-600 to-yellow-700 text-white hover:opacity-90 transition"
+                      onClick={handleGenerate}
+                      disabled={isLoading}
+                    >
+                      {isLoading ? 'Generating...' : 'Generate'}
                     </button>
                   </div>
                 </div>
+                
+                {result && (
+                  <div className="mt-8">
+                    <h3 className="text-xl font-bold mb-4">Generated Image</h3>
+                    <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                      <img 
+                        src={result.data?.[0]?.url} 
+                        alt="Generated image" 
+                        className="w-full max-h-96 object-contain" 
+                      />
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 
