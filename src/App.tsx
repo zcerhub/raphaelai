@@ -73,7 +73,7 @@ function App() {
             </div>
 
             <div className="bg-[rgb(33,26,20)] rounded-xl p-6 pl-4 mb-12 relative">
-              <h2 className="text-4xl font-bold mb-8 text-left text-[rgb(237,234,222)]" style={{ marginLeft: '-30px' }}>AI Image Generator</h2>
+              <h2 className="text-4xl font-bold mb-8 text-left text-[rgb(237,234,222)]" style={{ marginLeft: '0px' }}>AI Image Generator</h2>
               <div className="absolute right-6 bottom-[calc(100%-56px)]">
                 <button className="text-gray-400 hover:text-white bg-[rgb(48,38,30)] p-2 rounded-full flex items-center justify-center">
                   <Image className="w-5 h-5 text-white" />
@@ -87,7 +87,7 @@ function App() {
                     <label className="absolute top-2 left-4 text-sm text-gray-400">Description prompt</label>
                     <textarea
                       placeholder="What do you want to see?"
-                      className="w-full h-40 bg-[rgb(48,38,30)] rounded-lg p-4 pt-8 text-white placeholder-gray-500 focus:outline-none"
+                      className="w-full h-52 bg-[rgb(48,38,30)] rounded-lg p-4 pt-8 text-white placeholder-gray-500 focus:outline-none"
                       style={{ width: "100%" }}
                     />
                   </div>
