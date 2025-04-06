@@ -321,6 +321,21 @@ function App() {
                   referrerPolicy="no-referrer"
                   allow="clipboard-write; fullscreen"
                 ></iframe>
+                
+                {/* 广告覆盖层 - 精确定位在底部广告区域上 */}
+                <div 
+                  className="absolute bottom-0 left-0 right-0 z-50 bg-white" 
+                  style={{ 
+                    height: "80px",
+                    width: "100%",
+                    boxShadow: "0 -4px 6px -1px rgba(0, 0, 0, 0.1)"
+                  }}
+                >
+                  {/* 可选：添加一些自定义内容到覆盖层 */}
+                  <div className="flex items-center justify-center h-full text-gray-600 text-sm">
+                    <span>Images powered by Raphael AI</span>
+                  </div>
+                </div>
               </div>
             </div>
 
