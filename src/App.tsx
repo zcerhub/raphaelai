@@ -86,7 +86,7 @@ function App() {
                   </div>
                   <textarea
                     placeholder="What do you want to see?"
-                    className="w-full h-32 bg-[rgb(48,38,30)] rounded-lg p-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="w-full h-32 bg-[rgb(48,38,30)] rounded-lg p-4 text-white placeholder-gray-500 focus:outline-none"
                   />
                 </div>
 
