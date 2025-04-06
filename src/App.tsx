@@ -29,7 +29,35 @@ const translations = {
     blog: 'Blog',
     contact: 'Contact',
     api: 'API',
-    pricing: 'Pricing'
+    pricing: 'Pricing',
+    // 用户评论
+    testimonials: [
+      {
+        name: 'David Thompson',
+        role: 'Independent Game Developer',
+        comment: '"As a solo game dev, Raphael AI Image Generator is invaluable. The speed and quality of asset generation are unmatched, and being free means I can focus my budget elsewhere."'
+      },
+      {
+        name: 'Emily Parker',
+        role: 'Content Creator on YouTube',
+        comment: '"I create thumbnails daily using Raphael AI Image Generator. The text understanding is incredible - it captures exactly what I need, and the no-registration policy makes it super convenient."'
+      },
+      {
+        name: 'Robert Wilson',
+        role: 'UI/UX Designer at TechFlow',
+        comment: '"The FLUX.1-Dev model in Raphael AI Image Generator produces the most consistent and high-quality results I\'ve seen. It\'s become our go-to tool for generating mockup images."'
+      },
+      {
+        name: 'Jennifer Adams',
+        role: 'E-commerce Business Owner',
+        comment: '"Running an online store requires constant image creation. Raphael\'s free AI Image Generator helps me create professional product photos instantly. It\'s literally saving my business thousands."'
+      },
+      {
+        name: 'Michael Anderson',
+        role: 'Digital Artist at ArtStation',
+        comment: '"Raphael\'s AI Image Generator is a game-changer. The FLUX.1-Dev model produces incredibly detailed images that I use as concept art. The fact that it\'s completely free is mind-blowing!"'
+      }
+    ]
   },
   '简体中文': {
     features: '特点',
@@ -56,7 +84,35 @@ const translations = {
     blog: '博客',
     contact: '联系我们',
     api: 'API',
-    pricing: '价格'
+    pricing: '价格',
+    // 中文用户评论
+    testimonials: [
+      {
+        name: '大卫·汤普森',
+        role: '独立游戏开发者',
+        comment: '"作为一名独立游戏开发者，Raphael AI图像生成器价值连城。资源生成的速度和质量无与伦比，而且免费使用让我能够将预算用在其他地方。"'
+      },
+      {
+        name: '艾米丽·帕克',
+        role: 'YouTube内容创作者',
+        comment: '"我每天都使用Raphael AI图像生成器创建缩略图。它对文本的理解能力令人难以置信——能精确捕捉我所需要的内容，而且无需注册的政策使它非常便捷。"'
+      },
+      {
+        name: '罗伯特·威尔逊',
+        role: 'TechFlow的UI/UX设计师',
+        comment: '"Raphael AI图像生成器中的FLUX.1-Dev模型产生了我所见过的最一致和高质量的结果。它已经成为我们生成模型图像的首选工具。"'
+      },
+      {
+        name: '詹妮弗·亚当斯',
+        role: '电子商务企业主',
+        comment: '"经营在线商店需要持续创建图像。Raphael的免费AI图像生成器帮助我即时创建专业的产品照片。它实实在在地为我的企业节省了数千元成本。"'
+      },
+      {
+        name: '迈克尔·安德森',
+        role: 'ArtStation的数字艺术家',
+        comment: '"Raphael的AI图像生成器是一个改变游戏规则的工具。FLUX.1-Dev模型生成的细节丰富的图像，我将其用作概念艺术。它完全免费的事实令人难以置信！"'
+      }
+    ]
   }
 };
 
@@ -652,12 +708,12 @@ function App() {
                           <div className="flex items-center mb-4">
                             <img
                               src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                              alt="David Thompson"
+                              alt={t.testimonials[0].name}
                               className="w-12 h-12 rounded-full"
                             />
                             <div className="ml-4 text-left">
-                              <h3 className="font-semibold text-gray-800">David Thompson</h3>
-                              <p className="text-gray-500 text-sm">Independent Game Developer</p>
+                              <h3 className="font-semibold text-gray-800">{t.testimonials[0].name}</h3>
+                              <p className="text-gray-500 text-sm">{t.testimonials[0].role}</p>
                             </div>
                           </div>
                           <div className="flex text-yellow-500 mb-4">
@@ -666,7 +722,7 @@ function App() {
                             ))}
                           </div>
                           <p className="text-gray-600 text-left">
-                            "As a solo game dev, Raphael AI Image Generator is invaluable. The speed and quality of asset generation are unmatched, and being free means I can focus my budget elsewhere."
+                            {t.testimonials[0].comment}
                           </p>
                         </div>
 
@@ -674,12 +730,12 @@ function App() {
                           <div className="flex items-center mb-4">
                             <img
                               src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                              alt="Emily Parker"
+                              alt={t.testimonials[1].name}
                               className="w-12 h-12 rounded-full"
                             />
                             <div className="ml-4 text-left">
-                              <h3 className="font-semibold text-gray-800">Emily Parker</h3>
-                              <p className="text-gray-500 text-sm">Content Creator on YouTube</p>
+                              <h3 className="font-semibold text-gray-800">{t.testimonials[1].name}</h3>
+                              <p className="text-gray-500 text-sm">{t.testimonials[1].role}</p>
                             </div>
                           </div>
                           <div className="flex text-yellow-500 mb-4">
@@ -688,7 +744,7 @@ function App() {
                             ))}
                           </div>
                           <p className="text-gray-600 text-left">
-                            "I create thumbnails daily using Raphael AI Image Generator. The text understanding is incredible - it captures exactly what I need, and the no-registration policy makes it super convenient."
+                            {t.testimonials[1].comment}
                           </p>
                         </div>
 
@@ -696,12 +752,12 @@ function App() {
                           <div className="flex items-center mb-4">
                             <img
                               src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                              alt="Robert Wilson"
+                              alt={t.testimonials[2].name}
                               className="w-12 h-12 rounded-full"
                             />
                             <div className="ml-4 text-left">
-                              <h3 className="font-semibold text-gray-800">Robert Wilson</h3>
-                              <p className="text-gray-500 text-sm">UI/UX Designer at TechFlow</p>
+                              <h3 className="font-semibold text-gray-800">{t.testimonials[2].name}</h3>
+                              <p className="text-gray-500 text-sm">{t.testimonials[2].role}</p>
                             </div>
                           </div>
                           <div className="flex text-yellow-500 mb-4">
@@ -710,7 +766,7 @@ function App() {
                             ))}
                           </div>
                           <p className="text-gray-600 text-left">
-                            "The FLUX.1-Dev model in Raphael AI Image Generator produces the most consistent and high-quality results I've seen. It's become our go-to tool for generating mockup images."
+                            {t.testimonials[2].comment}
                           </p>
                         </div>
 
@@ -718,12 +774,12 @@ function App() {
                           <div className="flex items-center mb-4">
                             <img
                               src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                              alt="Jennifer Adams"
+                              alt={t.testimonials[3].name}
                               className="w-12 h-12 rounded-full"
                             />
                             <div className="ml-4 text-left">
-                              <h3 className="font-semibold text-gray-800">Jennifer Adams</h3>
-                              <p className="text-gray-500 text-sm">E-commerce Business Owner</p>
+                              <h3 className="font-semibold text-gray-800">{t.testimonials[3].name}</h3>
+                              <p className="text-gray-500 text-sm">{t.testimonials[3].role}</p>
                             </div>
                           </div>
                           <div className="flex text-yellow-500 mb-4">
@@ -732,7 +788,7 @@ function App() {
                             ))}
                           </div>
                           <p className="text-gray-600 text-left">
-                            "Running an online store requires constant image creation. Raphael's free AI Image Generator helps me create professional product photos instantly. It's literally saving my business thousands."
+                            {t.testimonials[3].comment}
                           </p>
                         </div>
 
@@ -740,12 +796,12 @@ function App() {
                           <div className="flex items-center mb-4">
                             <img
                               src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                              alt="Michael Anderson"
+                              alt={t.testimonials[4].name}
                               className="w-12 h-12 rounded-full"
                             />
                             <div className="ml-4 text-left">
-                              <h3 className="font-semibold text-gray-800">Michael Anderson</h3>
-                              <p className="text-gray-500 text-sm">Digital Artist at ArtStation</p>
+                              <h3 className="font-semibold text-gray-800">{t.testimonials[4].name}</h3>
+                              <p className="text-gray-500 text-sm">{t.testimonials[4].role}</p>
                             </div>
                           </div>
                           <div className="flex text-yellow-500 mb-4">
@@ -754,7 +810,7 @@ function App() {
                             ))}
                           </div>
                           <p className="text-gray-600 text-left">
-                            "Raphael's AI Image Generator is a game-changer. The FLUX.1-Dev model produces incredibly detailed images that I use as concept art. The fact that it's completely free is mind-blowing!"
+                            {t.testimonials[4].comment}
                           </p>
                         </div>
                       </motion.div>
