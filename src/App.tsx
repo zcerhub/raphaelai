@@ -255,18 +255,18 @@ function App() {
             <div className="bg-[rgb(33,26,20)] rounded-xl p-6 mb-12 relative">
               <h2 className="text-2xl font-bold mb-6 text-left text-[rgb(237,234,222)]">AI Image Generator</h2>
               
-              <div className="w-full h-[700px] relative overflow-hidden rounded-lg bg-[rgb(38,30,22)]">
+              <div className="w-full h-[640px] relative overflow-hidden rounded-lg bg-white">
                 <iframe 
                   ref={iframeRef}
-                  src="https://raphael.app/" 
+                  src="https://raphaelai.org/" 
                   title="Raphael AI Image Generator"
                   className="absolute border-0"
                   style={{
-                    width: "1280px",
+                    width: "1500px",
                     height: "3000px",
-                    top: "-460px",
+                    top: "-170px",
                     left: "50%",
-                    transform: "translateX(-50%) scale(1)",
+                    transform: "translateX(-50%) scale(0.9)",
                     transformOrigin: "top center",
                     pointerEvents: "auto" as "auto"
                   }}
