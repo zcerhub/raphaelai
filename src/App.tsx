@@ -4,6 +4,15 @@ import { Brush, Code2, Palette, Sparkles, Download, ChevronRight, Globe, Chevron
 
 function App() {
   const [prompt, setPrompt] = React.useState('');
+  const [options, setOptions] = React.useState({
+    squareAspect: true,
+    noStyle: false,
+    noColor: false,
+    noLighting: false,
+    noComposition: false,
+    negativePrompt: false,
+    highQuality: false
+  });
   
   const promptOptions = [
     "A polar fox walking through a snowy landscape, with pristine white fur and alert eyes.",
@@ -30,6 +39,13 @@ function App() {
   const handleRandom = () => {
     const randomIndex = Math.floor(Math.random() * promptOptions.length);
     setPrompt(promptOptions[randomIndex]);
+  };
+
+  const toggleOption = (option: keyof typeof options) => {
+    setOptions({
+      ...options,
+      [option]: !options[option]
+    });
   };
 
   return (
@@ -124,35 +140,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap gap-3">
-                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
-                    Square Aspect
-                  </button>
-                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
-                    No Style
-                  </button>
-                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
-                    No Color
-                  </button>
-                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
-                    No Lighting
-                  </button>
-                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
-                    No Composition
-                  </button>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex gap-4">
-                    <label className="flex items-center gap-2 cursor-pointer">
-                      <input type="checkbox" className="form-checkbox bg-[rgb(33,26,20)] rounded border-gray-600" />
-                      <span className="text-gray-400">Negative Prompt</span>
-                    </label>
-                    <label className="flex items-center gap-2 cursor-pointer">
-                      <input type="checkbox" className="form-checkbox bg-[rgb(33,26,20)] rounded border-gray-600" />
-                      <span className="text-gray-400">High Quality</span>
-                    </label>
-                  </div>
+                <div className="flex items-center justify-end">
                   <div className="flex gap-3">
                     <button 
                       className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition"
