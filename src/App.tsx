@@ -297,7 +297,7 @@ function App() {
             </div>
 
             <div className="bg-white p-6 mb-12 relative border-0">
-              <h2 className="text-2xl font-bold mb-6 text-left text-gray-800">AI Image Generator</h2>
+              <h2 className="text-2xl font-bold mb-6 text-left text-gray-800 pl-40">AI Image Generator</h2>
               
               <div className="w-full h-[560px] relative overflow-hidden bg-white border-0">
                 <iframe 
