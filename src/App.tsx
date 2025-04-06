@@ -316,7 +316,7 @@ function App() {
                     overflow: "hidden"
                   }}
                   scrolling="no"
-                  sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation"
+                  sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation allow-downloads"
                   loading="lazy"
                   referrerPolicy="no-referrer"
                   allow="clipboard-write; fullscreen"
