@@ -306,9 +306,6 @@ function App() {
                 
                 {showLanguageDropdown && (
                   <div className="absolute right-0 mt-2 py-2 w-40 bg-white rounded-lg shadow-xl z-50 max-h-[400px] overflow-y-auto">
-                    <div className="sticky top-0 bg-white p-2 flex justify-center items-center border-b border-gray-200">
-                      <ChevronDown className="w-5 h-5 text-gray-600 transform rotate-180" />
-                    </div>
                     {languages.map((language) => (
                       <button
                         key={language}
@@ -325,9 +322,6 @@ function App() {
                         {language}
                       </button>
                     ))}
-                    <div className="sticky bottom-0 bg-white p-2 flex justify-center border-t border-gray-200">
-                      <ChevronDown className="w-5 h-5 text-gray-600" />
-                    </div>
                   </div>
                 )}
               </div>
