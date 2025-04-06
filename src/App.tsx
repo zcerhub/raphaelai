@@ -235,107 +235,29 @@ function App() {
             </div>
 
             <div className="bg-[rgb(33,26,20)] rounded-xl p-6 mb-12 relative">
-              <h2 className="text-4xl font-bold mb-8 text-left text-[rgb(237,234,222)] pl-0">AI Image Generator</h2>
-              <div className="absolute right-6 bottom-[calc(100%-56px)]">
-                <button className="text-gray-400 hover:text-white bg-[rgb(48,38,30)] p-2 rounded-full flex items-center justify-center">
-                  <Image className="w-5 h-5 text-white" />
-                </button>
-              </div>
-              <div className="space-y-6">
-                <div>
-                  <div className="flex justify-between mb-2">
-                  </div>
-                  <div className="relative w-full mx-auto">
-                    <label className="absolute top-2 left-4 text-sm text-gray-400">Description prompt</label>
-                    <textarea
-                      placeholder="What do you want to see?"
-                      className="w-full h-48 bg-[rgb(48,38,30)] rounded-lg p-4 pt-8 text-white text-xl placeholder:text-[rgb(117,106,98)] placeholder:text-xl focus:outline-none"
-                      value={prompt}
-                      onChange={(e) => setPrompt(e.target.value)}
-                    />
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-end">
-                  <div className="flex gap-3">
-                    <button 
-                      className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition"
-                      onClick={handleClear}
-                    >
-                      Clear
-                    </button>
-                    <button 
-                      className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition flex items-center gap-2"
-                      onClick={handleRandom}
-                    >
-                      <Shuffle className="w-4 h-4" /> Random
-                    </button>
-                    <button 
-                      className="px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-600 to-yellow-700 text-white hover:opacity-90 transition"
-                      onClick={handleGenerate}
-                      disabled={isLoading}
-                    >
-                      {isLoading ? 'Generating...' : 'Generate'}
-                    </button>
-                  </div>
-                </div>
-                
-                {isLoading && (
-                  <div className="mt-8">
-                    <h3 className="text-xl font-bold mb-4 text-left">{prompt}</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      {[...Array(4)].map((_, index) => (
-                        <div key={index} className="bg-[rgb(44,36,27)] rounded-lg overflow-hidden relative border border-[rgb(48,38,30)]">
-                          <div className="h-64 flex flex-col items-center justify-center p-4">
-                            <div className="w-12 h-12 border-2 border-t-[#E5B06E] border-[#E5B06E]/20 rounded-full animate-spin mb-6"></div>
-                            <p className="text-gray-400 text-sm">Estimated time: 20s</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                
-                {!isLoading && result && result.error && (
-                  <div className="mt-8">
-                    <h3 className="text-xl font-bold mb-4 text-left">{prompt}</h3>
-                    <div className="bg-[rgb(48,38,30)] rounded-lg p-6 text-left hidden">
-                      <p className="text-red-400 mb-4">
-                        {result.error === "Request was rejected due to rate limiting. Details: IPM limit reached." ? 
-                          "Rate limit reached. Please try again later." : result.error}
-                      </p>
-                      <button 
-                        onClick={handleRetry}
-                        className="px-4 py-2 rounded-lg bg-[#E5B06E] text-white hover:bg-[#D8A258] transition-colors"
-                      >
-                        Retry
-                      </button>
-                    </div>
-                  </div>
-                )}
-                
-                {!isLoading && result && !result.error && (
-                  <div className="mt-8">
-                    <h3 className="text-xl font-bold mb-4 text-left">{prompt}</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      {result.data && result.data.length > 0 ? (
-                        result.data.map((image, index) => (
-                          <div key={index} className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                            <img 
-                              src={image.url} 
-                              alt={`Generated image ${index + 1}`} 
-                              className="w-full h-64 object-cover" 
-                            />
-                          </div>
-                        ))
-                      ) : (
-                        <div className="col-span-4 text-left text-gray-400">
-                          No images generated. Please try again.
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                )}
+              <h2 className="text-2xl font-bold mb-6 text-left text-[rgb(237,234,222)]">AI Image Generator</h2>
+              
+              {/* iframe容器，设置确切大小和溢出隐藏 */}
+              <div className="w-full h-[400px] relative overflow-hidden rounded-lg bg-[rgb(38,30,22)]">
+                {/* iframe，设置大尺寸并通过定位和缩放来显示特定区域 */}
+                <iframe 
+                  src="https://raphael.app/" 
+                  title="Raphael AI Image Generator"
+                  className="absolute border-0"
+                  style={{
+                    width: "1280px",
+                    height: "2500px",
+                    top: "-217px",
+                    left: "50%",
+                    transform: "translateX(-50%) scale(1)",
+                    transformOrigin: "top center",
+                    pointerEvents: "auto" as "auto"
+                  }}
+                  sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                  allow="clipboard-write; fullscreen"
+                ></iframe>
               </div>
             </div>
 
