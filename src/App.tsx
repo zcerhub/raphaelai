@@ -238,7 +238,7 @@ function App() {
               <h2 className="text-2xl font-bold mb-6 text-left text-[rgb(237,234,222)]">AI Image Generator</h2>
               
               {/* iframe容器，设置确切大小和溢出隐藏 */}
-              <div className="w-full h-[450px] relative overflow-hidden rounded-lg bg-[rgb(38,30,22)]">
+              <div className="w-full h-[600px] relative overflow-hidden rounded-lg bg-[rgb(38,30,22)]">
                 {/* iframe，设置大尺寸并通过定位和缩放来显示特定区域 */}
                 <iframe 
                   src="https://raphael.app/" 
@@ -246,13 +246,15 @@ function App() {
                   className="absolute border-0"
                   style={{
                     width: "1280px",
-                    height: "2500px",
+                    height: "3000px",  /* 增加高度以显示更多内容 */
                     top: "-460px",  /* 保持上部裁剪位置不变 */
                     left: "50%",
                     transform: "translateX(-50%) scale(1)",
                     transformOrigin: "top center",
-                    pointerEvents: "auto" as "auto"
+                    pointerEvents: "auto" as "auto",
+                    overflow: "hidden" /* 防止内部滚动 */
                   }}
+                  scrolling="no" /* 禁用iframe的滚动 */
                   sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation"
                   loading="lazy"
                   referrerPolicy="no-referrer"
