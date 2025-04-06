@@ -131,40 +131,18 @@ function App() {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap gap-3">
-                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
-                    Square Aspect
-                  </button>
-                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
-                    No Style
-                  </button>
-                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
-                    No Color
-                  </button>
-                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
-                    No Lighting
-                  </button>
-                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
-                    No Composition
-                  </button>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex gap-4">
-                    <label className="flex items-center gap-2 cursor-pointer">
-                      <input type="checkbox" className="form-checkbox bg-[rgb(33,26,20)] rounded border-gray-600" />
-                      <span className="text-gray-400">Negative Prompt</span>
-                    </label>
-                    <label className="flex items-center gap-2 cursor-pointer">
-                      <input type="checkbox" className="form-checkbox bg-[rgb(33,26,20)] rounded border-gray-600" />
-                      <span className="text-gray-400">High Quality</span>
-                    </label>
-                  </div>
+                <div className="flex items-center justify-end">
                   <div className="flex gap-3">
-                    <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
+                    <button 
+                      className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition"
+                      onClick={handleClear}
+                    >
                       Clear
                     </button>
-                    <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition flex items-center gap-2">
+                    <button 
+                      className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition flex items-center gap-2"
+                      onClick={handleRandom}
+                    >
                       <Shuffle className="w-4 h-4" /> Random
                     </button>
                     <button className="px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-600 to-yellow-700 text-white hover:opacity-90 transition">
