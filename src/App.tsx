@@ -499,6 +499,7 @@ function App() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.5 }}
                 >
                   <span className="text-yellow-500 font-semibold mb-4 block">Testimonial</span>
@@ -645,7 +646,8 @@ function App() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true, amount: 0.1 }}
+                  transition={{ duration: 0.2 }}
                   className="text-center mb-12"
                 >
                   <span className="inline-block bg-yellow-500/20 text-yellow-500 font-semibold px-4 py-1 rounded-full mb-4">FAQ</span>
@@ -659,7 +661,8 @@ function App() {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.2 }}
                     className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
@@ -678,7 +681,8 @@ function App() {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.2, delay: 0.05 }}
                     className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
@@ -697,7 +701,8 @@ function App() {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.2, delay: 0.1 }}
                     className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
@@ -716,7 +721,8 @@ function App() {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.2, delay: 0.15 }}
                     className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
@@ -735,7 +741,8 @@ function App() {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.4 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.2, delay: 0.2 }}
                     className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
@@ -754,7 +761,8 @@ function App() {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.2, delay: 0.25 }}
                     className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
@@ -773,7 +781,8 @@ function App() {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.2, delay: 0.3 }}
                     className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
@@ -792,7 +801,8 @@ function App() {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.7 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.2, delay: 0.35 }}
                     className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
@@ -811,7 +821,8 @@ function App() {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.8 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.2, delay: 0.4 }}
                     className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
@@ -830,7 +841,8 @@ function App() {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.9 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.2, delay: 0.45 }}
                     className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
@@ -849,7 +861,8 @@ function App() {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 1.0 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.2, delay: 0.5 }}
                     className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
@@ -868,7 +881,8 @@ function App() {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 1.1 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.2, delay: 0.55 }}
                     className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
