@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Brush, Code2, Palette, Sparkles, Download, ChevronRight, Globe, ChevronDown, Image, Shuffle, DollarSign, Star, Languages, Zap, Shield, Paintbrush, Check } from 'lucide-react';
+import { Brush, Code2, Palette, Sparkles, Download, ChevronRight, Globe, ChevronDown, Image, Shuffle, DollarSign, Star, Languages, Zap, Shield, Paintbrush, Check, X } from 'lucide-react';
 
 function App() {
   const [prompt, setPrompt] = React.useState('');
@@ -8,6 +8,8 @@ function App() {
   const [isLoading, setIsLoading] = React.useState(false);
   const [result, setResult] = React.useState<{data?: Array<{url: string}>, error?: string} | null>(null);
   const [retryCount, setRetryCount] = React.useState(0);
+  const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState('English');
   const maxRetries = 3;
   
   const promptOptions = [
@@ -27,9 +29,53 @@ function App() {
     "Soldiers in a World War II trench engaged in intense combat, with fighter planes soaring overhead.",
     "An elf warrior standing at the entrance of a magical forest. Behind her, an ancient stone tablet etched with glowing runes spells out the phrase 'Guardians of the Emerald Realm.'"
   ];
+  
+  const languages = [
+    'English',
+    '简体中文',
+    '繁體中文',
+    '日本語',
+    '한국어',
+    'Deutsch',
+    'Français',
+    'Italiano',
+    'Español',
+    'Português',
+    'हिन्दी',
+    'العربية',
+    'বাংলা',
+    'Bahasa Indonesia',
+    'Bahasa Melayu',
+    'ภาษาไทย',
+    'עברית',
+    'Русский',
+    'اردو',
+    'Türkçe',
+    'Tiếng Việt',
+    'فارسی',
+    'मराठी',
+    'தமிழ்',
+    'Polski',
+    'తెలుగు',
+    'नेपाली'
+  ];
 
+  const languageDropdownRef = useRef<HTMLDivElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
   
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (languageDropdownRef.current && !languageDropdownRef.current.contains(event.target as Node)) {
+        setShowLanguageDropdown(false);
+      }
+    }
+    
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   useEffect(() => {
     const resetIframePosition = () => {
       if (iframeRef.current) {
@@ -248,11 +294,49 @@ function App() {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <button className="flex items-center space-x-1 px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition">
-                <Globe className="w-4 h-4 text-gray-600" />
-                <span className="text-gray-600">English</span>
-                <ChevronDown className="w-4 h-4 text-gray-600" />
-              </button>
+              <div className="relative" ref={languageDropdownRef}>
+                <button 
+                  className="flex items-center space-x-1 px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition"
+                  onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
+                >
+                  <Globe className="w-4 h-4 text-gray-600" />
+                  <span className="text-gray-600">{currentLanguage}</span>
+                  <ChevronDown className="w-4 h-4 text-gray-600" />
+                </button>
+                
+                {showLanguageDropdown && (
+                  <div className="absolute right-0 mt-2 py-2 w-48 bg-[#1C1814] rounded-lg shadow-xl z-50 max-h-[400px] overflow-y-auto">
+                    <div className="sticky top-0 bg-[#1C1814] p-2 flex justify-between items-center border-b border-gray-700">
+                      <ChevronDown className="w-5 h-5 text-white transform rotate-180" />
+                      <button 
+                        onClick={() => setShowLanguageDropdown(false)}
+                        className="text-white hover:text-gray-300 transition"
+                      >
+                        <X className="w-5 h-5" />
+                      </button>
+                    </div>
+                    {languages.map((language) => (
+                      <button
+                        key={language}
+                        className={`block w-full text-left px-4 py-2 ${
+                          currentLanguage === language 
+                            ? 'bg-[#E5B06E] text-white' 
+                            : 'text-white hover:bg-gray-700'
+                        } transition`}
+                        onClick={() => {
+                          setCurrentLanguage(language);
+                          setShowLanguageDropdown(false);
+                        }}
+                      >
+                        {language}
+                      </button>
+                    ))}
+                    <div className="sticky bottom-0 bg-[#1C1814] p-2 flex justify-center border-t border-gray-700">
+                      <ChevronDown className="w-5 h-5 text-white" />
+                    </div>
+                  </div>
+                )}
+              </div>
               <button className="px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-90 transition text-white">
                 ce
               </button>
