@@ -322,6 +322,21 @@ function App() {
                   allow="clipboard-write; fullscreen"
                 ></iframe>
                 
+                {/* 覆盖iframe中红框区域的内容 */}
+                <div 
+                  className="absolute top-[65px] left-0 z-50 bg-white" 
+                  style={{ 
+                    height: "60px",
+                    width: "45%",
+                    margin: "0",
+                    boxShadow: "none",
+                    border: "0"
+                  }}
+                >
+                  <div className="flex items-center justify-center h-full text-gray-800 text-xl font-medium">
+                    <span>AI 图像生成</span>
+                  </div>
+                </div>
                 
                 {/* 左侧容器，覆盖iframe内容 */}
                 <div 
