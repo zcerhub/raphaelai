@@ -70,16 +70,38 @@ function App() {
       .then(response => response.json())
       .then(response => {
         console.log("接收响应:", JSON.stringify(response));
-        if (!response.data || !Array.isArray(response.data)) {
-          if (response.data && typeof response.data === 'object') {
-            response = { data: [response.data] };
-          } else {
-            response = { 
-              data: [{url: response.url || "/1 (1).webp"}]
-            };
-          }
+        
+        // 处理API返回的数据
+        let imageData = [];
+        
+        // 如果data是数组且有内容，直接使用
+        if (response.data && Array.isArray(response.data) && response.data.length > 0) {
+          imageData = response.data;
+        } 
+        // 如果data是单个对象，将它放入数组
+        else if (response.data && typeof response.data === 'object') {
+          imageData = [response.data];
         }
-        setResult(response);
+        // 如果有单个URL属性
+        else if (response.url) {
+          imageData = [{ url: response.url }];
+        }
+        // 如果找不到合适的数据，使用默认图片
+        else {
+          imageData = [{ url: "/1 (1).webp" }];
+        }
+        
+        // 确保总是有4张图片（如果API只返回1张，则复制为4张）
+        if (imageData.length === 1) {
+          imageData = [
+            imageData[0],
+            imageData[0],
+            imageData[0],
+            imageData[0]
+          ];
+        }
+        
+        setResult({ data: imageData });
         setIsLoading(false);
       })
       .catch(err => {
