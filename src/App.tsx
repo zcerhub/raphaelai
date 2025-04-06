@@ -83,7 +83,7 @@ function App() {
                 <div>
                   <div className="flex justify-between mb-2">
                   </div>
-                  <div className="relative w-full mx-auto" style={{ maxWidth: "1000px" }}>
+                  <div className="relative" style={{ width: "100%", maxWidth: "1400px", margin: "0 auto" }}>
                     <label className="absolute top-2 left-4 text-sm text-gray-400">Description prompt</label>
                     <textarea
                       placeholder="What do you want to see?"
