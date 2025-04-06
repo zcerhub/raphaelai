@@ -324,10 +324,11 @@ function App() {
                 
                 {/* 广告覆盖层 - 精确定位在底部广告区域上 */}
                 <div 
-                  className="absolute bottom-0 left-0 right-0 z-50 bg-white" 
+                  className="absolute bottom-0 right-0 z-50 bg-white" 
                   style={{ 
                     height: "80px",
-                    width: "100%",
+                    width: "50%",
+                    margin: "0",
                     boxShadow: "0 -4px 6px -1px rgba(0, 0, 0, 0.1)"
                   }}
                 >
