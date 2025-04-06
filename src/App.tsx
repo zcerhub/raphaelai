@@ -292,9 +292,6 @@ function App() {
                           <div className="h-64 flex flex-col items-center justify-center p-4">
                             <div className="w-12 h-12 border-2 border-t-[#E5B06E] border-[#E5B06E]/20 rounded-full animate-spin mb-6"></div>
                             <p className="text-gray-400 text-sm">Estimated time: 20s</p>
-                            <button className="mt-4 px-4 py-2 bg-[#E5B06E] text-white rounded-lg flex items-center gap-2 hover:bg-[#D8A258] transition-colors">
-                              <Zap className="w-4 h-4" /> Generate 5x faster
-                            </button>
                           </div>
                         </div>
                       ))}
