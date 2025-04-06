@@ -2046,7 +2046,7 @@ function App() {
             </div>
 
             {/* Key Features Section */}
-            <div className="py-20 bg-white">
+            <div id="features" className="py-20 bg-white">
               <div className="max-w-[1280px] mx-auto px-4">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
