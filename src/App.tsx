@@ -176,9 +176,125 @@ function App() {
             </div>
 
             <h2 className="text-3xl font-bold mb-4">Get Inspired</h2>
-            <p className="text-gray-400 text-lg mb-16">
+            <p className="text-gray-400 text-lg mb-8">
               Get inspired by what others are creating with Raphael
             </p>
+
+            {/* Image Gallery */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                <img 
+                  src="/1 (1).webp" 
+                  alt="Generated image 1" 
+                  className="w-full h-64 object-cover" 
+                />
+              </div>
+              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                <img 
+                  src="/2 (1).webp" 
+                  alt="Generated image 2" 
+                  className="w-full h-64 object-cover" 
+                />
+              </div>
+              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                <img 
+                  src="/3 (1).webp" 
+                  alt="Generated image 3" 
+                  className="w-full h-64 object-cover" 
+                />
+              </div>
+              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                <img 
+                  src="/4 (1).webp" 
+                  alt="Generated image 4" 
+                  className="w-full h-64 object-cover" 
+                />
+              </div>
+              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                <img 
+                  src="/5 (1).webp" 
+                  alt="Generated image 5" 
+                  className="w-full h-64 object-cover" 
+                />
+              </div>
+              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                <img 
+                  src="/6 (1).webp" 
+                  alt="Generated image 6" 
+                  className="w-full h-64 object-cover" 
+                />
+              </div>
+              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                <img 
+                  src="/7 (1).webp" 
+                  alt="Generated image 7" 
+                  className="w-full h-64 object-cover" 
+                />
+              </div>
+              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                <img 
+                  src="/8 (1).webp" 
+                  alt="Generated image 8" 
+                  className="w-full h-64 object-cover" 
+                />
+              </div>
+              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                <img 
+                  src="/9 (1).webp" 
+                  alt="Generated image 9" 
+                  className="w-full h-64 object-cover" 
+                />
+              </div>
+              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                <img 
+                  src="/10.webp" 
+                  alt="Generated image 10" 
+                  className="w-full h-64 object-cover" 
+                />
+              </div>
+              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                <img 
+                  src="/11.webp" 
+                  alt="Generated image 11" 
+                  className="w-full h-64 object-cover" 
+                />
+              </div>
+              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                <img 
+                  src="/12.webp" 
+                  alt="Generated image 12" 
+                  className="w-full h-64 object-cover" 
+                />
+              </div>
+              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                <img 
+                  src="/13.webp" 
+                  alt="Generated image 13" 
+                  className="w-full h-64 object-cover" 
+                />
+              </div>
+              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                <img 
+                  src="/14.webp" 
+                  alt="Generated image 14" 
+                  className="w-full h-64 object-cover" 
+                />
+              </div>
+              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                <img 
+                  src="/15.webp" 
+                  alt="Generated image 15" 
+                  className="w-full h-64 object-cover" 
+                />
+              </div>
+              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                <img 
+                  src="/16.webp" 
+                  alt="Generated image 16" 
+                  className="w-full h-64 object-cover" 
+                />
+              </div>
+            </div>
 
             {/* Key Features Section */}
             <div className="py-20 bg-[rgb(33,26,20)]">
