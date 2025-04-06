@@ -44,7 +44,7 @@ function App() {
     <div className="min-h-screen bg-[rgb(33,26,20)] text-white">
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-[rgb(33,26,20)]/80 backdrop-blur-lg border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
               <div className="flex items-center">
@@ -74,7 +74,7 @@ function App() {
 
       {/* Main Content */}
       <div className="pt-32 pb-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -180,7 +180,7 @@ function App() {
 
             {/* Key Features Section */}
             <div className="py-20 bg-[rgb(33,26,20)]">
-              <div className="max-w-7xl mx-auto">
+              <div className="max-w-[1280px] mx-auto">
                 <h2 className="text-4xl font-bold mb-4">Key Features of Raphael</h2>
                 <p className="text-xl text-gray-400 mb-16 text-left">
                   Experience the next generation of AI image generation - powerful, free, and privacy-focused.
@@ -282,7 +282,7 @@ function App() {
 
             {/* Testimonials Section */}
             <div className="py-20 bg-[rgb(33,26,20)]">
-              <div className="max-w-7xl mx-auto text-center">
+              <div className="max-w-[1280px] mx-auto text-center">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -434,7 +434,7 @@ function App() {
 
             {/* FAQ Section */}
             <div className="py-20 bg-[rgb(33,26,20)]" id="faqs">
-              <div className="max-w-7xl mx-auto">
+              <div className="max-w-[1280px] mx-auto">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -682,7 +682,7 @@ function App() {
 
             {/* Footer */}
             <footer className="bg-[rgb(33,26,20)] border-t border-white/10 mt-20">
-              <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+              <div className="max-w-[1280px] mx-auto py-12 px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                   <div className="col-span-1 md:col-span-2">
                     <div className="flex items-center mb-4">
