@@ -243,58 +243,6 @@ function App() {
               </div>
             </div>
 
-            {/* Trusted by Millions Section */}
-            <div className="py-20 bg-[rgb(33,26,20)]">
-              <div className="max-w-7xl mx-auto text-center">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <span className="text-yellow-500 font-semibold mb-4 block">Impact</span>
-                  <h2 className="text-4xl font-bold mb-4">Trusted by Millions</h2>
-                  <p className="text-xl text-gray-400 mb-16">
-                    Join the world's largest free AI Image Generator community
-                  </p>
-
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5 }}
-                      className="text-center"
-                    >
-                      <h3 className="text-[#E5B06E] text-6xl font-bold mb-2">3M+</h3>
-                      <p className="text-gray-400 text-lg mb-1">Active Users</p>
-                      <p className="text-gray-500">Monthly Active Users</p>
-                    </motion.div>
-
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.2 }}
-                      className="text-center"
-                    >
-                      <h3 className="text-[#E5B06E] text-6xl font-bold mb-2">1,530</h3>
-                      <p className="text-gray-400 text-lg mb-1">Images Created</p>
-                      <p className="text-gray-500">Images Generated per Minute</p>
-                    </motion.div>
-
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.4 }}
-                      className="text-center"
-                    >
-                      <h3 className="text-[#E5B06E] text-6xl font-bold mb-2">4.9</h3>
-                      <p className="text-gray-400 text-lg mb-1">User Rating</p>
-                      <p className="text-gray-500">Average Image Quality Score</p>
-                    </motion.div>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-
             {/* Testimonials Section */}
             <div className="py-20 bg-[rgb(33,26,20)]">
               <div className="max-w-7xl mx-auto text-center">
