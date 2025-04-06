@@ -145,7 +145,7 @@ function App() {
             <div className="py-20 bg-[rgb(33,26,20)]">
               <div className="max-w-7xl mx-auto">
                 <h2 className="text-4xl font-bold mb-4">Key Features of Raphael</h2>
-                <p className="text-xl text-gray-400 mb-16">
+                <p className="text-xl text-gray-400 mb-16 text-left">
                   Experience the next generation of AI image generation - powerful, free, and privacy-focused.
                 </p>
 
