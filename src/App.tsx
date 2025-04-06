@@ -189,7 +189,26 @@ function App() {
                   </div>
                 </div>
                 
-                {result && (
+                {isLoading && (
+                  <div className="mt-8">
+                    <h3 className="text-xl font-bold mb-4">{prompt}</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      {[...Array(4)].map((_, index) => (
+                        <div key={index} className="bg-[rgb(33,26,20)] rounded-lg overflow-hidden relative">
+                          <div className="h-64 flex flex-col items-center justify-center p-4">
+                            <div className="w-12 h-12 border-2 border-t-yellow-500 border-yellow-500/20 rounded-full animate-spin mb-6"></div>
+                            <p className="text-gray-400 text-sm">Estimated time: 20s</p>
+                            <button className="mt-4 px-4 py-2 bg-yellow-600 text-white rounded-lg flex items-center gap-2">
+                              <Zap className="w-4 h-4" /> Generate 5x faster
+                            </button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {!isLoading && result && (
                   <div className="mt-8">
                     <h3 className="text-xl font-bold mb-4">{prompt}</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -198,7 +217,7 @@ function App() {
                           <img 
                             src={image.url} 
                             alt={`Generated image ${index + 1}`} 
-                            className="w-full h-auto object-contain" 
+                            className="w-full h-64 object-cover" 
                           />
                         </div>
                       ))}
