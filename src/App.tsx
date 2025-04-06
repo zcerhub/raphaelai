@@ -234,7 +234,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white text-black">
-      <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200">
+      <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-lg">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
@@ -296,10 +296,10 @@ function App() {
               <span className="px-3 py-1 rounded-full bg-gray-50 text-purple-500 text-sm">Unlimited Generations</span>
             </div>
 
-            <div className="bg-gray-50 rounded-xl p-6 mb-12 relative shadow-sm">
+            <div className="bg-white p-6 mb-12 relative border-0">
               <h2 className="text-2xl font-bold mb-6 text-left text-gray-800">AI Image Generator</h2>
               
-              <div className="w-full h-[560px] relative overflow-hidden rounded-lg bg-white">
+              <div className="w-full h-[560px] relative overflow-hidden bg-white border-0">
                 <iframe 
                   ref={iframeRef}
                   src="https://raphaelai.org/" 
@@ -380,112 +380,112 @@ function App() {
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-              <div className="bg-gray-100 rounded-lg overflow-hidden shadow-sm">
+              <div className="bg-white rounded-lg overflow-hidden border-0">
                 <img 
                   src="/1 (1).webp" 
                   alt="Generated image 1" 
                   className="w-full h-64 object-cover" 
                 />
               </div>
-              <div className="bg-gray-100 rounded-lg overflow-hidden shadow-sm">
+              <div className="bg-white rounded-lg overflow-hidden border-0">
                 <img 
                   src="/2 (1).webp" 
                   alt="Generated image 2" 
                   className="w-full h-64 object-cover" 
                 />
               </div>
-              <div className="bg-gray-100 rounded-lg overflow-hidden shadow-sm">
+              <div className="bg-white rounded-lg overflow-hidden border-0">
                 <img 
                   src="/3 (1).webp" 
                   alt="Generated image 3" 
                   className="w-full h-64 object-cover" 
                 />
               </div>
-              <div className="bg-gray-100 rounded-lg overflow-hidden shadow-sm">
+              <div className="bg-white rounded-lg overflow-hidden border-0">
                 <img 
                   src="/4 (1).webp" 
                   alt="Generated image 4" 
                   className="w-full h-64 object-cover" 
                 />
               </div>
-              <div className="bg-gray-100 rounded-lg overflow-hidden shadow-sm">
+              <div className="bg-white rounded-lg overflow-hidden border-0">
                 <img 
                   src="/5 (1).webp" 
                   alt="Generated image 5" 
                   className="w-full h-64 object-cover" 
                 />
               </div>
-              <div className="bg-gray-100 rounded-lg overflow-hidden shadow-sm">
+              <div className="bg-white rounded-lg overflow-hidden border-0">
                 <img 
                   src="/6 (1).webp" 
                   alt="Generated image 6" 
                   className="w-full h-64 object-cover" 
                 />
               </div>
-              <div className="bg-gray-100 rounded-lg overflow-hidden shadow-sm">
+              <div className="bg-white rounded-lg overflow-hidden border-0">
                 <img 
                   src="/7 (1).webp" 
                   alt="Generated image 7" 
                   className="w-full h-64 object-cover" 
                 />
               </div>
-              <div className="bg-gray-100 rounded-lg overflow-hidden shadow-sm">
+              <div className="bg-white rounded-lg overflow-hidden border-0">
                 <img 
                   src="/8 (1).webp" 
                   alt="Generated image 8" 
                   className="w-full h-64 object-cover" 
                 />
               </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+              <div className="bg-white overflow-hidden">
                 <img 
                   src="/9 (1).webp" 
                   alt="Generated image 9" 
                   className="w-full h-64 object-cover" 
                 />
               </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+              <div className="bg-white overflow-hidden">
                 <img 
                   src="/10.webp" 
                   alt="Generated image 10" 
                   className="w-full h-64 object-cover" 
                 />
               </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+              <div className="bg-white overflow-hidden">
                 <img 
                   src="/11.webp" 
                   alt="Generated image 11" 
                   className="w-full h-64 object-cover" 
                 />
               </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+              <div className="bg-white overflow-hidden">
                 <img 
                   src="/12.webp" 
                   alt="Generated image 12" 
                   className="w-full h-64 object-cover" 
                 />
               </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+              <div className="bg-white overflow-hidden">
                 <img 
                   src="/13.webp" 
                   alt="Generated image 13" 
                   className="w-full h-64 object-cover" 
                 />
               </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+              <div className="bg-white overflow-hidden">
                 <img 
                   src="/14.webp" 
                   alt="Generated image 14" 
                   className="w-full h-64 object-cover" 
                 />
               </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+              <div className="bg-white overflow-hidden">
                 <img 
                   src="/15.webp" 
                   alt="Generated image 15" 
                   className="w-full h-64 object-cover" 
                 />
               </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+              <div className="bg-white overflow-hidden">
                 <img 
                   src="/16.webp" 
                   alt="Generated image 16" 
@@ -514,7 +514,7 @@ function App() {
                         animate={{ x: -currentTestimonial * 340 }}
                         transition={{ type: "tween", ease: "easeInOut", duration: 0.5 }}
                       >
-                        <div className="bg-gray-50 p-6 rounded-xl shadow-sm w-80 flex-shrink-0">
+                        <div className="bg-white p-6 rounded-xl w-80 flex-shrink-0">
                           <div className="flex items-center mb-4">
                             <img
                               src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
@@ -536,7 +536,7 @@ function App() {
                           </p>
                         </div>
 
-                        <div className="bg-gray-50 p-6 rounded-xl shadow-sm w-80 flex-shrink-0">
+                        <div className="bg-white p-6 rounded-xl w-80 flex-shrink-0">
                           <div className="flex items-center mb-4">
                             <img
                               src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
@@ -558,7 +558,7 @@ function App() {
                           </p>
                         </div>
 
-                        <div className="bg-gray-50 p-6 rounded-xl shadow-sm w-80 flex-shrink-0">
+                        <div className="bg-white p-6 rounded-xl w-80 flex-shrink-0">
                           <div className="flex items-center mb-4">
                             <img
                               src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
@@ -580,7 +580,7 @@ function App() {
                           </p>
                         </div>
 
-                        <div className="bg-gray-50 p-6 rounded-xl shadow-sm w-80 flex-shrink-0">
+                        <div className="bg-white p-6 rounded-xl w-80 flex-shrink-0">
                           <div className="flex items-center mb-4">
                             <img
                               src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
@@ -602,7 +602,7 @@ function App() {
                           </p>
                         </div>
 
-                        <div className="bg-gray-50 p-6 rounded-xl shadow-sm w-80 flex-shrink-0">
+                        <div className="bg-white p-6 rounded-xl w-80 flex-shrink-0">
                           <div className="flex items-center mb-4">
                             <img
                               src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
@@ -660,7 +660,7 @@ function App() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm"
+                    className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
                       <div className="flex-shrink-0 bg-yellow-500/20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
@@ -679,7 +679,7 @@ function App() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm"
+                    className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
                       <div className="flex-shrink-0 bg-yellow-500/20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
@@ -698,7 +698,7 @@ function App() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm"
+                    className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
                       <div className="flex-shrink-0 bg-yellow-500/20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
@@ -717,7 +717,7 @@ function App() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
-                    className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm"
+                    className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
                       <div className="flex-shrink-0 bg-yellow-500/20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
@@ -736,7 +736,7 @@ function App() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
-                    className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm"
+                    className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
                       <div className="flex-shrink-0 bg-yellow-500/20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
@@ -755,7 +755,7 @@ function App() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.5 }}
-                    className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm"
+                    className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
                       <div className="flex-shrink-0 bg-yellow-500/20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
@@ -774,7 +774,7 @@ function App() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.6 }}
-                    className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm"
+                    className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
                       <div className="flex-shrink-0 bg-yellow-500/20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
@@ -793,7 +793,7 @@ function App() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.7 }}
-                    className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm"
+                    className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
                       <div className="flex-shrink-0 bg-yellow-500/20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
@@ -812,7 +812,7 @@ function App() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
-                    className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm"
+                    className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
                       <div className="flex-shrink-0 bg-yellow-500/20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
@@ -831,7 +831,7 @@ function App() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.9 }}
-                    className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm"
+                    className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
                       <div className="flex-shrink-0 bg-yellow-500/20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
@@ -850,7 +850,7 @@ function App() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1.0 }}
-                    className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm"
+                    className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
                       <div className="flex-shrink-0 bg-yellow-500/20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
@@ -869,7 +869,7 @@ function App() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1.1 }}
-                    className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm"
+                    className="bg-white p-6 rounded-lg"
                   >
                     <div className="flex items-start">
                       <div className="flex-shrink-0 bg-yellow-500/20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
@@ -887,7 +887,7 @@ function App() {
               </div>
             </div>
 
-            <footer className="bg-white border-t border-gray-200 mt-20">
+            <footer className="bg-white mt-20">
               <div className="max-w-[1280px] mx-auto py-12 px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                   <div className="col-span-1 md:col-span-2">
@@ -955,7 +955,7 @@ function App() {
                     </ul>
                   </div>
                 </div>
-                <div className="mt-8 pt-8 border-t border-gray-200">
+                <div className="mt-8 pt-8">
                   <p className="text-gray-500 text-sm">
                     © 2024 Raphael AI. All rights reserved.
                   </p>
