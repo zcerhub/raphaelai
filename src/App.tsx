@@ -3,6 +3,12 @@ import { motion } from 'framer-motion';
 import { Brush, Code2, Palette, Sparkles, Download, ChevronRight, Globe, ChevronDown, Image, Shuffle, DollarSign, Star, Languages, Zap, Shield, Paintbrush, Check } from 'lucide-react';
 
 function App() {
+  const [prompt, setPrompt] = React.useState('');
+  
+  const handleClear = () => {
+    setPrompt('');
+  };
+
   return (
     <div className="min-h-screen bg-[rgb(33,26,20)] text-white">
       {/* Navigation */}
@@ -89,6 +95,8 @@ function App() {
                       placeholder="What do you want to see?"
                       className="w-full h-52 bg-[rgb(48,38,30)] rounded-lg p-4 pt-8 text-white text-xl placeholder:text-[rgb(117,106,98)] placeholder:text-xl focus:outline-none"
                       style={{ width: "100%" }}
+                      value={prompt}
+                      onChange={(e) => setPrompt(e.target.value)}
                     />
                   </div>
                 </div>
@@ -123,7 +131,10 @@ function App() {
                     </label>
                   </div>
                   <div className="flex gap-3">
-                    <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
+                    <button 
+                      className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition"
+                      onClick={handleClear}
+                    >
                       Clear
                     </button>
                     <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition flex items-center gap-2">
