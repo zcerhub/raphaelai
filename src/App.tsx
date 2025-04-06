@@ -74,7 +74,7 @@ function App() {
 
             <div className="bg-[rgb(33,26,20)] rounded-xl p-6 pl-4 mb-12 relative">
               <h2 className="text-4xl font-bold mb-8 text-left text-[rgb(237,234,222)]" style={{ marginLeft: '0px' }}>AI Image Generator</h2>
-              <div className="absolute right-6 bottom-[calc(100%-56px)]">
+              <div className="absolute" style={{ right: '24px', bottom: 'calc(100%-56px)' }}>
                 <button className="text-gray-400 hover:text-white bg-[rgb(48,38,30)] p-2 rounded-full flex items-center justify-center">
                   <Image className="w-5 h-5 text-white" />
                 </button>
