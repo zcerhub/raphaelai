@@ -324,7 +324,7 @@ function App() {
                 
                 {/* 覆盖iframe中红框区域的内容 */}
                 <div 
-                  className="absolute top-[50px] left-0 z-50 bg-black" 
+                  className="absolute top-[-10px] left-0 z-50 bg-black" 
                   style={{ 
                     height: "60px",
                     width: "45%",
