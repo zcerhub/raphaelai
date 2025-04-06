@@ -7,6 +7,8 @@ function App() {
   const [currentTestimonial, setCurrentTestimonial] = React.useState(0);
   const [isLoading, setIsLoading] = React.useState(false);
   const [result, setResult] = React.useState<{data?: Array<{url: string}>, error?: string} | null>(null);
+  const [retryCount, setRetryCount] = React.useState(0);
+  const maxRetries = 3;
   
   const promptOptions = [
     "A polar fox walking through a snowy landscape, with pristine white fur and alert eyes.",
@@ -42,7 +44,7 @@ function App() {
     setPrompt(promptOptions[randomIndex]);
   };
 
-  const handleGenerate = () => {
+  const generateImage = (shouldRetry = true, retry = 0) => {
     if (!prompt) return;
     
     setIsLoading(true);
@@ -64,12 +66,35 @@ function App() {
       })
     };
 
-    console.log("发送请求:", options);
+    console.log(`发送请求 (重试: ${retry}/${maxRetries}):`, options);
 
     fetch('https://api.siliconflow.cn/v1/images/generations', options)
       .then(response => response.json())
       .then(response => {
         console.log("接收响应:", JSON.stringify(response));
+        
+        // 检查是否有错误
+        if (response.code === 50604 || (response.message && response.message.includes("rate limiting"))) {
+          // 如果是频率限制错误且应该重试
+          if (shouldRetry && retry < maxRetries) {
+            console.log(`API频率限制，${2000 * (retry + 1)}ms后重试...`);
+            setRetryCount(retry + 1);
+            // 等待一段时间后重试
+            setTimeout(() => {
+              generateImage(shouldRetry, retry + 1);
+            }, 2000 * (retry + 1)); // 指数退避
+            return;
+          } else {
+            // 达到最大重试次数或不应该重试
+            setResult({
+              data: [],
+              error: "Rate limit reached. Please try again later."
+            });
+            setIsLoading(false);
+            setRetryCount(0);
+            return;
+          }
+        }
         
         // 处理API返回的数据
         let imageData = [];
@@ -85,6 +110,16 @@ function App() {
         // 如果有单个URL属性
         else if (response.url) {
           imageData = [{ url: response.url }];
+        }
+        // 如果找不到合适的数据，但有其他错误
+        else if (response.message || response.error) {
+          setResult({
+            data: [],
+            error: response.message || response.error || "Failed to generate images"
+          });
+          setIsLoading(false);
+          setRetryCount(0);
+          return;
         }
         // 如果找不到合适的数据，使用默认图片
         else {
@@ -103,15 +138,36 @@ function App() {
         
         setResult({ data: imageData });
         setIsLoading(false);
+        setRetryCount(0);
       })
       .catch(err => {
         console.error("请求错误:", err);
-        setIsLoading(false);
-        setResult({ 
-          data: [], 
-          error: err.message || "Failed to generate images" 
-        });
+        
+        // 如果应该重试且未达到最大重试次数
+        if (shouldRetry && retry < maxRetries) {
+          console.log(`请求失败，${2000 * (retry + 1)}ms后重试...`);
+          setRetryCount(retry + 1);
+          // 等待一段时间后重试
+          setTimeout(() => {
+            generateImage(shouldRetry, retry + 1);
+          }, 2000 * (retry + 1)); // 指数退避
+        } else {
+          setIsLoading(false);
+          setRetryCount(0);
+          setResult({ 
+            data: [], 
+            error: err.message || "Failed to generate images" 
+          });
+        }
       });
+  };
+
+  const handleGenerate = () => {
+    generateImage(true, 0);
+  };
+
+  const handleRetry = () => {
+    generateImage(true, 0);
   };
 
   return (
@@ -229,7 +285,7 @@ function App() {
                 
                 {isLoading && (
                   <div className="mt-8">
-                    <h3 className="text-xl font-bold mb-4 text-left">{prompt}</h3>
+                    <h3 className="text-xl font-bold mb-4 text-left">{prompt} {retryCount > 0 ? `(Retry ${retryCount}/${maxRetries})` : ''}</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       {[...Array(4)].map((_, index) => (
                         <div key={index} className="bg-[rgb(25,20,16)] rounded-lg overflow-hidden relative border border-[rgb(48,38,30)]">
@@ -246,35 +302,44 @@ function App() {
                   </div>
                 )}
                 
-                {!isLoading && result && (
+                {!isLoading && result && result.error && (
                   <div className="mt-8">
                     <h3 className="text-xl font-bold mb-4 text-left">{prompt}</h3>
-                    {result.error ? (
-                      <div className="bg-[rgb(48,38,30)] rounded-lg p-6 text-left">
-                        <p className="text-red-400">
-                          {result.error === "Request was rejected due to rate limiting. Details: IPM limit reached." ? 
-                            "Rate limit reached. Please try again later." : result.error}
-                        </p>
-                      </div>
-                    ) : (
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        {result.data && result.data.length > 0 ? (
-                          result.data.map((image, index) => (
-                            <div key={index} className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                              <img 
-                                src={image.url} 
-                                alt={`Generated image ${index + 1}`} 
-                                className="w-full h-64 object-cover" 
-                              />
-                            </div>
-                          ))
-                        ) : (
-                          <div className="col-span-4 text-left text-gray-400">
-                            No images generated. Please try again.
+                    <div className="bg-[rgb(48,38,30)] rounded-lg p-6 text-left">
+                      <p className="text-red-400 mb-4">
+                        {result.error === "Request was rejected due to rate limiting. Details: IPM limit reached." ? 
+                          "Rate limit reached. Please try again later." : result.error}
+                      </p>
+                      <button 
+                        onClick={handleRetry}
+                        className="px-4 py-2 rounded-lg bg-[#E5B06E] text-white hover:bg-[#D8A258] transition-colors"
+                      >
+                        Retry
+                      </button>
+                    </div>
+                  </div>
+                )}
+                
+                {!isLoading && result && !result.error && (
+                  <div className="mt-8">
+                    <h3 className="text-xl font-bold mb-4 text-left">{prompt}</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      {result.data && result.data.length > 0 ? (
+                        result.data.map((image, index) => (
+                          <div key={index} className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                            <img 
+                              src={image.url} 
+                              alt={`Generated image ${index + 1}`} 
+                              className="w-full h-64 object-cover" 
+                            />
                           </div>
-                        )}
-                      </div>
-                    )}
+                        ))
+                      ) : (
+                        <div className="col-span-4 text-left text-gray-400">
+                          No images generated. Please try again.
+                        </div>
+                      )}
+                    </div>
                   </div>
                 )}
               </div>
