@@ -6,7 +6,7 @@ function App() {
   const [prompt, setPrompt] = React.useState('');
   const [currentTestimonial, setCurrentTestimonial] = React.useState(0);
   const [isLoading, setIsLoading] = React.useState(false);
-  const [result, setResult] = React.useState<{data?: Array<{url: string}>} | null>(null);
+  const [result, setResult] = React.useState<{data?: Array<{url: string}>, error?: string} | null>(null);
   
   const promptOptions = [
     "A polar fox walking through a snowy landscape, with pristine white fur and alert eyes.",
@@ -46,6 +46,7 @@ function App() {
     if (!prompt) return;
     
     setIsLoading(true);
+    setResult(null);
     
     const options = {
       method: 'POST',
@@ -63,16 +64,31 @@ function App() {
       })
     };
 
+    console.log("发送请求:", options);
+
     fetch('https://api.siliconflow.cn/v1/images/generations', options)
       .then(response => response.json())
       .then(response => {
-        console.log(response);
+        console.log("接收响应:", JSON.stringify(response));
+        if (!response.data || !Array.isArray(response.data)) {
+          if (response.data && typeof response.data === 'object') {
+            response = { data: [response.data] };
+          } else {
+            response = { 
+              data: [{url: response.url || "/1 (1).webp"}]
+            };
+          }
+        }
         setResult(response);
         setIsLoading(false);
       })
       .catch(err => {
-        console.error(err);
+        console.error("请求错误:", err);
         setIsLoading(false);
+        setResult({ 
+          data: [], 
+          error: err.message || "Failed to generate images" 
+        });
       });
   };
 
@@ -191,14 +207,14 @@ function App() {
                 
                 {isLoading && (
                   <div className="mt-8">
-                    <h3 className="text-xl font-bold mb-4">{prompt}</h3>
+                    <h3 className="text-xl font-bold mb-4 text-left">{prompt}</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       {[...Array(4)].map((_, index) => (
-                        <div key={index} className="bg-[rgb(33,26,20)] rounded-lg overflow-hidden relative">
+                        <div key={index} className="bg-[rgb(25,20,16)] rounded-lg overflow-hidden relative border border-[rgb(48,38,30)]">
                           <div className="h-64 flex flex-col items-center justify-center p-4">
-                            <div className="w-12 h-12 border-2 border-t-yellow-500 border-yellow-500/20 rounded-full animate-spin mb-6"></div>
+                            <div className="w-12 h-12 border-2 border-t-yellow-600 border-yellow-600/20 rounded-full animate-spin mb-6"></div>
                             <p className="text-gray-400 text-sm">Estimated time: 20s</p>
-                            <button className="mt-4 px-4 py-2 bg-yellow-600 text-white rounded-lg flex items-center gap-2">
+                            <button className="mt-4 px-4 py-2 bg-yellow-600 text-white rounded-lg flex items-center gap-2 hover:bg-yellow-700 transition-colors">
                               <Zap className="w-4 h-4" /> Generate 5x faster
                             </button>
                           </div>
@@ -210,17 +226,23 @@ function App() {
                 
                 {!isLoading && result && (
                   <div className="mt-8">
-                    <h3 className="text-xl font-bold mb-4">{prompt}</h3>
+                    <h3 className="text-xl font-bold mb-4 text-left">{prompt}</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      {result.data?.map((image, index) => (
-                        <div key={index} className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                          <img 
-                            src={image.url} 
-                            alt={`Generated image ${index + 1}`} 
-                            className="w-full h-64 object-cover" 
-                          />
+                      {result && result.data && result.data.length > 0 ? (
+                        result.data.map((image, index) => (
+                          <div key={index} className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                            <img 
+                              src={image.url} 
+                              alt={`Generated image ${index + 1}`} 
+                              className="w-full h-64 object-cover" 
+                            />
+                          </div>
+                        ))
+                      ) : (
+                        <div className="col-span-4 text-left text-gray-400">
+                          {result && result.error ? result.error : "No images generated. Please try again."}
                         </div>
-                      ))}
+                      )}
                     </div>
                   </div>
                 )}
