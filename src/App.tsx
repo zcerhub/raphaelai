@@ -37,7 +37,7 @@ function App() {
 
       {/* Main Content */}
       <div className="pt-32 pb-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -83,11 +83,12 @@ function App() {
                 <div>
                   <div className="flex justify-between mb-2">
                   </div>
-                  <div className="relative" style={{ width: "100%", maxWidth: "1400px", margin: "0 auto" }}>
+                  <div className="relative w-full" style={{ maxWidth: "100%" }}>
                     <label className="absolute top-2 left-4 text-sm text-gray-400">Description prompt</label>
                     <textarea
                       placeholder="What do you want to see?"
                       className="w-full h-40 bg-[rgb(48,38,30)] rounded-lg p-4 pt-8 text-white placeholder-gray-500 focus:outline-none"
+                      style={{ width: "100%" }}
                     />
                   </div>
                 </div>
