@@ -87,7 +87,7 @@ function App() {
                     <label className="absolute top-2 left-4 text-sm text-gray-400">Description prompt</label>
                     <textarea
                       placeholder="What do you want to see?"
-                      className="w-full h-52 bg-[rgb(48,38,30)] rounded-lg p-4 pt-8 text-white text-lg placeholder:text-[rgb(117,106,98)] placeholder:text-lg focus:outline-none"
+                      className="w-full h-52 bg-[rgb(48,38,30)] rounded-lg p-4 pt-8 text-white text-xl placeholder:text-[rgb(117,106,98)] placeholder:text-xl focus:outline-none"
                       style={{ width: "100%" }}
                     />
                   </div>
