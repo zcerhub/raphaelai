@@ -2,6 +2,64 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Brush, Code2, Palette, Sparkles, Download, ChevronRight, Globe, ChevronDown, Image, Shuffle, DollarSign, Star, Languages, Zap, Shield, Paintbrush, Check, X } from 'lucide-react';
 
+// 添加多语言内容
+const translations = {
+  'English': {
+    features: 'Features',
+    faqs: 'FAQs',
+    title: 'Create stunning AI-generated images in seconds',
+    subtitle: 'World\'s First Unlimited Free AI Image Generator',
+    free: '100% Free',
+    poweredBy: 'Powered by Flux.1 Dev',
+    noLogin: 'No Login Required',
+    unlimited: 'Unlimited Generations',
+    generator: 'AI Image Generator',
+    getInspired: 'Get Inspired',
+    getInspiredDesc: 'Get inspired by what others are creating with Raphael',
+    testimonial: 'Testimonial',
+    testimonialTitle: 'What Users Say About Raphael AI',
+    testimonialDesc: 'Hear from creators and professionals who use our AI Image Generator daily.',
+    faqTitle: 'Frequently Asked Questions',
+    faqContact: 'Have another question? Contact us at support@raphael.app',
+    copyright: '© 2024 Raphael AI. All rights reserved.',
+    footerDesc: 'Create stunning AI-generated images in seconds with the world\'s first unlimited free AI Image Generator.',
+    product: 'Product',
+    company: 'Company',
+    about: 'About',
+    blog: 'Blog',
+    contact: 'Contact',
+    api: 'API',
+    pricing: 'Pricing'
+  },
+  '简体中文': {
+    features: '特点',
+    faqs: '常见问题',
+    title: '几秒钟内创建令人惊叹的AI生成图像',
+    subtitle: '世界首个免费无限制AI图像生成器',
+    free: '100%免费',
+    poweredBy: '由Flux.1 Dev提供支持',
+    noLogin: '无需登录',
+    unlimited: '无限生成',
+    generator: 'AI图像生成器',
+    getInspired: '获取灵感',
+    getInspiredDesc: '从其他人使用Raphael创建的作品中获取灵感',
+    testimonial: '用户评价',
+    testimonialTitle: '用户对Raphael AI的评价',
+    testimonialDesc: '听听每天使用我们AI图像生成器的创作者和专业人士的意见。',
+    faqTitle: '常见问题解答',
+    faqContact: '还有其他问题？请联系我们：support@raphael.app',
+    copyright: '© 2024 Raphael AI. 保留所有权利。',
+    footerDesc: '使用世界首个免费无限制的AI图像生成器，几秒钟内创建令人惊叹的AI生成图像。',
+    product: '产品',
+    company: '公司',
+    about: '关于我们',
+    blog: '博客',
+    contact: '联系我们',
+    api: 'API',
+    pricing: '价格'
+  }
+};
+
 function App() {
   const [prompt, setPrompt] = React.useState('');
   const [currentTestimonial, setCurrentTestimonial] = React.useState(0);
@@ -12,6 +70,9 @@ function App() {
   const [currentLanguage, setCurrentLanguage] = useState('English');
   const maxRetries = 3;
   
+  // 当前语言的文本内容
+  const t = translations[currentLanguage as keyof typeof translations] || translations['English'];
+
   const promptOptions = [
     "A polar fox walking through a snowy landscape, with pristine white fur and alert eyes.",
     "A basketball player captured mid-air during a slam dunk, with a cheering crowd in the background.",
@@ -289,8 +350,8 @@ function App() {
                 <span className="ml-2 text-xl font-bold text-[rgb(204,144,92)]">Raphael AI</span>
               </div>
               <div className="hidden md:flex items-center space-x-4">
-                <a href="#features" className="text-gray-600 hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">Features</a>
-                <a href="#faqs" className="text-gray-600 hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">FAQs</a>
+                <a href="#features" className="text-gray-600 hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">{t.features}</a>
+                <a href="#faqs" className="text-gray-600 hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">{t.faqs}</a>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -355,21 +416,21 @@ function App() {
             </div>
 
             <h1 className="text-2xl md:text-2xl font-bold mb-4 text-gray-800">
-              Create stunning AI-generated images in seconds
+              {t.title}
             </h1>
             <p className="text-lg text-yellow-500 mb-4 flex items-center justify-center gap-2 ">
-              ✨ World's First Unlimited Free AI Image Generator ✨
+              ✨ {t.subtitle} ✨
             </p>
             
             <div className="flex flex-wrap justify-center gap-1 mb-8">
-              <span className="px-3 py-1 rounded-full bg-gray-50 text-yellow-500 text-sm">100% Free</span>
-              <span className="px-3 py-1 rounded-full bg-gray-50 text-emerald-500 text-sm">Powered by Flux.1 Dev</span>
-              <span className="px-3 py-1 rounded-full bg-gray-50 text-blue-500 text-sm">No Login Required</span>
-              <span className="px-3 py-1 rounded-full bg-gray-50 text-purple-500 text-sm">Unlimited Generations</span>
+              <span className="px-3 py-1 rounded-full bg-gray-50 text-yellow-500 text-sm">{t.free}</span>
+              <span className="px-3 py-1 rounded-full bg-gray-50 text-emerald-500 text-sm">{t.poweredBy}</span>
+              <span className="px-3 py-1 rounded-full bg-gray-50 text-blue-500 text-sm">{t.noLogin}</span>
+              <span className="px-3 py-1 rounded-full bg-gray-50 text-purple-500 text-sm">{t.unlimited}</span>
             </div>
 
             <div className="bg-white p-6 mb-12 relative border-0">
-              <h2 className="text-2xl font-bold mb-6 text-left text-gray-800 pl-32">AI Image Generator</h2>
+              <h2 className="text-2xl font-bold mb-6 text-left text-gray-800 pl-32">{t.generator}</h2>
               
               <div className="w-full h-[560px] relative overflow-hidden bg-white border-0">
                 <iframe 
@@ -446,9 +507,9 @@ function App() {
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold mb-4 text-gray-800">Get Inspired</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-800">{t.getInspired}</h2>
             <p className="text-gray-600 text-lg mb-8">
-              Get inspired by what others are creating with Raphael
+              {t.getInspiredDesc}
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
@@ -574,10 +635,10 @@ function App() {
                   viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <span className="text-yellow-500 font-semibold mb-4 block">Testimonial</span>
-                  <h2 className="text-4xl font-bold mb-4 text-gray-800">What Users Say About Raphael AI</h2>
+                  <span className="text-yellow-500 font-semibold mb-4 block">{t.testimonial}</span>
+                  <h2 className="text-4xl font-bold mb-4 text-gray-800">{t.testimonialTitle}</h2>
                   <p className="text-xl text-gray-600 mb-16">
-                    Hear from creators and professionals who use our AI Image Generator daily.
+                    {t.testimonialDesc}
                   </p>
 
                   <div className="relative">
@@ -723,9 +784,9 @@ function App() {
                   className="text-center mb-12"
                 >
                   <span className="inline-block bg-yellow-500/20 text-yellow-500 font-semibold px-4 py-1 rounded-full mb-4">FAQ</span>
-                  <h2 className="text-4xl font-bold mb-4 text-gray-800">Frequently Asked Questions</h2>
+                  <h2 className="text-4xl font-bold mb-4 text-gray-800">{t.faqTitle}</h2>
                   <p className="text-gray-600 text-lg">
-                    Have another question? Contact us at support@raphael.app
+                    {t.faqContact}
                   </p>
                 </motion.div>
 
@@ -982,7 +1043,7 @@ function App() {
                       <span className="ml-2 text-xl font-bold text-gray-800">Raphael AI</span>
                     </div>
                     <p className="text-gray-600 mb-4">
-                      Create stunning AI-generated images in seconds with the world's first unlimited free AI Image Generator.
+                      {t.footerDesc}
                     </p>
                     <div className="flex space-x-4">
                       <a href="#" className="text-gray-500 hover:text-gray-800 transition">
@@ -998,44 +1059,44 @@ function App() {
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-                      Product
+                      {t.product}
                     </h3>
                     <ul className="space-y-4">
                       <li>
                         <a href="#" className="text-gray-500 hover:text-gray-800 transition">
-                          Features
+                          {t.features}
                         </a>
                       </li>
                       <li>
                         <a href="#" className="text-gray-500 hover:text-gray-800 transition">
-                          Pricing
+                          {t.pricing}
                         </a>
                       </li>
                       <li>
                         <a href="#" className="text-gray-500 hover:text-gray-800 transition">
-                          API
+                          {t.api}
                         </a>
                       </li>
                     </ul>
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-                      Company
+                      {t.company}
                     </h3>
                     <ul className="space-y-4">
                       <li>
                         <a href="#" className="text-gray-500 hover:text-gray-800 transition">
-                          About
+                          {t.about}
                         </a>
                       </li>
                       <li>
                         <a href="#" className="text-gray-500 hover:text-gray-800 transition">
-                          Blog
+                          {t.blog}
                         </a>
                       </li>
                       <li>
                         <a href="#" className="text-gray-500 hover:text-gray-800 transition">
-                          Contact
+                          {t.contact}
                         </a>
                       </li>
                     </ul>
@@ -1043,7 +1104,7 @@ function App() {
                 </div>
                 <div className="mt-8 pt-8">
                   <p className="text-gray-500 text-sm">
-                    © 2024 Raphael AI. All rights reserved.
+                    {t.copyright}
                   </p>
                 </div>
               </div>
