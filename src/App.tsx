@@ -322,20 +322,6 @@ function App() {
                   allow="clipboard-write; fullscreen"
                 ></iframe>
                 
-
-                
-                {/* 覆盖iframe中Generate按钮下方的内容 */}
-                <div 
-                  className="absolute top-[310px] left-0 right-0 z-50 bg-white" 
-                  style={{ 
-                    height: "150px",
-                    width: "95%",
-                    margin: "0 auto",
-                    boxShadow: "none",
-                    border: "0"
-                  }}
-                >
-                </div>
                 
                 {/* 左侧容器，覆盖iframe内容 */}
                 <div 
