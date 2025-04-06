@@ -285,7 +285,7 @@ function App() {
                     <h3 className="text-xl font-bold mb-4 text-left">{prompt} {retryCount > 0 ? `(Retry ${retryCount}/${maxRetries})` : ''}</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       {[...Array(4)].map((_, index) => (
-                        <div key={index} className="bg-[rgb(25,20,16)] rounded-lg overflow-hidden relative border border-[rgb(48,38,30)]">
+                        <div key={index} className="bg-[rgb(44,36,27)] rounded-lg overflow-hidden relative border border-[rgb(48,38,30)]">
                           <div className="h-64 flex flex-col items-center justify-center p-4">
                             <div className="w-12 h-12 border-2 border-t-[#E5B06E] border-[#E5B06E]/20 rounded-full animate-spin mb-6"></div>
                             <p className="text-gray-400 text-sm">Estimated time: 20s</p>
