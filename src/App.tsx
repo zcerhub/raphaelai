@@ -282,7 +282,7 @@ function App() {
                 
                 {isLoading && (
                   <div className="mt-8">
-                    <h3 className="text-xl font-bold mb-4 text-left">{prompt} {retryCount > 0 ? `(Retry ${retryCount}/${maxRetries})` : ''}</h3>
+                    <h3 className="text-xl font-bold mb-4 text-left">{prompt}</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       {[...Array(4)].map((_, index) => (
                         <div key={index} className="bg-[rgb(44,36,27)] rounded-lg overflow-hidden relative border border-[rgb(48,38,30)]">
