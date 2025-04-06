@@ -1644,7 +1644,7 @@ function App() {
             </div>
 
             {/* Key Features Section */}
-            <div className="py-20 bg-[#1C1917]">
+            <div className="py-20 bg-white">
               <div className="max-w-[1280px] mx-auto px-4">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -1653,8 +1653,8 @@ function App() {
                   transition={{ duration: 0.5 }}
                   className="text-center mb-16"
                 >
-                  <h2 className="text-4xl font-bold mb-4 text-white">Key Features of Raphael</h2>
-                  <p className="text-xl text-gray-400">
+                  <h2 className="text-4xl font-bold mb-4 text-gray-900">Key Features of Raphael</h2>
+                  <p className="text-xl text-gray-600">
                     Experience the next generation of AI image generation - powerful, free, and privacy-focused.
                   </p>
                 </motion.div>
@@ -1665,13 +1665,13 @@ function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="text-center"
+                    className="flex flex-col"
                   >
-                    <div className="w-16 h-16 mx-auto mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
+                    <div className="w-16 h-16 mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
                       <DollarSign className="w-8 h-8 text-[#E5B06E]" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 text-white">Zero-Cost Creation</h3>
-                    <p className="text-gray-400">
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Zero-Cost Creation</h3>
+                    <p className="text-gray-600">
                       The world's first completely free AI image generator with no usage limits or registration requirements.
                     </p>
                   </motion.div>
@@ -1681,13 +1681,13 @@ function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="text-center"
+                    className="flex flex-col"
                   >
-                    <div className="w-16 h-16 mx-auto mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
+                    <div className="w-16 h-16 mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
                       <Star className="w-8 h-8 text-[#E5B06E]" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 text-white">State-of-the-Art Quality</h3>
-                    <p className="text-gray-400">
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">State-of-the-Art Quality</h3>
+                    <p className="text-gray-600">
                       Powered by FLUX.1-Dev model, delivering photorealistic images with exceptional detail and artistic style control.
                     </p>
                   </motion.div>
@@ -1697,13 +1697,13 @@ function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
-                    className="text-center"
+                    className="flex flex-col"
                   >
-                    <div className="w-16 h-16 mx-auto mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
+                    <div className="w-16 h-16 mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
                       <Languages className="w-8 h-8 text-[#E5B06E]" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 text-white">Advanced Text Understanding</h3>
-                    <p className="text-gray-400">
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Advanced Text Understanding</h3>
+                    <p className="text-gray-600">
                       Superior text-to-image capabilities with accurate interpretation of complex prompts and text overlay features.
                     </p>
                   </motion.div>
@@ -1713,13 +1713,13 @@ function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
-                    className="text-center"
+                    className="flex flex-col"
                   >
-                    <div className="w-16 h-16 mx-auto mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
+                    <div className="w-16 h-16 mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
                       <Zap className="w-8 h-8 text-[#E5B06E]" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 text-white">Lightning-Fast Generation</h3>
-                    <p className="text-gray-400">
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Lightning-Fast Generation</h3>
+                    <p className="text-gray-600">
                       Optimized inference pipeline ensuring rapid image generation without compromising quality.
                     </p>
                   </motion.div>
@@ -1729,13 +1729,13 @@ function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.5, delay: 0.5 }}
-                    className="text-center"
+                    className="flex flex-col"
                   >
-                    <div className="w-16 h-16 mx-auto mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
+                    <div className="w-16 h-16 mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
                       <Shield className="w-8 h-8 text-[#E5B06E]" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 text-white">Enhanced Privacy Protection</h3>
-                    <p className="text-gray-400">
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Enhanced Privacy Protection</h3>
+                    <p className="text-gray-600">
                       Zero data retention policy - your prompts and generated images are never stored on our servers.
                     </p>
                   </motion.div>
@@ -1745,13 +1745,13 @@ function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.5, delay: 0.6 }}
-                    className="text-center"
+                    className="flex flex-col"
                   >
-                    <div className="w-16 h-16 mx-auto mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
+                    <div className="w-16 h-16 mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
                       <Paintbrush className="w-8 h-8 text-[#E5B06E]" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 text-white">Multi-Style Support</h3>
-                    <p className="text-gray-400">
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Multi-Style Support</h3>
+                    <p className="text-gray-600">
                       Create images across various artistic styles, from photorealistic to anime, oil paintings to digital art.
                     </p>
                   </motion.div>
