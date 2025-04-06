@@ -325,7 +325,7 @@ function App() {
                 
                 {/* 左侧容器，覆盖iframe内容 */}
                 <div 
-                  className="absolute bottom-0 left-auto right-[56%] z-50 bg-black" 
+                  className="absolute bottom-0 left-auto right-[58%] z-50 bg-black" 
                   style={{ 
                     height: "40px",
                     width: "44%",
