@@ -340,7 +340,7 @@ function App() {
                 
                 {/* 左侧容器，覆盖iframe内容 */}
                 <div 
-                  className="absolute bottom-0 left-auto right-[49%] z-50 bg-black" 
+                  className="absolute bottom-0 left-auto right-[49%] z-50 bg-white" 
                   style={{ 
                     height: "40px",
                     width: "47%",
@@ -351,7 +351,7 @@ function App() {
                 >
                   {/* 可以添加自定义内容 */}
                   <div className="flex items-center justify-center h-full text-gray-600 text-sm">
-                    <span>Image processing by Raphael</span>
+                    {/* <span>Image processing by Raphael</span> */}
                   </div>
                 </div>
                 
@@ -368,7 +368,7 @@ function App() {
                 >
                   {/* 可选：添加一些自定义内容到覆盖层 */}
                   <div className="flex items-center justify-center h-full text-gray-600 text-sm">
-                    <span>Images powered by Raphael AI</span>
+                    {/* <span>Images powered by Raphael AI</span> */}
                   </div>
                 </div>
               </div>
