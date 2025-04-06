@@ -45,8 +45,40 @@ function App() {
                 iframeWindow.scrollTo(0, 530);
                 return false;
               }, true);
+              
+              // 尝试注入CSS来隐藏广告区域
+              const iframeDocument = iframeRef.current.contentDocument || iframeWindow.document;
+              if (iframeDocument) {
+                const style = iframeDocument.createElement('style');
+                style.textContent = `
+                  /* 隐藏底部广告区域 */
+                  div[style*="position: absolute"][style*="bottom"],
+                  div[style*="position:absolute"][style*="bottom"],
+                  .ad-container,
+                  .advertisement,
+                  div[id*="ad-container"],
+                  div[class*="ad-container"],
+                  div[class*="adsbygoogle"],
+                  iframe[id*="google_ads"],
+                  div[id*="banner"],
+                  div[class*="banner"],
+                  div[style*="border: 1px solid red"],
+                  div[style*="border:1px solid red"] {
+                    display: none !important;
+                    visibility: hidden !important;
+                    opacity: 0 !important;
+                    pointer-events: none !important;
+                    height: 0 !important;
+                    width: 0 !important;
+                    max-height: 0 !important;
+                    max-width: 0 !important;
+                    overflow: hidden !important;
+                  }
+                `;
+                iframeDocument.head.appendChild(style);
+              }
             } catch (e) {
-              console.log("无法添加滚动事件监听器，这是正常的跨域限制");
+              console.log("无法添加滚动事件监听器或注入CSS，这是正常的跨域限制");
             }
           }
         } catch (e) {
