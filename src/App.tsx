@@ -120,11 +120,13 @@ function App() {
                 <div>
                   <div className="flex justify-between mb-2">
                   </div>
-                  <div className="relative w-full mx-auto" style={{ maxWidth: "800px" }}>
+                  <div className="relative w-full mx-auto">
                     <label className="absolute top-2 left-4 text-sm text-gray-400">Description prompt</label>
                     <textarea
                       placeholder="What do you want to see?"
-                      className="w-full h-48 bg-[rgb(48,38,30)] rounded-lg p-4 pt-8 text-white placeholder-gray-500 focus:outline-none"
+                      className="w-full h-48 bg-[rgb(48,38,30)] rounded-lg p-4 pt-8 text-white text-xl placeholder:text-[rgb(117,106,98)] placeholder:text-xl focus:outline-none"
+                      value={prompt}
+                      onChange={(e) => setPrompt(e.target.value)}
                     />
                   </div>
                 </div>
