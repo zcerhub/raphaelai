@@ -299,7 +299,7 @@ function App() {
             <div className="bg-[rgb(33,26,20)] rounded-xl p-6 mb-12 relative">
               <h2 className="text-2xl font-bold mb-6 text-left text-[rgb(237,234,222)]">AI Image Generator</h2>
               
-              <div className="w-full h-[520px] relative overflow-hidden rounded-lg bg-white">
+              <div className="w-full h-[560px] relative overflow-hidden rounded-lg bg-white">
                 <iframe 
                   ref={iframeRef}
                   src="https://raphaelai.org/" 
