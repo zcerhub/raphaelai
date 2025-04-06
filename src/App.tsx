@@ -82,12 +82,14 @@ function App() {
               <div className="space-y-6">
                 <div>
                   <div className="flex justify-between mb-2">
-                    <label className="text-sm text-gray-400" style={{ marginLeft: '-20px' }}>Description prompt</label>
                   </div>
-                  <textarea
-                    placeholder="What do you want to see?"
-                    className="w-full h-32 bg-[rgb(48,38,30)] rounded-lg p-4 text-white placeholder-gray-500 focus:outline-none"
-                  />
+                  <div className="relative">
+                    <label className="absolute top-2 left-4 text-sm text-gray-400">Description prompt</label>
+                    <textarea
+                      placeholder="What do you want to see?"
+                      className="w-full h-32 bg-[rgb(48,38,30)] rounded-lg p-4 pt-8 text-white placeholder-gray-500 focus:outline-none"
+                    />
+                  </div>
                 </div>
 
                 <div className="flex flex-wrap gap-3">
