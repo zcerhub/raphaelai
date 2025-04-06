@@ -432,6 +432,162 @@ function App() {
               </div>
             </div>
 
+            {/* FAQ Section */}
+            <div className="py-20 bg-[rgb(33,26,20)]" id="faqs">
+              <div className="max-w-7xl mx-auto">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-center mb-12"
+                >
+                  <span className="inline-block bg-yellow-500/20 text-yellow-500 font-semibold px-4 py-1 rounded-full mb-4">FAQ</span>
+                  <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+                  <p className="text-gray-400 text-lg">
+                    Have another question? Contact us at support@raphael.app
+                  </p>
+                </motion.div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="bg-[rgb(33,26,20)] p-6 rounded-lg border border-white/10"
+                  >
+                    <div className="flex items-start">
+                      <span className="flex-shrink-0 bg-yellow-500/20 text-yellow-500 text-sm font-semibold w-8 h-8 rounded-full flex items-center justify-center mr-4">1</span>
+                      <div>
+                        <h3 className="text-xl font-bold mb-3">What is Raphael AI and how does it work?</h3>
+                        <p className="text-gray-400">
+                          Raphael AI is the world's first completely free, unlimited AI image generator powered by the FLUX.1-Dev model. It allows you to create high-quality images from text descriptions without any registration or usage limits.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    className="bg-[rgb(33,26,20)] p-6 rounded-lg border border-white/10"
+                  >
+                    <div className="flex items-start">
+                      <span className="flex-shrink-0 bg-yellow-500/20 text-yellow-500 text-sm font-semibold w-8 h-8 rounded-full flex items-center justify-center mr-4">2</span>
+                      <div>
+                        <h3 className="text-xl font-bold mb-3">Is Raphael AI really free to use?</h3>
+                        <p className="text-gray-400">
+                          Yes, Raphael AI is completely free to use! We are committed to being the world's largest and most powerful free AI Image Generator. There are no hidden fees, no credit card required, and no usage limits.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="bg-[rgb(33,26,20)] p-6 rounded-lg border border-white/10"
+                  >
+                    <div className="flex items-start">
+                      <span className="flex-shrink-0 bg-yellow-500/20 text-yellow-500 text-sm font-semibold w-8 h-8 rounded-full flex items-center justify-center mr-4">3</span>
+                      <div>
+                        <h3 className="text-xl font-bold mb-3">What makes Raphael AI different from other AI image generators?</h3>
+                        <p className="text-gray-400">
+                          Raphael AI is the only platform offering unlimited free access to the powerful FLUX.1-Dev model. We provide superior image quality, fast generation speed, and complete privacy protection, all without any cost or registration requirements.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="bg-[rgb(33,26,20)] p-6 rounded-lg border border-white/10"
+                  >
+                    <div className="flex items-start">
+                      <span className="flex-shrink-0 bg-yellow-500/20 text-yellow-500 text-sm font-semibold w-8 h-8 rounded-full flex items-center justify-center mr-4">4</span>
+                      <div>
+                        <h3 className="text-xl font-bold mb-3">Do I need to create an account to use Raphael AI?</h3>
+                        <p className="text-gray-400">
+                          No, you don't need to create an account or register. Simply visit raphael.app and start generating images immediately. We believe in making AI accessible to everyone without barriers.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    className="bg-[rgb(33,26,20)] p-6 rounded-lg border border-white/10"
+                  >
+                    <div className="flex items-start">
+                      <span className="flex-shrink-0 bg-yellow-500/20 text-yellow-500 text-sm font-semibold w-8 h-8 rounded-full flex items-center justify-center mr-4">5</span>
+                      <div>
+                        <h3 className="text-xl font-bold mb-3">What types of images can I create with Raphael AI?</h3>
+                        <p className="text-gray-400">
+                          You can create a wide variety of images including photorealistic scenes, artistic illustrations, digital art, anime-style images, and more. The FLUX.1-Dev model excels at understanding complex prompts and generating diverse visual styles.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    className="bg-[rgb(33,26,20)] p-6 rounded-lg border border-white/10"
+                  >
+                    <div className="flex items-start">
+                      <span className="flex-shrink-0 bg-yellow-500/20 text-yellow-500 text-sm font-semibold w-8 h-8 rounded-full flex items-center justify-center mr-4">6</span>
+                      <div>
+                        <h3 className="text-xl font-bold mb-3">How does Raphael AI protect my privacy?</h3>
+                        <p className="text-gray-400">
+                          We take privacy seriously. We don't store your prompts or generated images on our servers, and we don't require any personal information. Your creations remain completely private and are deleted after generation.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.6 }}
+                    className="bg-[rgb(33,26,20)] p-6 rounded-lg border border-white/10"
+                  >
+                    <div className="flex items-start">
+                      <span className="flex-shrink-0 bg-yellow-500/20 text-yellow-500 text-sm font-semibold w-8 h-8 rounded-full flex items-center justify-center mr-4">7</span>
+                      <div>
+                        <h3 className="text-xl font-bold mb-3">What is the FLUX.1-Dev model?</h3>
+                        <p className="text-gray-400">
+                          FLUX.1-Dev is a state-of-the-art AI model known for its exceptional image quality, prompt accuracy, and style versatility. It's typically expensive to use, but Raphael makes it freely available to everyone.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.7 }}
+                    className="bg-[rgb(33,26,20)] p-6 rounded-lg border border-white/10"
+                  >
+                    <div className="flex items-start">
+                      <span className="flex-shrink-0 bg-yellow-500/20 text-yellow-500 text-sm font-semibold w-8 h-8 rounded-full flex items-center justify-center mr-4">8</span>
+                      <div>
+                        <h3 className="text-xl font-bold mb-3">Are there any limitations to using Raphael AI?</h3>
+                        <p className="text-gray-400">
+                          While Raphael AI is free and unlimited, we maintain standard content guidelines to ensure appropriate use. The platform is designed for web use currently, with mobile apps planned for the future.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+
             {/* Pricing Section */}
             <div className="py-20 bg-[rgb(33,26,20)]">
               <div className="max-w-7xl mx-auto text-center">
