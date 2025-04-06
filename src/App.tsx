@@ -239,7 +239,7 @@ function App() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
               <div className="flex items-center">
-                <img src="/logo.webp" alt="Raphael AI" className="w-8 h-8 rounded-full" />
+                <img src="/raphael.png" alt="Raphael AI" className="w-8 h-8 rounded-full" />
                 <span className="ml-2 text-xl font-bold text-[rgb(204,144,92)]">Raphael AI</span>
               </div>
               <div className="hidden md:flex items-center space-x-4">
@@ -271,7 +271,7 @@ function App() {
             <div className="flex items-center justify-center mb-5">
               <div className="flex items-center bg-gray-50 px-8 py-4 rounded-lg border border-gray-200">
                 <img
-                  src="/logo.webp"
+                  src="/raphael.png"
                   alt="Raphael AI"
                   className="w-16 h-16 rounded-full"
                 />
@@ -892,7 +892,7 @@ function App() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                   <div className="col-span-1 md:col-span-2">
                     <div className="flex items-center mb-4">
-                      <img src="/logo.webp" alt="Raphael AI" className="w-8 h-8 rounded-full" />
+                      <img src="/raphael.png" alt="Raphael AI" className="w-8 h-8 rounded-full" />
                       <span className="ml-2 text-xl font-bold text-gray-800">Raphael AI</span>
                     </div>
                     <p className="text-gray-600 mb-4">
