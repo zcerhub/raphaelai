@@ -85,13 +85,12 @@ function App() {
             }, 2000 * (retry + 1)); // 指数退避
             return;
           } else {
-            // 达到最大重试次数或不应该重试
-            setResult({
-              data: [],
-              error: "Rate limit reached. Please try again later."
-            });
-            setIsLoading(false);
-            setRetryCount(0);
+            // 达到最大重试次数但继续显示加载状态
+            console.log("达到最大重试次数，继续显示加载状态");
+            // 不设置错误信息，保持isLoading为true，5秒后重试
+            setTimeout(() => {
+              generateImage(true, 0);
+            }, 5000);
             return;
           }
         }
@@ -113,12 +112,11 @@ function App() {
         }
         // 如果找不到合适的数据，但有其他错误
         else if (response.message || response.error) {
-          setResult({
-            data: [],
-            error: response.message || response.error || "Failed to generate images"
-          });
-          setIsLoading(false);
-          setRetryCount(0);
+          console.log("API返回错误，继续显示加载状态并重试");
+          // 继续显示加载状态，5秒后重试
+          setTimeout(() => {
+            generateImage(true, 0);
+          }, 5000);
           return;
         }
         // 如果找不到合适的数据，使用默认图片
@@ -152,12 +150,11 @@ function App() {
             generateImage(shouldRetry, retry + 1);
           }, 2000 * (retry + 1)); // 指数退避
         } else {
-          setIsLoading(false);
-          setRetryCount(0);
-          setResult({ 
-            data: [], 
-            error: err.message || "Failed to generate images" 
-          });
+          console.log("请求错误达到最大重试次数，继续显示加载状态");
+          // 继续显示加载状态，5秒后重试
+          setTimeout(() => {
+            generateImage(true, 0);
+          }, 5000);
         }
       });
   };
@@ -302,7 +299,7 @@ function App() {
                 {!isLoading && result && result.error && (
                   <div className="mt-8">
                     <h3 className="text-xl font-bold mb-4 text-left">{prompt}</h3>
-                    <div className="bg-[rgb(48,38,30)] rounded-lg p-6 text-left">
+                    <div className="bg-[rgb(48,38,30)] rounded-lg p-6 text-left hidden">
                       <p className="text-red-400 mb-4">
                         {result.error === "Request was rejected due to rate limiting. Details: IPM limit reached." ? 
                           "Rate limit reached. Please try again later." : result.error}
