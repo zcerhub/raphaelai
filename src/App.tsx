@@ -191,13 +191,17 @@ function App() {
                 
                 {result && (
                   <div className="mt-8">
-                    <h3 className="text-xl font-bold mb-4">Generated Image</h3>
-                    <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                      <img 
-                        src={result.data?.[0]?.url} 
-                        alt="Generated image" 
-                        className="w-full max-h-96 object-contain" 
-                      />
+                    <h3 className="text-xl font-bold mb-4">{prompt}</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      {result.data?.map((image, index) => (
+                        <div key={index} className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                          <img 
+                            src={image.url} 
+                            alt={`Generated image ${index + 1}`} 
+                            className="w-full h-auto object-contain" 
+                          />
+                        </div>
+                      ))}
                     </div>
                   </div>
                 )}
