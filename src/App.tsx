@@ -36,7 +36,7 @@ interface Translation {
   testimonials: Array<{
     name: string;
     role: string;
-    comment: string;
+    answer: string;
   }>;
 }
 
@@ -124,27 +124,27 @@ const translations: Record<string, Translation> = {
       {
         name: 'David Thompson',
         role: 'Independent Game Developer',
-        comment: '"As a solo game dev, Raphael AI Image Generator is invaluable. The speed and quality of asset generation are unmatched, and being free means I can focus my budget elsewhere."'
+        answer: '"As a solo game dev, Raphael AI Image Generator is invaluable. The speed and quality of asset generation are unmatched, and being free means I can focus my budget elsewhere."'
       },
       {
         name: 'Emily Parker',
         role: 'Content Creator on YouTube',
-        comment: '"I create thumbnails daily using Raphael AI Image Generator. The text understanding is incredible - it captures exactly what I need, and the no-registration policy makes it super convenient."'
+        answer: '"I create thumbnails daily using Raphael AI Image Generator. The text understanding is incredible - it captures exactly what I need, and the no-registration policy makes it super convenient."'
       },
       {
         name: 'Robert Wilson',
         role: 'UI/UX Designer at TechFlow',
-        comment: '"The FLUX.1-Dev model in Raphael AI Image Generator produces the most consistent and high-quality results I\'ve seen. It\'s become our go-to tool for generating mockup images."'
+        answer: '"The FLUX.1-Dev model in Raphael AI Image Generator produces the most consistent and high-quality results I\'ve seen. It\'s become our go-to tool for generating mockup images."'
       },
       {
         name: 'Jennifer Adams',
         role: 'E-commerce Business Owner',
-        comment: '"Running an online store requires constant image creation. Raphael\'s free AI Image Generator helps me create professional product photos instantly. It\'s literally saving my business thousands."'
+        answer: '"Running an online store requires constant image creation. Raphael\'s free AI Image Generator helps me create professional product photos instantly. It\'s literally saving my business thousands."'
       },
       {
         name: 'Michael Anderson',
         role: 'Digital Artist at ArtStation',
-        comment: '"Raphael\'s AI Image Generator is a game-changer. The FLUX.1-Dev model produces incredibly detailed images that I use as concept art. The fact that it\'s completely free is mind-blowing!"'
+        answer: '"Raphael\'s AI Image Generator is a game-changer. The FLUX.1-Dev model produces incredibly detailed images that I use as concept art. The fact that it\'s completely free is mind-blowing!"'
       }
     ]
   },
@@ -230,27 +230,27 @@ const translations: Record<string, Translation> = {
       {
         name: '大卫·汤普森',
         role: '独立游戏开发者',
-        comment: '"作为一名独立游戏开发者，Raphael AI图像生成器价值连城。资源生成的速度和质量无与伦比，而且免费使用让我能够将预算用在其他地方。"'
+        answer: '"作为一名独立游戏开发者，Raphael AI图像生成器价值连城。资源生成的速度和质量无与伦比，而且免费使用让我能够将预算用在其他地方。"'
       },
       {
         name: '艾米丽·帕克',
         role: 'YouTube内容创作者',
-        comment: '"我每天都使用Raphael AI图像生成器创建缩略图。它对文本的理解能力令人难以置信——能精确捕捉我所需要的内容，而且无需注册的政策使它非常便捷。"'
+        answer: '"我每天都使用Raphael AI图像生成器创建缩略图。它对文本的理解能力令人难以置信——能精确捕捉我所需要的内容，而且无需注册的政策使它非常便捷。"'
       },
       {
         name: '罗伯特·威尔逊',
         role: 'TechFlow的UI/UX设计师',
-        comment: '"Raphael AI图像生成器中的FLUX.1-Dev模型产生了我所见过的最一致和高质量的结果。它已经成为我们生成模型图像的首选工具。"'
+        answer: '"Raphael AI图像生成器中的FLUX.1-Dev模型产生了我所见过的最一致和高质量的结果。它已经成为我们生成模型图像的首选工具。"'
       },
       {
         name: '詹妮弗·亚当斯',
         role: '电子商务企业主',
-        comment: '"经营在线商店需要持续创建图像。Raphael的免费AI图像生成器帮助我即时创建专业的产品照片。它实实在在地为我的企业节省了数千元成本。"'
+        answer: '"经营在线商店需要持续创建图像。Raphael的免费AI图像生成器帮助我即时创建专业的产品照片。它实实在在地为我的企业节省了数千元成本。"'
       },
       {
         name: '迈克尔·安德森',
         role: 'ArtStation的数字艺术家',
-        comment: '"Raphael的AI图像生成器是一个改变游戏规则的工具。FLUX.1-Dev模型生成的细节丰富的图像，我将其用作概念艺术。它完全免费的事实令人难以置信！"'
+        answer: '"Raphael的AI图像生成器是一个改变游戏规则的工具。FLUX.1-Dev模型生成的细节丰富的图像，我将其用作概念艺术。它完全免费的事实令人难以置信！"'
       }
     ]
   },
@@ -336,27 +336,27 @@ const translations: Record<string, Translation> = {
       {
         name: '大衛·湯普森',
         role: '獨立遊戲開發者',
-        comment: '"作為一名獨立遊戲開發者，Raphael AI圖像生成器價值連城。資源生成的速度和質量無與倫比，而且免費使用讓我能夠將預算用在其他地方。"'
+        answer: '"作為一名獨立遊戲開發者，Raphael AI圖像生成器價值連城。資源生成的速度和質量無與倫比，而且免費使用讓我能夠將預算用在其他地方。"'
       },
       {
         name: '艾米麗·帕克',
         role: 'YouTube內容創作者',
-        comment: '"我每天都使用Raphael AI圖像生成器創建縮略圖。它對文本的理解能力令人難以置信——能精確捕捉我所需要的內容，而且無需註冊的政策使它非常便捷。"'
+        answer: '"我每天都使用Raphael AI圖像生成器創建縮略圖。它對文本的理解能力令人難以置信——能精確捕捉我所需要的內容，而且無需註冊的政策使它非常便捷。"'
       },
       {
         name: '羅伯特·威爾遜',
         role: 'TechFlow的UI/UX設計師',
-        comment: '"Raphael AI圖像生成器中的FLUX.1-Dev模型產生了我所見過的最一致和高質量的結果。它已經成為我們生成模型圖像的首選工具。"'
+        answer: '"Raphael AI圖像生成器中的FLUX.1-Dev模型產生了我所見過的最一致和高質量的結果。它已經成為我們生成模型圖像的首選工具。"'
       },
       {
         name: '珍妮弗·亞當斯',
         role: '電子商務企業主',
-        comment: '"經營線上商店需要持續創建圖像。Raphael的免費AI圖像生成器幫助我即時創建專業的產品照片。它實實在地在為我的企業節省了數千元成本。"'
+        answer: '"經營線上商店需要持續創建圖像。Raphael的免費AI圖像生成器幫助我即時創建專業的產品照片。它實實在地在為我的企業節省了數千元成本。"'
       },
       {
         name: '邁克爾·安德森',
         role: 'ArtStation的數字藝術家',
-        comment: '"Raphael的AI圖像生成器是一個改變遊戲規則的工具。FLUX.1-Dev模型生成的細節豐富的圖像，我將其用作概念藝術。它完全免費的事實令人難以置信！"'
+        answer: '"Raphael的AI圖像生成器是一個改變遊戲規則的工具。FLUX.1-Dev模型生成的細節豐富的圖像，我將其用作概念藝術。它完全免費的事實令人難以置信！"'
       }
     ]
   },
@@ -440,27 +440,27 @@ const translations: Record<string, Translation> = {
       {
         name: 'デイビッド・トンプソン',
         role: 'インディーゲーム開発者',
-        comment: '「個人ゲーム開発者として、Raphael AIイメージジェネレーターは非常に価値があります。アセット生成のスピードと品質は比類なく、無料であることで予算を他に回せます。」'
+        answer: '「個人ゲーム開発者として、Raphael AIイメージジェネレーターは非常に価値があります。アセット生成のスピードと品質は比類なく、無料であることで予算を他に回せます。」'
       },
       {
         name: 'エミリー・パーカー',
         role: 'YouTubeコンテンツクリエイター',
-        comment: '「Raphael AIイメージジェネレーターを使って毎日サムネイルを作成しています。テキストの理解力が素晴らしく、必要なものを正確に捉え、登録不要なのも便利です。」'
+        answer: '「Raphael AIイメージジェネレーターを使って毎日サムネイルを作成しています。テキストの理解力が素晴らしく、必要なものを正確に捉え、登録不要なのも便利です。」'
       },
       {
         name: 'ロバート・ウィルソン',
         role: 'TechFlowのUI/UXデザイナー',
-        comment: '「Raphael AIイメージジェネレーターのFLUX.1-Devモデルは、私が見た中で最も一貫性が高く、高品質な結果を生み出します。モックアップ画像の生成に欠かせないツールとなっています。」'
+        answer: '「Raphael AIイメージジェネレーターのFLUX.1-Devモデルは、私が見た中で最も一貫性が高く、高品質な結果を生み出します。モックアップ画像の生成に欠かせないツールとなっています。」'
       },
       {
         name: 'ジェニファー・アダムス',
         role: 'Eコマース事業主',
-        comment: '「オンラインストアの運営には常に画像作成が必要です。Raphaelの無料AIイメージジェネレーターのおかげで、プロフェッショナルな商品写真を即座に作成できます。文字通り、ビジネスの何千ドルもの節約になっています。」'
+        answer: '「オンラインストアの運営には常に画像作成が必要です。Raphaelの無料AIイメージジェネレーターのおかげで、プロフェッショナルな商品写真を即座に作成できます。文字通り、ビジネスの何千ドルもの節約になっています。」'
       },
       {
         name: 'マイケル・アンダーソン',
         role: 'ArtStationのデジタルアーティスト',
-        comment: '"RaphaelのAIイメージジェネレーターはゲームチェンジャーです。FLUX.1-Devモデルは信じられないほど詳細な画像を生成し、それをコンセプトアートとして使用しています。完全無料なのは驚きです！"'
+        answer: '"RaphaelのAIイメージジェネレーターはゲームチェンジャーです。FLUX.1-Devモデルは信じられないほど詳細な画像を生成し、それをコンセプトアートとして使用しています。完全無料なのは驚きです！"'
       }
     ]
   },
@@ -544,27 +544,27 @@ const translations: Record<string, Translation> = {
       {
         name: '데이비드 톰슨',
         role: '독립 게임 개발자',
-        comment: '"독립 게임 개발자로서 Raphael AI 이미지 생성기는 매우 가치 있습니다. 에셋 생성의 속도와 품질이 타의 추종을 불허하며, 무료라서 예산을 다른 곳에 투자할 수 있습니다."'
+        answer: '"독립 게임 개발자로서 Raphael AI 이미지 생성기는 매우 가치 있습니다. 에셋 생성의 속도와 품질이 타의 추종을 불허하며, 무료라서 예산을 다른 곳에 투자할 수 있습니다."'
       },
       {
         name: '에밀리 파커',
         role: 'YouTube 콘텐츠 크리에이터',
-        comment: '"매일 Raphael AI 이미지 생성기로 썸네일을 만듭니다. 텍스트 이해력이 놀랍고 필요한 것을 정확히 포착하며, 가입이 필요 없어 매우 편리합니다."'
+        answer: '"매일 Raphael AI 이미지 생성기로 썸네일을 만듭니다. 텍스트 이해력이 놀랍고 필요한 것을 정확히 포착하며, 가입이 필요 없어 매우 편리합니다."'
       },
       {
         name: '로버트 윌슨',
         role: 'TechFlow의 UI/UX 디자이너',
-        comment: '"Raphael AI 이미지 생성기의 FLUX.1-Dev 모델은 제가 본 것 중 가장 일관성 있고 고품질의 결과물을 만듭니다. 목업 이미지 생성을 위한 우리의 필수 도구가 되었습니다."'
+        answer: '"Raphael AI 이미지 생성기의 FLUX.1-Dev 모델은 제가 본 것 중 가장 일관성 있고 고품질의 결과물을 만듭니다. 목업 이미지 생성을 위한 우리의 필수 도구가 되었습니다."'
       },
       {
         name: '제니퍼 아담스',
         role: '이커머스 사업주',
-        comment: '"온라인 스토어 운영에는 지속적인 이미지 생성이 필요합니다. Raphael의 무료 AI 이미지 생성기 덕분에 전문적인 제품 사진을 즉시 만들 수 있습니다. 말 그대로 우리 비즈니스에 수천 달러를 절약해주고 있습니다."'
+        answer: '"온라인 스토어 운영에는 지속적인 이미지 생성이 필요합니다. Raphael의 무료 AI 이미지 생성기 덕분에 전문적인 제품 사진을 즉시 만들 수 있습니다. 말 그대로 우리 비즈니스에 수천 달러를 절약해주고 있습니다."'
       },
       {
         name: '마이클 앤더슨',
         role: 'ArtStation의 디지털 아티스트',
-        comment: '"Raphael의 AI 이미지 생성기는 게임 체인저입니다. FLUX.1-Dev 모델이 생성하는 놀랍도록 상세한 이미지를 컨셉 아트로 사용하고 있습니다. 완전 무료라는 사실이 믿기지 않습니다!"'
+        answer: '"Il generatore di immagini IA di Raphael è rivoluzionario. Il modello FLUX.1-Dev produce immagini incredibilmente dettagliate che uso come concept art. Il fatto che sia completamente gratuito è incredibile!"'
       }
     ]
   },
@@ -648,27 +648,27 @@ const translations: Record<string, Translation> = {
       {
         name: 'David Thompson',
         role: 'Independent Game Developer',
-        comment: '"As a solo game dev, Raphael AI Image Generator is invaluable. The speed and quality of asset generation are unmatched, and being free means I can focus my budget elsewhere."'
+        answer: '"As a solo game dev, Raphael AI Image Generator is invaluable. The speed and quality of asset generation are unmatched, and being free means I can focus my budget elsewhere."'
       },
       {
         name: 'Emily Parker',
         role: 'Content Creator on YouTube',
-        comment: '"I create thumbnails daily using Raphael AI Image Generator. The text understanding is incredible - it captures exactly what I need, and the no-registration policy makes it super convenient."'
+        answer: '"I create thumbnails daily using Raphael AI Image Generator. The text understanding is incredible - it captures exactly what I need, and the no-registration policy makes it super convenient."'
       },
       {
         name: 'Robert Wilson',
         role: 'UI/UX Designer at TechFlow',
-        comment: '"The FLUX.1-Dev model in Raphael AI Image Generator produces the most consistent and high-quality results I\'ve seen. It\'s become our go-to tool for generating mockup images."'
+        answer: '"The FLUX.1-Dev model in Raphael AI Image Generator produces the most consistent and high-quality results I\'ve seen. It\'s become our go-to tool for generating mockup images."'
       },
       {
         name: 'Jennifer Adams',
         role: 'E-commerce Business Owner',
-        comment: '"Running an online store requires constant image creation. Raphael\'s free AI Image Generator helps me create professional product photos instantly. It\'s literally saving my business thousands."'
+        answer: '"Running an online store requires constant image creation. Raphael\'s free AI Image Generator helps me create professional product photos instantly. It\'s literally saving my business thousands."'
       },
       {
         name: 'Michael Anderson',
         role: 'Digital Artist at ArtStation',
-        comment: '"Raphael\'s AI Image Generator is a game-changer. The FLUX.1-Dev model produces incredibly detailed images that I use as concept art. The fact that it\'s completely free is mind-blowing!"'
+        answer: '"Raphael\'s AI Image Generator is a game-changer. The FLUX.1-Dev model produces incredibly detailed images that I use as concept art. The fact that it\'s completely free is mind-blowing!"'
       }
     ]
   },
@@ -752,268 +752,268 @@ const translations: Record<string, Translation> = {
       {
         name: 'David Thompson',
         role: 'Independent Game Developer',
-        comment: '"As a solo game dev, Raphael AI Image Generator is invaluable. The speed and quality of asset generation are unmatched, and being free means I can focus my budget elsewhere."'
+        answer: '"As a solo game dev, Raphael AI Image Generator is invaluable. The speed and quality of asset generation are unmatched, and being free means I can focus my budget elsewhere."'
       },
       {
         name: 'Emily Parker',
         role: 'Content Creator on YouTube',
-        comment: '"I create thumbnails daily using Raphael AI Image Generator. The text understanding is incredible - it captures exactly what I need, and the no-registration policy makes it super convenient."'
+        answer: '"I create thumbnails daily using Raphael AI Image Generator. The text understanding is incredible - it captures exactly what I need, and the no-registration policy makes it super convenient."'
       },
       {
         name: 'Robert Wilson',
         role: 'UI/UX Designer at TechFlow',
-        comment: '"The FLUX.1-Dev model in Raphael AI Image Generator produces the most consistent and high-quality results I\'ve seen. It\'s become our go-to tool for generating mockup images."'
+        answer: '"The FLUX.1-Dev model in Raphael AI Image Generator produces the most consistent and high-quality results I\'ve seen. It\'s become our go-to tool for generating mockup images."'
       },
       {
         name: 'Jennifer Adams',
         role: 'E-commerce Business Owner',
-        comment: '"Running an online store requires constant image creation. Raphael\'s free AI Image Generator helps me create professional product photos instantly. It\'s literally saving my business thousands."'
+        answer: '"Running an online store requires constant image creation. Raphael\'s free AI Image Generator helps me create professional product photos instantly. It\'s literally saving my business thousands."'
       },
       {
         name: 'Michael Anderson',
         role: 'Digital Artist at ArtStation',
-        comment: '"Raphael\'s AI Image Generator is a game-changer. The FLUX.1-Dev model produces incredibly detailed images that I use as concept art. The fact that it\'s completely free is mind-blowing!"'
+        answer: '"Raphael\'s AI Image Generator is a game-changer. The FLUX.1-Dev model produces incredibly detailed images that I use as concept art. The fact that it\'s completely free is mind-blowing!"'
       }
     ]
   },
   'Italiano': {
     features: 'Funzionalità',
     faqs: 'Domande frequenti',
-    title: 'Crea immagini generati da IA in pochi secondi',
-    subtitle: 'Primo generatore gratuito e illimitato di immagini di AI',
+    title: 'Crea immagini generate dall\'IA in pochi secondi',
+    subtitle: 'Il primo generatore di immagini IA gratuito e illimitato al mondo',
     free: '100% gratuito',
-    poweredBy: 'Powered by Flux.1 Dev',
-    noLogin: 'Nessuna connessione necessaria',
+    poweredBy: 'Basato su Flux.1 Dev',
+    noLogin: 'Nessun login richiesto',
     unlimited: 'Generazione illimitata',
     generator: 'Generatore di immagini IA',
-    getInspired: 'Prendere ispirazione',
-    getInspiredDesc: 'Prendi ispirazione da ciò che altri stanno creando con Raphael',
-    testimonial: 'Testimoniale',
-    testimonialTitle: 'Cosa dicono gli utenti su Raphael AI',
-    testimonialDesc: 'Ascolta le opinioni dei creativi e dei professionisti che utilizzano quotidianamente il nostro servizio di generazione di immagini IA.',
+    getInspired: 'Trova ispirazione',
+    getInspiredDesc: 'Lasciati ispirare da ciò che gli altri creano con Raphael',
+    testimonial: 'Testimonianze',
+    testimonialTitle: 'Cosa dicono gli utenti di Raphael AI',
+    testimonialDesc: 'Ascolta le opinioni dei creativi e dei professionisti che utilizzano quotidianamente il nostro generatore di immagini IA.',
     faqTitle: 'Domande frequenti',
-    faqContact: 'Hai un\'altra domanda? Contattaci a support@raphael.app',
+    faqContact: 'Hai altre domande? Contattaci a support@raphael.app',
     copyright: '© 2024 Raphael AI. Tutti i diritti riservati.',
-    footerDesc: 'Crea immagini generati da IA in pochi secondi con il primo generatore gratuito e illimitato di immagini di AI.',
+    footerDesc: 'Crea immagini straordinarie generate dall\'IA in pochi secondi con il primo generatore di immagini IA gratuito e illimitato al mondo.',
     product: 'Prodotto',
     company: 'Azienda',
     about: 'Chi siamo',
     blog: 'Blog',
-    contact: 'Contattaci',
+    contact: 'Contatti',
     api: 'API',
-    pricing: 'Prezzo',
+    pricing: 'Prezzi',
     faqItems: [
       {
         question: 'Cos\'è Raphael AI e come funziona?',
-        answer: 'Raphael AI è il primo generatore gratuito e illimitato di immagini di AI, basato sul modello FLUX.1-Dev. Ti permette di creare immagini di alta qualità a partire da descrizioni testuali senza alcuna restrizione di registrazione o di limiti di utilizzo.'
+        answer: 'Raphael AI è il primo generatore di immagini IA gratuito e illimitato al mondo, basato sul modello FLUX.1-Dev. Ti permette di creare immagini di alta qualità da descrizioni testuali senza registrazione o limiti di utilizzo.'
       },
       {
-        question: 'Raphael AI è veramente gratuito?',
-        answer: 'Sì, Raphael AI è completamente gratuito! Ci impegniamo a diventare il più grande e potente generatore di immagini gratuite dell\'historia. Non ci sono costi nascosti, nessuna carta di credito richiesta, e nessun limite di utilizzo.'
+        question: 'Raphael AI è davvero gratuito?',
+        answer: 'Sì, Raphael AI è completamente gratuito! Ci impegniamo a essere il più grande e potente generatore di immagini IA gratuito al mondo. Non ci sono costi nascosti, non è richiesta alcuna carta di credito e non ci sono limiti di utilizzo.'
       },
       {
-        question: 'Qual è la differenza tra Raphael AI e gli altri generatori di immagini IA?',
-        answer: 'Raphael AI è l\'unico piattaforma che offre un accesso illimitato e gratuito al potente modello FLUX.1-Dev. Offriamo una qualità d\'immagine superiore, una velocità di generazione rapida e una protezione completa della privacy, tutto senza costi o requisiti di registrazione.'
+        question: 'Qual è la differenza tra Raphael AI e altri generatori di immagini IA?',
+        answer: 'Raphael AI è l\'unica piattaforma che offre accesso illimitato e gratuito al potente modello FLUX.1-Dev. Forniamo qualità delle immagini superiore, velocità di generazione rapida e protezione completa della privacy, tutto senza costi o requisiti di registrazione.'
       },
       {
-        question: 'Devo creare un account per usare Raphael AI?',
-        answer: 'No, non è necessario creare un account o registrarsi. Basta visitare raphael.app e iniziare immediatamente a generare immagini. Crediamo che l\'IA debba essere accessibile a tutti senza barriere.'
+        question: 'Devo creare un account per utilizzare Raphael AI?',
+        answer: 'No, non devi creare un account o registrarti. Basta visitare raphael.app e iniziare subito a generare immagini. Crediamo che l\'IA debba essere accessibile a tutti senza barriere.'
       },
       {
-        question: 'Con Raphael AI posso creare quali tipi di immagini?',
-        answer: 'Puoi creare una varietà di immagini, tra cui scene fotorrealistiche, illustrazioni artistiche, arte digitale, immagini di anime e altro. Il modello FLUX.1-Dev è eccezionale nel comprendere prompt complessi e generare uno stile visivo vario.'
+        question: 'Che tipo di immagini posso creare con Raphael AI?',
+        answer: 'Puoi creare una varietà di immagini, incluse scene fotorrealistiche, illustrazioni artistiche, arte digitale, immagini in stile anime e altro. Il modello FLUX.1-Dev eccelle nella comprensione di prompt complessi e nella generazione di diversi stili visivi.'
       },
       {
-        question: 'Raphael AI come protegge la mia privacy?',
-        answer: 'Ci prendiamo la privacy molto seriamente. Non memorizziamo le tue istruzioni o immagini generate sul nostro server, e non richiediamo alcuna informazione personale. Le tue creazioni restano completamente private e vengono eliminate dopo la generazione.'
+        question: 'Come protegge Raphael AI la mia privacy?',
+        answer: 'Prendiamo la privacy molto seriamente. Non memorizziamo i tuoi prompt o le immagini generate sui nostri server e non richiediamo informazioni personali. Le tue creazioni rimangono completamente private e vengono eliminate dopo la generazione.'
       },
       {
         question: 'Cos\'è il modello FLUX.1-Dev?',
-        answer: 'FLUX.1-Dev è un modello di IA di punta per la sua qualità d\'immagine eccezionale, la precisione dei prompt e la versatilità dello stile. Normalmente è costoso da usare, ma Raphael lo rende gratuito a tutti.'
+        answer: 'FLUX.1-Dev è un modello IA all\'avanguardia noto per la sua eccezionale qualità delle immagini, precisione dei prompt e versatilità stilistica. Normalmente è costoso da utilizzare, ma Raphael lo rende gratuito per tutti.'
       },
       {
-        question: 'Ci sono limiti all\'uso di Raphael AI?',
-        answer: 'Raphael AI è gratuito e illimitato, ma manteniamo linee guida di contenuto standard per assicurare un uso appropriato. Attualmente è progettato per il web, con app mobili pianificate per il futuro.'
+        question: 'Ci sono limitazioni all\'uso di Raphael AI?',
+        answer: 'Raphael AI è gratuito e illimitato, ma manteniamo linee guida standard sui contenuti per garantire un uso appropriato. Attualmente è progettato per il web, con app mobili pianificate per il futuro.'
       },
       {
-        question: 'Posso usare le immagini generate a scopo commerciale?',
-        answer: 'Sì, hai i diritti sulle immagini generate con Raphael AI. Puoi usarle sia per scopi personali che commerciali, il che è perfetto per creativi e aziende.'
+        question: 'Posso utilizzare le immagini generate per scopi commerciali?',
+        answer: 'Sì, possiedi i diritti delle immagini generate con Raphael AI. Puoi utilizzarle sia per uso personale che commerciale, rendendolo perfetto per creativi e aziende.'
       },
       {
         question: 'Raphael AI è disponibile su dispositivi mobili?',
-        answer: 'Attualmente, Raphael AI è disponibile tramite il nostro sito web raphael.app, che funziona molto bene sui browser mobili. Stiamo sviluppando attualmente app mobili dedicate per offrire una migliore esperienza presto.'
+        answer: 'Attualmente, Raphael AI è disponibile tramite il nostro sito web raphael.app, che funziona molto bene sui browser mobili. Stiamo sviluppando app mobili dedicate per offrire presto un\'esperienza ancora migliore.'
       },
       {
         question: 'Come posso fornire feedback o segnalare problemi?',
-        answer: 'Siamo lieti dei tuoi commenti! Puoi contattarci al support@raphael.app. Il tuo feedback ci aiuta a migliorare e mantenere il miglior servizio di generazione di immagini IA gratuito.'
+        answer: 'Apprezziamo il tuo feedback! Puoi contattare il nostro team di supporto a support@raphael.app. Il tuo input ci aiuta a migliorare e mantenere il miglior servizio di generazione di immagini IA gratuito.'
       },
       {
-        question: 'Qual è il prossimo passo per Raphael AI?',
-        answer: 'Miglioriamo continuamente il nostro servizio grazie a aggiornamenti regolari dell\'IA e dell\'interfaccia utente. Le prossime idee includono app mobili e funzionalità creative aggiuntive, mantenendo il nostro impegno a rimanere completamente gratuito.'
+        question: 'Quali sono i prossimi passi per Raphael AI?',
+        answer: 'Miglioriamo continuamente il nostro servizio attraverso aggiornamenti regolari del modello IA e dell\'interfaccia utente. I piani futuri includono app mobili e funzionalità creative aggiuntive, mantenendo il nostro impegno a rimanere completamente gratuiti.'
       }
     ],
     testimonials: [
       {
         name: 'David Thompson',
-        role: 'Independent Game Developer',
-        comment: '"As a solo game dev, Raphael AI Image Generator is invaluable. The speed and quality of asset generation are unmatched, and being free means I can focus my budget elsewhere."'
+        role: 'Sviluppatore di giochi indipendente',
+        answer: '"Come sviluppatore di giochi indipendente, Raphael AI Image Generator è inestimabile. La velocità e la qualità della generazione degli asset sono impareggiabili, ed essere gratuito significa che posso concentrare il mio budget altrove."'
       },
       {
         name: 'Emily Parker',
-        role: 'Content Creator on YouTube',
-        comment: '"I create thumbnails daily using Raphael AI Image Generator. The text understanding is incredible - it captures exactly what I need, and the no-registration policy makes it super convenient."'
+        role: 'Content Creator su YouTube',
+        answer: '"Creo miniature quotidianamente usando Raphael AI Image Generator. La comprensione del testo è incredibile - cattura esattamente ciò di cui ho bisogno, e la politica di non registrazione lo rende super conveniente."'
       },
       {
         name: 'Robert Wilson',
-        role: 'UI/UX Designer at TechFlow',
-        comment: '"The FLUX.1-Dev model in Raphael AI Image Generator produces the most consistent and high-quality results I\'ve seen. It\'s become our go-to tool for generating mockup images."'
+        role: 'UI/UX Designer presso TechFlow',
+        answer: '"Il modello FLUX.1-Dev in Raphael AI Image Generator produce i risultati più consistenti e di alta qualità che abbia mai visto. È diventato il nostro strumento preferito per generare immagini di maquette."'
       },
       {
         name: 'Jennifer Adams',
-        role: 'E-commerce Business Owner',
-        comment: '"Running an online store requires constant image creation. Raphael\'s free AI Image Generator helps me create professional product photos instantly. It\'s literally saving my business thousands."'
+        role: 'Proprietária di e-commerce',
+        answer: '"Gestire un negozio online richiede una costante creazione di immagini. Il generatore di immagini IA gratuito di Raphael mi aiuta a creare foto professionali dei prodotti istantaneamente. Sta letteralmente facendo risparmiare migliaia di euro alla mia attività."'
       },
       {
         name: 'Michael Anderson',
-        role: 'Digital Artist at ArtStation',
-        comment: '"Raphael\'s AI Image Generator is a game-changer. The FLUX.1-Dev model produces incredibly detailed images that I use as concept art. The fact that it\'s completely free is mind-blowing!"'
+        role: 'Artista digitale su ArtStation',
+        answer: '"Il generatore di immagini IA di Raphael è rivoluzionario. Il modello FLUX.1-Dev produce immagini incredibilmente dettagliate che uso come concept art. Il fatto che sia completamente gratuito è incredibile!"'
       }
     ]
   },
   'Español': {
     features: 'Características',
     faqs: 'Preguntas frecuentes',
-    title: 'Crear imágenes generadas por IA en segundos',
-    subtitle: 'Primer generador gratuito e ilimitado de imágenes de IA',
-    free: '100% gratis',
-    poweredBy: 'Powered by Flux.1 Dev',
-    noLogin: 'No se requiere inicio de sesión',
+    title: 'Crea imágenes generadas por IA en segundos',
+    subtitle: 'El primer generador de imágenes de IA gratuito e ilimitado del mundo',
+    free: '100% gratuito',
+    poweredBy: 'Impulsado por Flux.1 Dev',
+    noLogin: 'Sin inicio de sesión',
     unlimited: 'Generación ilimitada',
     generator: 'Generador de imágenes IA',
-    getInspired: 'Obtener inspiración',
+    getInspired: 'Inspírate',
     getInspiredDesc: 'Inspírate en lo que otros están creando con Raphael',
-    testimonial: 'Testimonio',
-    testimonialTitle: 'Lo que los usuarios dicen sobre Raphael AI',
-    testimonialDesc: 'Escucha las opiniones de los creadores y profesionales que utilizan diariamente nuestro servicio de generación de imágenes IA.',
+    testimonial: 'Testimonios',
+    testimonialTitle: 'Lo que dicen los usuarios sobre Raphael AI',
+    testimonialDesc: 'Escucha las opiniones de creativos y profesionales que utilizan nuestro generador de imágenes IA a diario.',
     faqTitle: 'Preguntas frecuentes',
     faqContact: '¿Tienes otra pregunta? Contáctanos en support@raphael.app',
     copyright: '© 2024 Raphael AI. Todos los derechos reservados.',
-    footerDesc: 'Crear imágenes generadas por IA en segundos con el primer generador gratuito e ilimitado de imágenes de IA.',
+    footerDesc: 'Crea imágenes asombrosas generadas por IA en segundos con el primer generador de imágenes de IA gratuito e ilimitado del mundo.',
     product: 'Producto',
     company: 'Empresa',
-    about: 'Acerca de',
+    about: 'Sobre nosotros',
     blog: 'Blog',
     contact: 'Contacto',
     api: 'API',
-    pricing: 'Precio',
+    pricing: 'Precios',
     faqItems: [
       {
         question: '¿Qué es Raphael AI y cómo funciona?',
-        answer: 'Raphael AI es el primer generador gratuito e ilimitado de imágenes de IA, basado en el modelo FLUX.1-Dev. Te permite crear imágenes de alta calidad a partir de descripciones textuales sin ninguna restricción de registro o límites de uso.'
+        answer: 'Raphael AI es el primer generador de imágenes de IA gratuito e ilimitado del mundo, basado en el modelo FLUX.1-Dev. Te permite crear imágenes de alta calidad a partir de descripciones textuales sin registro ni límites de uso.'
       },
       {
         question: '¿Raphael AI es realmente gratuito?',
-        answer: '¡Sí, Raphael AI es completamente gratuito! Nos comprometemos a ser el generador de imágenes gratuitas más grande y potente del mundo. No hay costos ocultos, ninguna tarjeta de crédito requerida, y ningún límite de uso.'
+        answer: '¡Sí, Raphael AI es completamente gratuito! Nos comprometemos a ser el generador de imágenes de IA gratuito más grande y potente del mundo. No hay costos ocultos, no se requiere tarjeta de crédito y no hay límites de uso.'
       },
       {
-        question: '¿Cuál es la diferencia entre Raphael AI y otros generadores de imágenes IA?',
-        answer: 'Raphael AI es la única plataforma que ofrece un acceso ilimitado y gratuito al potente modelo FLUX.1-Dev. Nosotros ofrecemos una excelente calidad de imagen, una velocidad de generación rápida y una protección completa de la privacidad, todo sin costo ni requisitos de registro.'
+        question: '¿Cuál es la diferencia entre Raphael AI y otros generadores de imágenes de IA?',
+        answer: 'Raphael AI es la única plataforma que ofrece acceso ilimitado y gratuito al potente modelo FLUX.1-Dev. Proporcionamos calidad de imagen superior, velocidad de generación rápida y protección total de la privacidad, todo sin costos ni requisitos de registro.'
       },
       {
         question: '¿Necesito crear una cuenta para usar Raphael AI?',
-        answer: 'No, no es necesario crear una cuenta o registrarse. Simplemente visita raphael.app y comienza inmediatamente a generar imágenes. Creemos que la IA debe ser accesible para todos sin barreras.'
+        answer: 'No, no necesitas crear una cuenta ni registrarte. Simplemente visita raphael.app y comienza a generar imágenes inmediatamente. Creemos que la IA debe ser accesible para todos sin barreras.'
       },
       {
-        question: '¿Con Raphael AI puedo crear qué tipos de imágenes?',
-        answer: 'Puedes crear una variedad de imágenes, incluyendo escenas fotorrealistas, ilustraciones artísticas, arte digital, imágenes de anime y más. El modelo FLUX.1-Dev es excelente para entender los prompts complejos y generar varios estilos visuales.'
+        question: '¿Qué tipos de imágenes puedo crear con Raphael AI?',
+        answer: 'Puedes crear una variedad de imágenes, incluyendo escenas fotorrealistas, ilustraciones artísticas, arte digital, imágenes estilo anime y más. El modelo FLUX.1-Dev sobresale en la comprensión de indicaciones complejas y la generación de diversos estilos visuales.'
       },
       {
-        question: '¿Raphael AI cómo protege mi privacidad?',
-        answer: 'Nos tomamos la privacidad muy en serio. No almacenamos tus instrucciones o imágenes generadas en nuestros servidores, y no requerimos ninguna información personal. Tus creaciones permanecen completamente privadas y se eliminan después de la generación.'
+        question: '¿Cómo protege Raphael AI mi privacidad?',
+        answer: 'Nos tomamos la privacidad muy en serio. No almacenamos tus indicaciones ni las imágenes generadas en nuestros servidores, y no requerimos información personal. Tus creaciones permanecen completamente privadas y se eliminan después de la generación.'
       },
       {
         question: '¿Qué es el modelo FLUX.1-Dev?',
-        answer: 'FLUX.1-Dev es un modelo de IA de punta para su excelente calidad de imagen, precisión de los prompts y versatilidad del estilo. Normalmente es costoso de usar, pero Raphael lo hace gratuito para todos.'
+        answer: 'FLUX.1-Dev es un modelo de IA de vanguardia conocido por su excepcional calidad de imagen, precisión en las indicaciones y versatilidad estilística. Normalmente es costoso de usar, pero Raphael lo hace gratuito para todos.'
       },
       {
-        question: '¿Hay algún límite para usar Raphael AI?',
-        answer: 'Raphael AI es gratuito e ilimitado, pero mantenemos líneas de contenido estándar para asegurar un uso apropiado. Actualmente está diseñado para el web, con aplicaciones móviles planeadas para el futuro.'
+        question: '¿Hay limitaciones en el uso de Raphael AI?',
+        answer: 'Raphael AI es gratuito e ilimitado, pero mantenemos pautas de contenido estándar para garantizar un uso apropiado. Actualmente está diseñado para web, con aplicaciones móviles planeadas para el futuro.'
       },
       {
         question: '¿Puedo usar las imágenes generadas con fines comerciales?',
-        answer: '¡Sí, tienes los derechos sobre las imágenes generadas con Raphael AI! Puedes usarlos tanto para uso personal como comercial, lo que es perfecto para creadores y empresas.'
+        answer: 'Sí, tienes los derechos de las imágenes generadas con Raphael AI. Puedes usarlas tanto para uso personal como comercial, lo que es perfecto para creadores y empresas.'
       },
       {
-        question: '¿Raphael AI está disponible en dispositivos móviles?',
-        answer: 'Actualmente, Raphael AI está disponible a través de nuestro sitio web raphael.app, que funciona muy bien en los navegadores móviles. Estamos desarrollando actualmente aplicaciones móviles dedicadas para ofrecerte una mejor experiencia pronto.'
+        question: '¿Está disponible Raphael AI en dispositivos móviles?',
+        answer: 'Actualmente, Raphael AI está disponible a través de nuestro sitio web raphael.app, que funciona muy bien en los navegadores móviles. Estamos desarrollando aplicaciones móviles dedicadas para ofrecerte una mejor experiencia próximamente.'
       },
       {
         question: '¿Cómo puedo proporcionar comentarios o informar problemas?',
-        answer: '¡Estamos encantados de escuchar tus comentarios! Ponte en contacto con nosotros en support@raphael.app. Tu opinión nos ayuda a mejorar y mantener el mejor servicio de generación de imágenes IA gratuito.'
+        answer: '¡Apreciamos tus comentarios! Puedes contactar a nuestro equipo de soporte en support@raphael.app. Tu opinión nos ayuda a mejorar y mantener el mejor servicio gratuito de generación de imágenes de IA.'
       },
       {
-        question: '¿Cuál es el siguiente paso para Raphael AI?',
-        answer: 'Estamos mejorando continuamente nuestro servicio gracias a actualizaciones regulares de la IA y la interfaz de usuario. Las próximas ideas incluyen aplicaciones móviles y funciones creativas adicionales, manteniendo nuestro compromiso de seguir siendo completamente gratuito.'
+        question: '¿Cuáles son los próximos pasos para Raphael AI?',
+        answer: 'Mejoramos continuamente nuestro servicio a través de actualizaciones regulares del modelo de IA y la interfaz de usuario. Los planes futuros incluyen aplicaciones móviles y características creativas adicionales, manteniendo nuestro compromiso de permanecer completamente gratuitos.'
       }
     ],
     testimonials: [
       {
         name: 'David Thompson',
-        role: 'Independent Game Developer',
-        comment: '"As a solo game dev, Raphael AI Image Generator is invaluable. The speed and quality of asset generation are unmatched, and being free means I can focus my budget elsewhere."'
+        role: 'Desarrollador de juegos independiente',
+        answer: '"Como desarrollador de juegos independiente, Raphael AI Image Generator es invaluable. La velocidad y calidad de la generación de recursos son incomparables, y ser gratuito significa que puedo enfocar mi presupuesto en otros aspectos."'
       },
       {
         name: 'Emily Parker',
-        role: 'Content Creator on YouTube',
-        comment: '"I create thumbnails daily using Raphael AI Image Generator. The text understanding is incredible - it captures exactly what I need, and the no-registration policy makes it super convenient."'
+        role: 'Creadora de contenido en YouTube',
+        answer: '"Creo miniaturas diariamente usando Raphael AI Image Generator. La comprensión del texto es increíble - captura exáctamente lo que necesito, y la política de no registro lo hace super conveniente."'
       },
       {
         name: 'Robert Wilson',
-        role: 'UI/UX Designer at TechFlow',
-        comment: '"The FLUX.1-Dev model in Raphael AI Image Generator produces the most consistent and high-quality results I\'ve seen. It\'s become our go-to tool for generating mockup images."'
+        role: 'Diseñador UI/UX en TechFlow',
+        answer: '"El modelo FLUX.1-Dev en Raphael AI Image Generator produce los resultados más consistentes y de alta calidad que he visto. Se ha convertido en nuestra herramienta preferida para generar imágenes de maquetas."'
       },
       {
         name: 'Jennifer Adams',
-        role: 'E-commerce Business Owner',
-        comment: '"Running an online store requires constant image creation. Raphael\'s free AI Image Generator helps me create professional product photos instantly. It\'s literally saving my business thousands."'
+        role: 'Propietária de e-commerce',
+        answer: '"Administrar una tienda en línea requiere creación constante de imágenes. El generador de imágenes IA gratuito de Raphael me ayuda a crear fotos profesionales de produtos instantáneamente. Literalmente está ahorrando miles a mi negocio."'
       },
       {
         name: 'Michael Anderson',
-        role: 'Digital Artist at ArtStation',
-        comment: '"Raphael\'s AI Image Generator is a game-changer. The FLUX.1-Dev model produces incredibly detailed images that I use as concept art. The fact that it\'s completely free is mind-blowing!"'
+        role: 'Artista digital en ArtStation',
+        answer: '"El generador de imágenes IA de Raphael es revolucionario. El modelo FLUX.1-Dev produce imágenes incrivelmente detalhadas que uso como arte conceptual. ¡El hecho de que sea completamente gratuito es increíble!"'
       }
     ]
   },
   'Português': {
     features: 'Funcionalidades',
     faqs: 'Perguntas frequentes',
-    title: 'Criar imagens geradas por IA em segundos',
-    subtitle: 'Primeiro gerador gratuito e ilimitado de imagens de IA',
+    title: 'Crie imagens geradas por IA em segundos',
+    subtitle: 'O primeiro gerador gratuito e ilimitado de imagens de IA',
     free: '100% grátis',
-    poweredBy: 'Powered by Flux.1 Dev',
-    noLogin: 'Nenhum login necessário',
+    poweredBy: 'Desenvolvido com Flux.1 Dev',
+    noLogin: 'Sem necessidade de login',
     unlimited: 'Geração ilimitada',
     generator: 'Gerador de imagens IA',
-    getInspired: 'Obter inspiração',
+    getInspired: 'Inspire-se',
     getInspiredDesc: 'Inspire-se no que outros estão criando com Raphael',
-    testimonial: 'Depoimento',
+    testimonial: 'Depoimentos',
     testimonialTitle: 'O que os usuários dizem sobre Raphael AI',
-    testimonialDesc: 'Ouvir as opiniões dos criadores e profissionais que usam diariamente nosso serviço de geração de imagens IA.',
+    testimonialDesc: 'Ouça as opiniões de criativos e profissionais que usam nosso gerador de imagens IA diariamente.',
     faqTitle: 'Perguntas frequentes',
-    faqContact: 'Tem outra pergunta? Contate-nos em support@raphael.app',
+    faqContact: 'Tem outra pergunta? Entre em contato conosco em support@raphael.app',
     copyright: '© 2024 Raphael AI. Todos os direitos reservados.',
-    footerDesc: 'Criar imagens geradas por IA em segundos com o primeiro gerador gratuito e ilimitado de imagens de IA.',
+    footerDesc: 'Crie imagens impressionantes geradas por IA em segundos com o primeiro gerador de imagens de IA gratuito e ilimitado do mundo.',
     product: 'Produto',
     company: 'Empresa',
     about: 'Sobre nós',
     blog: 'Blog',
     contact: 'Contato',
     api: 'API',
-    pricing: 'Preço',
+    pricing: 'Preços',
     faqItems: [
       {
         question: 'O que é Raphael AI e como funciona?',
-        answer: 'Raphael AI é o primeiro gerador gratuito e ilimitado de imagens de IA, baseado no modelo FLUX.1-Dev. Ele permite criar imagens de alta qualidade a partir de descrições textuais sem qualquer restrição de registro ou limites de uso.'
+        answer: 'Raphael AI é o primeiro gerador gratuito e ilimitado de imagens de IA, baseado no modelo FLUX.1-Dev. Ele permite criar imagens de alta qualidade a partir de descrições textuais sem necessidade de registro ou limites de uso.'
       },
       {
         question: 'Raphael AI é realmente gratuito?',
@@ -1057,7 +1057,34 @@ const translations: Record<string, Translation> = {
       },
       {
         question: 'Qual é o próximo passo para Raphael AI?',
-        comment: '「RaphaelのAIイメージジェネレーターはゲームチェンジャーです。FLUX.1-Devモデルは信じられないほど詳細な画像を生成し、それをコンセプトアートとして使用しています。完全無料なのは驚きです！」'
+        answer: 'Melhoramos continuamente nosso serviço através de atualizações regulares do modelo de IA e da interface do usuário. Os planos futuros incluem aplicativos móveis e recursos criativos adicionais, mantendo nosso compromisso de permanecer completamente gratuito.'
+      }
+    ],
+    testimonials: [
+      {
+        name: 'David Thompson',
+        role: 'Desenvolvedor de jogos independente',
+        answer: '"Como desenvolvedor de jogos independente, Raphael AI Image Generator é inestimável. A velocidade e qualidade da geração de assets são incomparáveis, e ser gratuito significa que posso focar meu orçamento em outros aspectos."'
+      },
+      {
+        name: 'Emily Parker',
+        role: 'Criadora de conteúdo no YouTube',
+        answer: '"Crio miniaturas diariamente usando Raphael AI Image Generator. A compreensão do texto é incrível - captura exatamente o que preciso, e a política de não registro o torna super conveniente."'
+      },
+      {
+        name: 'Robert Wilson',
+        role: 'Designer de UI/UX na TechFlow',
+        answer: '"O modelo FLUX.1-Dev no Raphael AI Image Generator produz os resultados mais consistentes e de alta qualidade que já vi. Tornou-se nossa ferramenta preferida para gerar imagens de mockup."'
+      },
+      {
+        name: 'Jennifer Adams',
+        role: 'Proprietária de e-commerce',
+        answer: '"Administrar uma loja online requer criação constante de imagens. O gerador de imagens IA gratuito da Raphael me ajuda a criar fotos profissionais de produtos instantaneamente. Literalmente está economizando milhares para meu negócio."'
+      },
+      {
+        name: 'Michael Anderson',
+        role: 'Artista digital na ArtStation',
+        answer: '"O gerador de imagens IA da Raphael é revolucionário. O modelo FLUX.1-Dev produz imagens incrivelmente detalhadas que uso como arte conceitual. O fato de ser completamente gratuito é incrível!"'
       }
     ]
   }
@@ -1672,7 +1699,7 @@ function App() {
                             ))}
                           </div>
                           <p className="text-gray-600 text-left">
-                            {t.testimonials[0].comment}
+                            {t.testimonials[0].answer}
                           </p>
                         </div>
 
@@ -1694,7 +1721,7 @@ function App() {
                             ))}
                           </div>
                           <p className="text-gray-600 text-left">
-                            {t.testimonials[1].comment}
+                            {t.testimonials[1].answer}
                           </p>
                         </div>
 
@@ -1716,7 +1743,7 @@ function App() {
                             ))}
                           </div>
                           <p className="text-gray-600 text-left">
-                            {t.testimonials[2].comment}
+                            {t.testimonials[2].answer}
                           </p>
                         </div>
 
@@ -1738,7 +1765,7 @@ function App() {
                             ))}
                           </div>
                           <p className="text-gray-600 text-left">
-                            {t.testimonials[3].comment}
+                            {t.testimonials[3].answer}
                           </p>
                         </div>
 
@@ -1760,7 +1787,7 @@ function App() {
                             ))}
                           </div>
                           <p className="text-gray-600 text-left">
-                            {t.testimonials[4].comment}
+                            {t.testimonials[4].answer}
                           </p>
                         </div>
                       </motion.div>
