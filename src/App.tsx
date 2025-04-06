@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Brush, Code2, Palette, Sparkles, Download, ChevronRight, Globe, ChevronDown, Image, Shuffle, DollarSign, Star, Languages, Zap, Shield, Paintbrush, Check } from 'lucide-react';
 
@@ -27,6 +27,43 @@ function App() {
     "Soldiers in a World War II trench engaged in intense combat, with fighter planes soaring overhead.",
     "An elf warrior standing at the entrance of a magical forest. Behind her, an ancient stone tablet etched with glowing runes spells out the phrase 'Guardians of the Emerald Realm.'"
   ];
+
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  
+  useEffect(() => {
+    const resetIframePosition = () => {
+      if (iframeRef.current) {
+        try {
+          const iframeWindow = iframeRef.current.contentWindow;
+          if (iframeWindow) {
+            iframeWindow.scrollTo(0, 460);
+          }
+        } catch (e) {
+          console.log("无法访问iframe内容，这是正常的跨域限制");
+        }
+      }
+    };
+    
+    const intervalId = setInterval(resetIframePosition, 500);
+    
+    const handleIframeLoad = () => {
+      setTimeout(resetIframePosition, 100);
+      setTimeout(resetIframePosition, 500);
+      setTimeout(resetIframePosition, 1000);
+    };
+    
+    const iframe = iframeRef.current;
+    if (iframe) {
+      iframe.addEventListener('load', handleIframeLoad);
+    }
+    
+    return () => {
+      clearInterval(intervalId);
+      if (iframe) {
+        iframe.removeEventListener('load', handleIframeLoad);
+      }
+    };
+  }, []);
 
   React.useEffect(() => {
     const interval = setInterval(() => {
@@ -73,21 +110,16 @@ function App() {
       .then(response => {
         console.log("接收响应:", JSON.stringify(response));
         
-        // 检查是否有错误
         if (response.code === 50604 || (response.message && response.message.includes("rate limiting"))) {
-          // 如果是频率限制错误且应该重试
           if (shouldRetry && retry < maxRetries) {
             console.log(`API频率限制，${2000 * (retry + 1)}ms后重试...`);
             setRetryCount(retry + 1);
-            // 等待一段时间后重试
             setTimeout(() => {
               generateImage(shouldRetry, retry + 1);
-            }, 2000 * (retry + 1)); // 指数退避
+            }, 2000 * (retry + 1));
             return;
           } else {
-            // 达到最大重试次数但继续显示加载状态
             console.log("达到最大重试次数，继续显示加载状态");
-            // 不设置错误信息，保持isLoading为true，5秒后重试
             setTimeout(() => {
               generateImage(true, 0);
             }, 5000);
@@ -95,36 +127,28 @@ function App() {
           }
         }
         
-        // 处理API返回的数据
         let imageData = [];
         
-        // 如果data是数组且有内容，直接使用
         if (response.data && Array.isArray(response.data) && response.data.length > 0) {
           imageData = response.data;
         } 
-        // 如果data是单个对象，将它放入数组
         else if (response.data && typeof response.data === 'object') {
           imageData = [response.data];
         }
-        // 如果有单个URL属性
         else if (response.url) {
           imageData = [{ url: response.url }];
         }
-        // 如果找不到合适的数据，但有其他错误
         else if (response.message || response.error) {
           console.log("API返回错误，继续显示加载状态并重试");
-          // 继续显示加载状态，5秒后重试
           setTimeout(() => {
             generateImage(true, 0);
           }, 5000);
           return;
         }
-        // 如果找不到合适的数据，使用默认图片
         else {
           imageData = [{ url: "/1 (1).webp" }];
         }
         
-        // 确保总是有4张图片（如果API只返回1张，则复制为4张）
         if (imageData.length === 1) {
           imageData = [
             imageData[0],
@@ -141,17 +165,14 @@ function App() {
       .catch(err => {
         console.error("请求错误:", err);
         
-        // 如果应该重试且未达到最大重试次数
         if (shouldRetry && retry < maxRetries) {
           console.log(`请求失败，${2000 * (retry + 1)}ms后重试...`);
           setRetryCount(retry + 1);
-          // 等待一段时间后重试
           setTimeout(() => {
             generateImage(shouldRetry, retry + 1);
-          }, 2000 * (retry + 1)); // 指数退避
+          }, 2000 * (retry + 1));
         } else {
           console.log("请求错误达到最大重试次数，继续显示加载状态");
-          // 继续显示加载状态，5秒后重试
           setTimeout(() => {
             generateImage(true, 0);
           }, 5000);
@@ -169,7 +190,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[rgb(33,26,20)] text-white">
-      {/* Navigation */}
       <nav className="fixed w-full z-50 bg-[rgb(33,26,20)]/80 backdrop-blur-lg border-b border-white/10">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -197,7 +217,6 @@ function App() {
         </div>
       </nav>
 
-      {/* Main Content */}
       <div className="pt-32 pb-20">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -205,7 +224,6 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            {/* Logo Section */}
             <div className="flex items-center justify-center mb-5">
               <div className="flex items-center bg-[rgb(33,26,20)] px-8 py-4 rounded-lg border border-white/10">
                 <img
@@ -237,24 +255,21 @@ function App() {
             <div className="bg-[rgb(33,26,20)] rounded-xl p-6 mb-12 relative">
               <h2 className="text-2xl font-bold mb-6 text-left text-[rgb(237,234,222)]">AI Image Generator</h2>
               
-              {/* iframe容器，设置确切大小和溢出隐藏 */}
-              <div className="w-full h-[600px] relative overflow-hidden rounded-lg bg-[rgb(38,30,22)]">
-                {/* iframe，设置大尺寸并通过定位和缩放来显示特定区域 */}
+              <div className="w-full h-[700px] relative overflow-hidden rounded-lg bg-[rgb(38,30,22)]">
                 <iframe 
+                  ref={iframeRef}
                   src="https://raphael.app/" 
                   title="Raphael AI Image Generator"
                   className="absolute border-0"
                   style={{
                     width: "1280px",
-                    height: "3000px",  /* 增加高度以显示更多内容 */
-                    top: "-460px",  /* 保持上部裁剪位置不变 */
+                    height: "3000px",
+                    top: "-460px",
                     left: "50%",
                     transform: "translateX(-50%) scale(1)",
                     transformOrigin: "top center",
-                    pointerEvents: "auto" as "auto",
-                    overflow: "hidden" /* 防止内部滚动 */
+                    pointerEvents: "auto" as "auto"
                   }}
-                  scrolling="no" /* 禁用iframe的滚动 */
                   sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation"
                   loading="lazy"
                   referrerPolicy="no-referrer"
@@ -268,7 +283,6 @@ function App() {
               Get inspired by what others are creating with Raphael
             </p>
 
-            {/* Image Gallery */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
               <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
                 <img 
@@ -384,7 +398,6 @@ function App() {
               </div>
             </div>
 
-            {/* Key Features Section */}
             <div className="py-20 bg-[rgb(33,26,20)]">
               <div className="max-w-[1280px] mx-auto">
                 <h2 className="text-4xl font-bold mb-4">Key Features of Raphael</h2>
@@ -486,7 +499,6 @@ function App() {
               </div>
             </div>
 
-            {/* Testimonials Section */}
             <div className="py-20 bg-[rgb(33,26,20)]">
               <div className="max-w-[1280px] mx-auto text-center">
                 <motion.div
@@ -507,7 +519,6 @@ function App() {
                         animate={{ x: -currentTestimonial * 340 }}
                         transition={{ type: "tween", ease: "easeInOut", duration: 0.5 }}
                       >
-                        {/* David Thompson */}
                         <div className="bg-[rgb(33,26,20)] p-6 rounded-xl w-80 flex-shrink-0">
                           <div className="flex items-center mb-4">
                             <img
@@ -530,7 +541,6 @@ function App() {
                           </p>
                         </div>
 
-                        {/* Emily Parker */}
                         <div className="bg-[rgb(33,26,20)] p-6 rounded-xl w-80 flex-shrink-0">
                           <div className="flex items-center mb-4">
                             <img
@@ -553,7 +563,6 @@ function App() {
                           </p>
                         </div>
 
-                        {/* Robert Wilson */}
                         <div className="bg-[rgb(33,26,20)] p-6 rounded-xl w-80 flex-shrink-0">
                           <div className="flex items-center mb-4">
                             <img
@@ -576,7 +585,6 @@ function App() {
                           </p>
                         </div>
 
-                        {/* Jennifer Adams */}
                         <div className="bg-[rgb(33,26,20)] p-6 rounded-xl w-80 flex-shrink-0">
                           <div className="flex items-center mb-4">
                             <img
@@ -599,7 +607,6 @@ function App() {
                           </p>
                         </div>
 
-                        {/* Michael Anderson */}
                         <div className="bg-[rgb(33,26,20)] p-6 rounded-xl w-80 flex-shrink-0">
                           <div className="flex items-center mb-4">
                             <img
@@ -638,7 +645,6 @@ function App() {
               </div>
             </div>
 
-            {/* FAQ Section */}
             <div className="py-20 bg-[rgb(33,26,20)]" id="faqs">
               <div className="max-w-[1280px] mx-auto">
                 <motion.div
@@ -886,7 +892,6 @@ function App() {
               </div>
             </div>
 
-            {/* Footer */}
             <footer className="bg-[rgb(33,26,20)] border-t border-white/10 mt-20">
               <div className="max-w-[1280px] mx-auto py-12 px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
