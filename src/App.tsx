@@ -37,6 +37,17 @@ function App() {
           const iframeWindow = iframeRef.current.contentWindow;
           if (iframeWindow) {
             iframeWindow.scrollTo(0, 460);
+            
+            try {
+              iframeWindow.addEventListener('scroll', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                iframeWindow.scrollTo(0, 460);
+                return false;
+              }, true);
+            } catch (e) {
+              console.log("无法添加滚动事件监听器，这是正常的跨域限制");
+            }
           }
         } catch (e) {
           console.log("无法访问iframe内容，这是正常的跨域限制");
@@ -44,10 +55,11 @@ function App() {
       }
     };
     
-    const intervalId = setInterval(resetIframePosition, 500);
+    const intervalId = setInterval(resetIframePosition, 100);
     
     const handleIframeLoad = () => {
       setTimeout(resetIframePosition, 100);
+      setTimeout(resetIframePosition, 300);
       setTimeout(resetIframePosition, 500);
       setTimeout(resetIframePosition, 1000);
     };
@@ -255,7 +267,7 @@ function App() {
             <div className="bg-[rgb(33,26,20)] rounded-xl p-6 mb-12 relative">
               <h2 className="text-2xl font-bold mb-6 text-left text-[rgb(237,234,222)]">AI Image Generator</h2>
               
-              <div className="w-full h-[640px] relative overflow-hidden rounded-lg bg-white">
+              <div className="w-full h-[520px] relative overflow-hidden rounded-lg bg-white">
                 <iframe 
                   ref={iframeRef}
                   src="https://raphaelai.org/" 
@@ -268,8 +280,10 @@ function App() {
                     left: "50%",
                     transform: "translateX(-50%) scale(0.9)",
                     transformOrigin: "top center",
-                    pointerEvents: "auto" as "auto"
+                    pointerEvents: "auto" as "auto",
+                    overflow: "hidden"
                   }}
+                  scrolling="no"
                   sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation"
                   loading="lazy"
                   referrerPolicy="no-referrer"
