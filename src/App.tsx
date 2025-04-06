@@ -3,6 +3,43 @@ import { motion } from 'framer-motion';
 import { Brush, Code2, Palette, Sparkles, Download, ChevronRight, Globe, ChevronDown, Image, Shuffle, DollarSign, Star, Languages, Zap, Shield, Paintbrush, Check } from 'lucide-react';
 
 function App() {
+  const [prompt, setPrompt] = React.useState('');
+  const [currentTestimonial, setCurrentTestimonial] = React.useState(0);
+  
+  const promptOptions = [
+    "A polar fox walking through a snowy landscape, with pristine white fur and alert eyes.",
+    "A basketball player captured mid-air during a slam dunk, with a cheering crowd in the background.",
+    "A black and white photograph of a woman standing in the rain, holding an umbrella, with a blurred city street in the background.",
+    "A World War II trench scene. A weathered wooden sign at the trench's entrance reads 'No Man's Land,' with bullet holes piercing through the letters.",
+    "A medieval-style portrait of a noblewoman in a lavish gown, seated in an ancient palace, with a solemn expression.",
+    "An abandoned castle overgrown with vines, with sunlight streaming through broken windows.",
+    "A neon-lit street in a cyberpunk city, with a digital shop sign displaying 'Cyber Sushi – Open 24/7.' Holographic text floats above the crowd, showcasing ongoing deals.",
+    "A city street illuminated by neon lights, with pedestrians in futuristic attire and holographic advertisements floating above.",
+    "A meticulously arranged sushi platter with vibrant colors and artistic presentation.",
+    "A deserted haunted house with broken windows, appearing especially eerie under the moonlight.",
+    "Vibrant liquids blending together underwater, forming unique abstract patterns.",
+    "An inventor wearing goggles, working in a laboratory filled with gears and steam.",
+    "A black and white photograph of a rainy city street. A woman holding an umbrella stands next to a neon sign that reads 'Eternal Rain,' with the letters glowing softly through the mist.",
+    "Soldiers in a World War II trench engaged in intense combat, with fighter planes soaring overhead.",
+    "An elf warrior standing at the entrance of a magical forest. Behind her, an ancient stone tablet etched with glowing runes spells out the phrase 'Guardians of the Emerald Realm.'"
+  ];
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % 3);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+  
+  const handleClear = () => {
+    setPrompt('');
+  };
+  
+  const handleRandom = () => {
+    const randomIndex = Math.floor(Math.random() * promptOptions.length);
+    setPrompt(promptOptions[randomIndex]);
+  };
+
   return (
     <div className="min-h-screen bg-[rgb(33,26,20)] text-white">
       {/* Navigation */}
@@ -258,8 +295,12 @@ function App() {
                   </p>
 
                   <div className="relative">
-                    <div className="overflow-x-auto pb-4 scrollbar-hide">
-                      <div className="inline-flex space-x-6 min-w-full px-4">
+                    <div className="overflow-hidden pb-4">
+                      <motion.div 
+                        className="flex space-x-6 min-w-full"
+                        animate={{ x: -currentTestimonial * 340 }}
+                        transition={{ type: "tween", ease: "easeInOut", duration: 0.5 }}
+                      >
                         {/* David Thompson */}
                         <div className="bg-[rgb(33,26,20)] p-6 rounded-xl w-80 flex-shrink-0">
                           <div className="flex items-center mb-4">
@@ -374,14 +415,15 @@ function App() {
                             "Raphael's AI Image Generator is a game-changer. The FLUX.1-Dev model produces incredibly detailed images that I use as concept art. The fact that it's completely free is mind-blowing!"
                           </p>
                         </div>
-                      </div>
+                      </motion.div>
                     </div>
                     <div className="flex justify-center mt-6 space-x-2">
                       {[0, 1, 2].map((i) => (
                         <button 
                           key={i} 
-                          className={`w-3 h-3 rounded-full ${i === 0 ? 'bg-yellow-500' : 'bg-gray-600'}`}
+                          className={`w-3 h-3 rounded-full ${i === currentTestimonial ? 'bg-yellow-500' : 'bg-gray-600'}`}
                           aria-label={`Go to slide ${i + 1}`}
+                          onClick={() => setCurrentTestimonial(i)}
                         />
                       ))}
                     </div>
