@@ -238,7 +238,7 @@ function App() {
               <h2 className="text-2xl font-bold mb-6 text-left text-[rgb(237,234,222)]">AI Image Generator</h2>
               
               {/* iframe容器，设置确切大小和溢出隐藏 */}
-              <div className="w-full h-[330px] relative overflow-hidden rounded-lg bg-[rgb(38,30,22)]">
+              <div className="w-full h-[450px] relative overflow-hidden rounded-lg bg-[rgb(38,30,22)]">
                 {/* iframe，设置大尺寸并通过定位和缩放来显示特定区域 */}
                 <iframe 
                   src="https://raphael.app/" 
@@ -247,7 +247,7 @@ function App() {
                   style={{
                     width: "1280px",
                     height: "2500px",
-                    top: "-460px",  /* 进一步增大负值，移除更多上方内容 */
+                    top: "-460px",  /* 保持上部裁剪位置不变 */
                     left: "50%",
                     transform: "translateX(-50%) scale(1)",
                     transformOrigin: "top center",
