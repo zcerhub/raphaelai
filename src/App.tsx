@@ -305,15 +305,9 @@ function App() {
                 </button>
                 
                 {showLanguageDropdown && (
-                  <div className="absolute right-0 mt-2 py-2 w-48 bg-[#1C1814] rounded-lg shadow-xl z-50 max-h-[400px] overflow-y-auto">
-                    <div className="sticky top-0 bg-[#1C1814] p-2 flex justify-between items-center border-b border-gray-700">
-                      <ChevronDown className="w-5 h-5 text-white transform rotate-180" />
-                      <button 
-                        onClick={() => setShowLanguageDropdown(false)}
-                        className="text-white hover:text-gray-300 transition"
-                      >
-                        <X className="w-5 h-5" />
-                      </button>
+                  <div className="absolute right-0 mt-2 py-2 w-40 bg-white rounded-lg shadow-xl z-50 max-h-[400px] overflow-y-auto">
+                    <div className="sticky top-0 bg-white p-2 flex justify-center items-center border-b border-gray-200">
+                      <ChevronDown className="w-5 h-5 text-gray-600 transform rotate-180" />
                     </div>
                     {languages.map((language) => (
                       <button
@@ -321,7 +315,7 @@ function App() {
                         className={`block w-full text-left px-4 py-2 ${
                           currentLanguage === language 
                             ? 'bg-[#E5B06E] text-white' 
-                            : 'text-white hover:bg-gray-700'
+                            : 'text-gray-700 hover:bg-gray-100'
                         } transition`}
                         onClick={() => {
                           setCurrentLanguage(language);
@@ -331,8 +325,8 @@ function App() {
                         {language}
                       </button>
                     ))}
-                    <div className="sticky bottom-0 bg-[#1C1814] p-2 flex justify-center border-t border-gray-700">
-                      <ChevronDown className="w-5 h-5 text-white" />
+                    <div className="sticky bottom-0 bg-white p-2 flex justify-center border-t border-gray-200">
+                      <ChevronDown className="w-5 h-5 text-gray-600" />
                     </div>
                   </div>
                 )}
