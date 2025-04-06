@@ -215,6 +215,112 @@ const translations = {
         comment: '"Raphael的AI图像生成器是一个改变游戏规则的工具。FLUX.1-Dev模型生成的细节丰富的图像，我将其用作概念艺术。它完全免费的事实令人难以置信！"'
       }
     ]
+  },
+  '繁體中文': {
+    features: '特點',
+    faqs: '常見問題',
+    title: '幾秒鐘內創建令人驚嘆的AI生成圖像',
+    subtitle: '世界首個免費無限制AI圖像生成器',
+    free: '100%免費',
+    poweredBy: '由Flux.1 Dev提供支持',
+    noLogin: '無需登錄',
+    unlimited: '無限生成',
+    generator: 'AI圖像生成器',
+    getInspired: '獲取靈感',
+    getInspiredDesc: '從其他人使用Raphael創建的作品中獲取靈感',
+    testimonial: '用戶評價',
+    testimonialTitle: '用戶對Raphael AI的評價',
+    testimonialDesc: '聽聽每天使用我們AI圖像生成器的創作者和專業人士的意見。',
+    faqTitle: '常見問題解答',
+    faqContact: '還有其他問題？請聯繫我們：support@raphael.app',
+    copyright: '© 2024 Raphael AI. 保留所有權利。',
+    footerDesc: '使用世界首個免費無限制的AI圖像生成器，幾秒鐘內創建令人驚嘆的AI生成圖像。',
+    product: '產品',
+    company: '公司',
+    about: '關於我們',
+    blog: '部落格',
+    contact: '聯繫我們',
+    api: 'API',
+    pricing: '價格',
+    // FAQ問題與答案
+    faqItems: [
+      {
+        question: 'Raphael AI是什麼，它是如何工作的？',
+        answer: 'Raphael AI是世界上第一個完全免費、無限制的AI圖像生成器，由FLUX.1-Dev模型提供支持。它允許您從文本描述中創建高質量圖像，無需任何註冊或使用限制。'
+      },
+      {
+        question: 'Raphael AI真的免費使用嗎？',
+        answer: '是的，Raphael AI完全免費使用！我們致力於成為世界上最大、最強大的免費AI圖像生成器。沒有隱藏費用，無需信用卡，也沒有使用限制。'
+      },
+      {
+        question: 'Raphael AI與其他AI圖像生成器有何不同？',
+        answer: 'Raphael AI是唯一一個提供無限免費訪問強大FLUX.1-Dev模型的平台。我們提供卓越的圖像質量、快速的生成速度和完整的隱私保護，所有這些都不需要任何費用或註冊要求。'
+      },
+      {
+        question: '我需要創建賬戶才能使用Raphael AI嗎？',
+        answer: '不，您不需要創建賬戶或註冊。只需訪問raphael.app並立即開始生成圖像。我們相信讓AI技術無障礙地為所有人所用。'
+      },
+      {
+        question: '我可以用Raphael AI創建哪些類型的圖像？',
+        answer: '您可以創建各種各樣的圖像，包括逼真的場景、藝術插圖、數字藝術、動漫風格圖像等。FLUX.1-Dev模型擅長理解複雜提示並生成多樣化的視覺風格。'
+      },
+      {
+        question: 'Raphael AI如何保護我的隱私？',
+        answer: '我們非常重視隱私。我們不會在服務器上存儲您的提示或生成的圖像，也不需要任何個人信息。您的創作完全保持私密，並在生成後被刪除。'
+      },
+      {
+        question: 'FLUX.1-Dev模型是什麼？',
+        answer: 'FLUX.1-Dev是一個最先進的AI模型，以其卓越的圖像質量、提示準確性和風格多樣性而聞名。它通常使用成本較高，但Raphael使它免費提供給所有人。'
+      },
+      {
+        question: '使用Raphael AI有什麼限制嗎？',
+        answer: '雖然Raphael AI是免費且無限制的，但我們維持標準內容指南以確保適當使用。該平台目前為網頁設計，移動應用計劃在未來推出。'
+      },
+      {
+        question: '我可以將生成的圖像用於商業用途嗎？',
+        answer: '是的，您擁有使用Raphael AI生成的圖像的權利。您可以將它們用於個人和商業目的，這使它成為創作者和企業的理想選擇。'
+      },
+      {
+        question: 'Raphael AI在移動設備上可用嗎？',
+        answer: '目前，Raphael AI可通過我們的網站raphael.app訪問，在移動瀏覽器上運行良好。我們正在積極開發專用移動應用，以便不久後提供更好的體驗。'
+      },
+      {
+        question: '如何提供反饋或報告問題？',
+        answer: '我們歡迎您的反饋！您可以通過support@raphael.app聯繫我們的支持團隊。您的反饋有助於我們改進和維護最好的免費AI圖像生成服務。'
+      },
+      {
+        question: 'Raphael AI的未來計劃是什麼？',
+        answer: '我們不斷通過定期更新AI模型和用戶界面來改進我們的服務。未來計劃包括移動應用和額外的創意功能，同時保持我們完全免費的承諾。'
+      }
+    ],
+    // 繁體中文用戶評論
+    testimonials: [
+      {
+        name: '大衛·湯普森',
+        role: '獨立遊戲開發者',
+        comment: '"作為一名獨立遊戲開發者，Raphael AI圖像生成器價值連城。資源生成的速度和質量無與倫比，而且免費使用讓我能夠將預算用在其他地方。"'
+      },
+      {
+        name: '艾米麗·帕克',
+        role: 'YouTube內容創作者',
+        comment: '"我每天都使用Raphael AI圖像生成器創建縮略圖。它對文本的理解能力令人難以置信——能精確捕捉我所需要的內容，而且無需註冊的政策使它非常便捷。"'
+      },
+      {
+        name: '羅伯特·威爾遜',
+        role: 'TechFlow的UI/UX設計師',
+        comment: '"Raphael AI圖像生成器中的FLUX.1-Dev模型產生了我所見過的最一致和高質量的結果。它已經成為我們生成模型圖像的首選工具。"'
+      },
+      {
+        name: '珍妮弗·亞當斯',
+        role: '電子商務企業主',
+        comment: '"經營線上商店需要持續創建圖像。Raphael的免費AI圖像生成器幫助我即時創建專業的產品照片。它實實在地在為我的企業節省了數千元成本。"'
+      },
+      {
+        name: '邁克爾·安德森',
+        role: 'ArtStation的數字藝術家',
+        comment: '"Raphael的AI圖像生成器是一個改變遊戲規則的工具。FLUX.1-Dev模型生成的細節豐富的圖像，我將其用作概念藝術。它完全免費的事實令人難以置信！"'
+      }
+    ]
   }
 };
 
@@ -230,6 +336,9 @@ function App() {
   
   // 当前语言的文本内容
   const t = translations[currentLanguage as keyof typeof translations] || translations['English'];
+  
+  // 有翻译数据的语言
+  const availableLanguages = Object.keys(translations);
 
   const promptOptions = [
     "A polar fox walking through a snowy landscape, with pristine white fur and alert eyes.",
@@ -525,7 +634,7 @@ function App() {
                 
                 {showLanguageDropdown && (
                   <div className="absolute right-0 mt-2 py-2 w-40 bg-white rounded-lg shadow-xl z-50 max-h-[400px] overflow-y-auto">
-                    {languages.map((language) => (
+                    {availableLanguages.map((language) => (
                       <button
                         key={language}
                         className={`block w-full text-left px-4 py-2 ${
