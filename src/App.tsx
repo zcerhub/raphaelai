@@ -334,7 +334,7 @@ function App() {
                   }}
                 >
                   <div className="flex items-center justify-center h-full text-gray-800 text-xl font-medium">
-                    <span>AI 图像生成</span>
+                    {/* <span>AI 图像生成</span> */}
                   </div>
                 </div>
                 
