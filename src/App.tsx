@@ -257,87 +257,134 @@ function App() {
                     Hear from creators and professionals who use our AI Image Generator daily.
                   </p>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5 }}
-                      className="bg-[rgb(33,26,20)] p-6 rounded-xl"
-                    >
-                      <div className="flex items-center mb-4">
-                        <img
-                          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                          alt="Robert Wilson"
-                          className="w-12 h-12 rounded-full"
-                        />
-                        <div className="ml-4 text-left">
-                          <h3 className="font-semibold">Robert Wilson</h3>
-                          <p className="text-gray-400 text-sm">UX Designer at FlowAI</p>
+                  <div className="relative">
+                    <div className="overflow-x-auto pb-4 scrollbar-hide">
+                      <div className="inline-flex space-x-6 min-w-full px-4">
+                        {/* David Thompson */}
+                        <div className="bg-[rgb(33,26,20)] p-6 rounded-xl w-80 flex-shrink-0">
+                          <div className="flex items-center mb-4">
+                            <img
+                              src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                              alt="David Thompson"
+                              className="w-12 h-12 rounded-full"
+                            />
+                            <div className="ml-4 text-left">
+                              <h3 className="font-semibold">David Thompson</h3>
+                              <p className="text-gray-400 text-sm">Independent Game Developer</p>
+                            </div>
+                          </div>
+                          <div className="flex text-yellow-500 mb-4">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} className="w-5 h-5 fill-current" />
+                            ))}
+                          </div>
+                          <p className="text-gray-300 text-left">
+                            "As a solo game dev, Raphael AI Image Generator is invaluable. The speed and quality of asset generation are unmatched, and being free means I can focus my budget elsewhere."
+                          </p>
                         </div>
-                      </div>
-                      <div className="flex text-yellow-500 mb-4">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-current" />
-                        ))}
-                      </div>
-                      <p className="text-gray-300 text-left">
-                        "FLUX.1 Dev model in Raphael AI Image produces the most consistent quality results I've seen. It's my go-to tool for generating images."
-                      </p>
-                    </motion.div>
 
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.2 }}
-                      className="bg-[rgb(33,26,20)] p-6 rounded-xl"
-                    >
-                      <div className="flex items-center mb-4">
-                        <img
-                          src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                          alt="Jennifer Adams"
-                          className="w-12 h-12 rounded-full"
-                        />
-                        <div className="ml-4 text-left">
-                          <h3 className="font-semibold">Jennifer Adams</h3>
-                          <p className="text-gray-400 text-sm">E-commerce Business Owner</p>
+                        {/* Emily Parker */}
+                        <div className="bg-[rgb(33,26,20)] p-6 rounded-xl w-80 flex-shrink-0">
+                          <div className="flex items-center mb-4">
+                            <img
+                              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                              alt="Emily Parker"
+                              className="w-12 h-12 rounded-full"
+                            />
+                            <div className="ml-4 text-left">
+                              <h3 className="font-semibold">Emily Parker</h3>
+                              <p className="text-gray-400 text-sm">Content Creator on YouTube</p>
+                            </div>
+                          </div>
+                          <div className="flex text-yellow-500 mb-4">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} className="w-5 h-5 fill-current" />
+                            ))}
+                          </div>
+                          <p className="text-gray-300 text-left">
+                            "I create thumbnails daily using Raphael AI Image Generator. The text understanding is incredible - it captures exactly what I need, and the no-registration policy makes it super convenient."
+                          </p>
                         </div>
-                      </div>
-                      <div className="flex text-yellow-500 mb-4">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-current" />
-                        ))}
-                      </div>
-                      <p className="text-gray-300 text-left">
-                        "Running an online store requires constant image creation. Raphael's free AI Image Generator helps me create professional product photos instantly. It's literally saving my business thousands."
-                      </p>
-                    </motion.div>
 
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.4 }}
-                      className="bg-[rgb(33,26,20)] p-6 rounded-xl"
-                    >
-                      <div className="flex items-center mb-4">
-                        <img
-                          src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                          alt="Michael Anderson"
-                          className="w-12 h-12 rounded-full"
-                        />
-                        <div className="ml-4 text-left">
-                          <h3 className="font-semibold">Michael Anderson</h3>
-                          <p className="text-gray-400 text-sm">Digital Artist at ArtStation</p>
+                        {/* Robert Wilson */}
+                        <div className="bg-[rgb(33,26,20)] p-6 rounded-xl w-80 flex-shrink-0">
+                          <div className="flex items-center mb-4">
+                            <img
+                              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                              alt="Robert Wilson"
+                              className="w-12 h-12 rounded-full"
+                            />
+                            <div className="ml-4 text-left">
+                              <h3 className="font-semibold">Robert Wilson</h3>
+                              <p className="text-gray-400 text-sm">UI/UX Designer at TechFlow</p>
+                            </div>
+                          </div>
+                          <div className="flex text-yellow-500 mb-4">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} className="w-5 h-5 fill-current" />
+                            ))}
+                          </div>
+                          <p className="text-gray-300 text-left">
+                            "The FLUX.1-Dev model in Raphael AI Image Generator produces the most consistent and high-quality results I've seen. It's become our go-to tool for generating mockup images."
+                          </p>
+                        </div>
+
+                        {/* Jennifer Adams */}
+                        <div className="bg-[rgb(33,26,20)] p-6 rounded-xl w-80 flex-shrink-0">
+                          <div className="flex items-center mb-4">
+                            <img
+                              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                              alt="Jennifer Adams"
+                              className="w-12 h-12 rounded-full"
+                            />
+                            <div className="ml-4 text-left">
+                              <h3 className="font-semibold">Jennifer Adams</h3>
+                              <p className="text-gray-400 text-sm">E-commerce Business Owner</p>
+                            </div>
+                          </div>
+                          <div className="flex text-yellow-500 mb-4">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} className="w-5 h-5 fill-current" />
+                            ))}
+                          </div>
+                          <p className="text-gray-300 text-left">
+                            "Running an online store requires constant image creation. Raphael's free AI Image Generator helps me create professional product photos instantly. It's literally saving my business thousands."
+                          </p>
+                        </div>
+
+                        {/* Michael Anderson */}
+                        <div className="bg-[rgb(33,26,20)] p-6 rounded-xl w-80 flex-shrink-0">
+                          <div className="flex items-center mb-4">
+                            <img
+                              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                              alt="Michael Anderson"
+                              className="w-12 h-12 rounded-full"
+                            />
+                            <div className="ml-4 text-left">
+                              <h3 className="font-semibold">Michael Anderson</h3>
+                              <p className="text-gray-400 text-sm">Digital Artist at ArtStation</p>
+                            </div>
+                          </div>
+                          <div className="flex text-yellow-500 mb-4">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} className="w-5 h-5 fill-current" />
+                            ))}
+                          </div>
+                          <p className="text-gray-300 text-left">
+                            "Raphael's AI Image Generator is a game-changer. The FLUX.1-Dev model produces incredibly detailed images that I use as concept art. The fact that it's completely free is mind-blowing!"
+                          </p>
                         </div>
                       </div>
-                      <div className="flex text-yellow-500 mb-4">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-current" />
-                        ))}
-                      </div>
-                      <p className="text-gray-300 text-left">
-                        "Raphael's AI Image Generator is a game-changer. The FLUX.1-Dev model produces incredibly detailed images that I use as concept art. The fact that it's completely free is mind-blowing!"
-                      </p>
-                    </motion.div>
+                    </div>
+                    <div className="flex justify-center mt-6 space-x-2">
+                      {[0, 1, 2].map((i) => (
+                        <button 
+                          key={i} 
+                          className={`w-3 h-3 rounded-full ${i === 0 ? 'bg-yellow-500' : 'bg-gray-600'}`}
+                          aria-label={`Go to slide ${i + 1}`}
+                        />
+                      ))}
+                    </div>
                   </div>
                 </motion.div>
               </div>
