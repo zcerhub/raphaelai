@@ -36,13 +36,13 @@ function App() {
         try {
           const iframeWindow = iframeRef.current.contentWindow;
           if (iframeWindow) {
-            iframeWindow.scrollTo(0, 510);
+            iframeWindow.scrollTo(0, 550);
             
             try {
               iframeWindow.addEventListener('scroll', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                iframeWindow.scrollTo(0, 510);
+                iframeWindow.scrollTo(0, 550);
                 return false;
               }, true);
             } catch (e) {
@@ -276,7 +276,7 @@ function App() {
                   style={{
                     width: "1500px",
                     height: "3000px",
-                    top: "-220px",
+                    top: "-280px",
                     left: "50%",
                     transform: "translateX(-50%) scale(0.9)",
                     transformOrigin: "top center",
