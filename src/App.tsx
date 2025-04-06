@@ -36,13 +36,13 @@ function App() {
         try {
           const iframeWindow = iframeRef.current.contentWindow;
           if (iframeWindow) {
-            iframeWindow.scrollTo(0, 460);
+            iframeWindow.scrollTo(0, 510);
             
             try {
               iframeWindow.addEventListener('scroll', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                iframeWindow.scrollTo(0, 460);
+                iframeWindow.scrollTo(0, 510);
                 return false;
               }, true);
             } catch (e) {
@@ -58,10 +58,10 @@ function App() {
     const intervalId = setInterval(resetIframePosition, 100);
     
     const handleIframeLoad = () => {
-      setTimeout(resetIframePosition, 100);
-      setTimeout(resetIframePosition, 300);
-      setTimeout(resetIframePosition, 500);
-      setTimeout(resetIframePosition, 1000);
+      setTimeout(() => resetIframePosition(), 100);
+      setTimeout(() => resetIframePosition(), 300);
+      setTimeout(() => resetIframePosition(), 500);
+      setTimeout(() => resetIframePosition(), 1000);
     };
     
     const iframe = iframeRef.current;
@@ -276,7 +276,7 @@ function App() {
                   style={{
                     width: "1500px",
                     height: "3000px",
-                    top: "-170px",
+                    top: "-220px",
                     left: "50%",
                     transform: "translateX(-50%) scale(0.9)",
                     transformOrigin: "top center",
