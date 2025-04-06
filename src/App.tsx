@@ -326,10 +326,11 @@ function App() {
                 <div 
                   className="absolute bottom-0 right-0 z-50 bg-white" 
                   style={{ 
-                    height: "100px",
+                    height: "90px",
                     width: "50%",
                     margin: "0",
-                    boxShadow: "0 -4px 6px -1px rgba(0, 0, 0, 0.1)"
+                    boxShadow: "none",
+                    border: "0"
                   }}
                 >
                   {/* 可选：添加一些自定义内容到覆盖层 */}
