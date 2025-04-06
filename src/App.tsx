@@ -163,9 +163,22 @@ function App() {
             </div>
 
             <h2 className="text-3xl font-bold mb-4">Get Inspired</h2>
-            <p className="text-gray-400 text-lg mb-16">
+            <p className="text-gray-400 text-lg mb-8">
               Get inspired by what others are creating with Raphael
             </p>
+
+            {/* Image Gallery */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+              {[...Array(16)].map((_, index) => (
+                <div key={index} className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
+                  <img 
+                    src={`/${index + 1}${index < 9 ? '(1)' : ''}.webp`} 
+                    alt={`Generated image ${index + 1}`} 
+                    className="w-full h-64 object-cover" 
+                  />
+                </div>
+              ))}
+            </div>
 
             {/* Key Features Section */}
             <div className="py-20 bg-[rgb(33,26,20)]">
