@@ -584,6 +584,74 @@ function App() {
                       </div>
                     </div>
                   </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                    className="bg-[rgb(33,26,20)] p-6 rounded-lg border border-white/10"
+                  >
+                    <div className="flex items-start">
+                      <span className="flex-shrink-0 bg-yellow-500/20 text-yellow-500 text-sm font-semibold w-8 h-8 rounded-full flex items-center justify-center mr-4">9</span>
+                      <div>
+                        <h3 className="text-xl font-bold mb-3">Can I use the generated images commercially?</h3>
+                        <p className="text-gray-400">
+                          Yes, you own the rights to the images you generate with Raphael AI. You can use them for both personal and commercial purposes, making it perfect for creators and businesses alike.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.9 }}
+                    className="bg-[rgb(33,26,20)] p-6 rounded-lg border border-white/10"
+                  >
+                    <div className="flex items-start">
+                      <span className="flex-shrink-0 bg-yellow-500/20 text-yellow-500 text-sm font-semibold w-8 h-8 rounded-full flex items-center justify-center mr-4">10</span>
+                      <div>
+                        <h3 className="text-xl font-bold mb-3">Is Raphael AI available on mobile devices?</h3>
+                        <p className="text-gray-400">
+                          Currently, Raphael AI is available through our website at raphael.app, which works great on mobile browsers. We're actively developing dedicated mobile apps to provide an even better experience soon.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 1.0 }}
+                    className="bg-[rgb(33,26,20)] p-6 rounded-lg border border-white/10"
+                  >
+                    <div className="flex items-start">
+                      <span className="flex-shrink-0 bg-yellow-500/20 text-yellow-500 text-sm font-semibold w-8 h-8 rounded-full flex items-center justify-center mr-4">11</span>
+                      <div>
+                        <h3 className="text-xl font-bold mb-3">How can I provide feedback or report issues?</h3>
+                        <p className="text-gray-400">
+                          We welcome your feedback! You can reach our support team at support@raphael.app. Your input helps us improve and maintain the best free AI image generation service.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 1.1 }}
+                    className="bg-[rgb(33,26,20)] p-6 rounded-lg border border-white/10"
+                  >
+                    <div className="flex items-start">
+                      <span className="flex-shrink-0 bg-yellow-500/20 text-yellow-500 text-sm font-semibold w-8 h-8 rounded-full flex items-center justify-center mr-4">12</span>
+                      <div>
+                        <h3 className="text-xl font-bold mb-3">What's next for Raphael AI?</h3>
+                        <p className="text-gray-400">
+                          We're constantly improving our service with regular updates to the AI model and user interface. Future plans include mobile apps and additional creative features, while maintaining our commitment to being completely free.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
                 </div>
               </div>
             </div>
