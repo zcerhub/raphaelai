@@ -322,21 +322,7 @@ function App() {
                   allow="clipboard-write; fullscreen"
                 ></iframe>
                 
-                {/* 覆盖iframe中的"What will you create? 你将创造什么？"文字 */}
-                <div 
-                  className="absolute top-[70px] left-0 right-0 z-50 bg-white" 
-                  style={{ 
-                    height: "40px",
-                    width: "80%",
-                    margin: "0 auto",
-                    boxShadow: "none",
-                    border: "0"
-                  }}
-                >
-                  <div className="flex items-center justify-center h-full text-gray-800 text-lg font-medium">
-                    <span>创建您的AI艺术作品</span>
-                  </div>
-                </div>
+
                 
                 {/* 覆盖iframe中Generate按钮下方的内容 */}
                 <div 
@@ -356,7 +342,7 @@ function App() {
                   className="absolute bottom-0 left-auto right-[52%] z-50 bg-white" 
                   style={{ 
                     height: "40px",
-                    width: "40%",
+                    width: "44%",
                     margin: "0 10px 0 0",
                     boxShadow: "none",
                     border: "0"
