@@ -356,7 +356,7 @@ function App() {
                   className="absolute bottom-0 left-auto right-[52%] z-50 bg-white" 
                   style={{ 
                     height: "40px",
-                    width: "30%",
+                    width: "40%",
                     margin: "0 10px 0 0",
                     boxShadow: "none",
                     border: "0"
