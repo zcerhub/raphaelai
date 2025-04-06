@@ -3,51 +3,6 @@ import { motion } from 'framer-motion';
 import { Brush, Code2, Palette, Sparkles, Download, ChevronRight, Globe, ChevronDown, Image, Shuffle, DollarSign, Star, Languages, Zap, Shield, Paintbrush, Check } from 'lucide-react';
 
 function App() {
-  const [prompt, setPrompt] = React.useState('');
-  const [options, setOptions] = React.useState({
-    squareAspect: true,
-    noStyle: false,
-    noColor: false,
-    noLighting: false,
-    noComposition: false,
-    negativePrompt: false,
-    highQuality: false
-  });
-  
-  const promptOptions = [
-    "A polar fox walking through a snowy landscape, with pristine white fur and alert eyes.",
-    "A basketball player captured mid-air during a slam dunk, with a cheering crowd in the background.",
-    "A black and white photograph of a woman standing in the rain, holding an umbrella, with a blurred city street in the background.",
-    "A World War II trench scene. A weathered wooden sign at the trench's entrance reads 'No Man's Land,' with bullet holes piercing through the letters.",
-    "A medieval-style portrait of a noblewoman in a lavish gown, seated in an ancient palace, with a solemn expression.",
-    "An abandoned castle overgrown with vines, with sunlight streaming through broken windows.",
-    "A neon-lit street in a cyberpunk city, with a digital shop sign displaying 'Cyber Sushi – Open 24/7.' Holographic text floats above the crowd, showcasing ongoing deals.",
-    "A city street illuminated by neon lights, with pedestrians in futuristic attire and holographic advertisements floating above.",
-    "A meticulously arranged sushi platter with vibrant colors and artistic presentation.",
-    "A deserted haunted house with broken windows, appearing especially eerie under the moonlight.",
-    "Vibrant liquids blending together underwater, forming unique abstract patterns.",
-    "An inventor wearing goggles, working in a laboratory filled with gears and steam.",
-    "A black and white photograph of a rainy city street. A woman holding an umbrella stands next to a neon sign that reads 'Eternal Rain,' with the letters glowing softly through the mist.",
-    "Soldiers in a World War II trench engaged in intense combat, with fighter planes soaring overhead.",
-    "An elf warrior standing at the entrance of a magical forest. Behind her, an ancient stone tablet etched with glowing runes spells out the phrase 'Guardians of the Emerald Realm.'"
-  ];
-  
-  const handleClear = () => {
-    setPrompt('');
-  };
-  
-  const handleRandom = () => {
-    const randomIndex = Math.floor(Math.random() * promptOptions.length);
-    setPrompt(promptOptions[randomIndex]);
-  };
-
-  const toggleOption = (option: keyof typeof options) => {
-    setOptions({
-      ...options,
-      [option]: !options[option]
-    });
-  };
-
   return (
     <div className="min-h-screen bg-[rgb(33,26,20)] text-white">
       {/* Navigation */}
@@ -82,7 +37,7 @@ function App() {
 
       {/* Main Content */}
       <div className="pt-32 pb-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -118,40 +73,59 @@ function App() {
             </div>
 
             <div className="bg-[rgb(33,26,20)] rounded-xl p-6 pl-4 mb-12 relative">
-              <h2 className="text-4xl font-bold mb-8 text-left text-[rgb(237,234,222)]" style={{ marginLeft: '0px' }}>AI Image Generator</h2>
-              <div className="absolute" style={{ right: '45px', top: '46px' }}>
-                <button className="text-gray-400 hover:text-white bg-[rgb(48,38,30)] p-3 rounded-full flex items-center justify-center">
-                  <Image className="w-6 h-6 text-white" />
+              <h2 className="text-4xl font-bold mb-8 text-left text-[rgb(237,234,222)]" style={{ marginLeft: '-30px' }}>AI Image Generator</h2>
+              <div className="absolute right-6 bottom-[calc(100%-56px)]">
+                <button className="text-gray-400 hover:text-white bg-[rgb(48,38,30)] p-2 rounded-full flex items-center justify-center">
+                  <Image className="w-5 h-5 text-white" />
                 </button>
               </div>
               <div className="space-y-6">
                 <div>
                   <div className="flex justify-between mb-2">
                   </div>
-                  <div className="relative w-full" style={{ maxWidth: "98%" }}>
+                  <div className="relative w-full mx-auto" style={{ maxWidth: "800px" }}>
                     <label className="absolute top-2 left-4 text-sm text-gray-400">Description prompt</label>
                     <textarea
                       placeholder="What do you want to see?"
-                      className="w-full h-52 bg-[rgb(48,38,30)] rounded-lg p-4 pt-8 text-white text-xl placeholder:text-[rgb(117,106,98)] placeholder:text-xl focus:outline-none"
-                      style={{ width: "100%" }}
-                      value={prompt}
-                      onChange={(e) => setPrompt(e.target.value)}
+                      className="w-full h-48 bg-[rgb(48,38,30)] rounded-lg p-4 pt-8 text-white placeholder-gray-500 focus:outline-none"
                     />
                   </div>
                 </div>
 
-                <div className="flex items-center justify-end">
+                <div className="flex flex-wrap gap-3">
+                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
+                    Square Aspect
+                  </button>
+                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
+                    No Style
+                  </button>
+                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
+                    No Color
+                  </button>
+                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
+                    No Lighting
+                  </button>
+                  <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
+                    No Composition
+                  </button>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div className="flex gap-4">
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input type="checkbox" className="form-checkbox bg-[rgb(33,26,20)] rounded border-gray-600" />
+                      <span className="text-gray-400">Negative Prompt</span>
+                    </label>
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input type="checkbox" className="form-checkbox bg-[rgb(33,26,20)] rounded border-gray-600" />
+                      <span className="text-gray-400">High Quality</span>
+                    </label>
+                  </div>
                   <div className="flex gap-3">
-                    <button 
-                      className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition"
-                      onClick={handleClear}
-                    >
+                    <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition">
                       Clear
                     </button>
-                    <button 
-                      className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition flex items-center gap-2"
-                      onClick={handleRandom}
-                    >
+                    <button className="px-4 py-2 rounded-lg bg-[rgb(33,26,20)] text-gray-400 hover:bg-[#333333] transition flex items-center gap-2">
                       <Shuffle className="w-4 h-4" /> Random
                     </button>
                     <button className="px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-600 to-yellow-700 text-white hover:opacity-90 transition">
@@ -163,125 +137,9 @@ function App() {
             </div>
 
             <h2 className="text-3xl font-bold mb-4">Get Inspired</h2>
-            <p className="text-gray-400 text-lg mb-8">
+            <p className="text-gray-400 text-lg mb-16">
               Get inspired by what others are creating with Raphael
             </p>
-
-            {/* Image Gallery */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                <img 
-                  src="/1 (1).webp" 
-                  alt="Generated image 1" 
-                  className="w-full h-64 object-cover" 
-                />
-              </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                <img 
-                  src="/2 (1).webp" 
-                  alt="Generated image 2" 
-                  className="w-full h-64 object-cover" 
-                />
-              </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                <img 
-                  src="/3 (1).webp" 
-                  alt="Generated image 3" 
-                  className="w-full h-64 object-cover" 
-                />
-              </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                <img 
-                  src="/4 (1).webp" 
-                  alt="Generated image 4" 
-                  className="w-full h-64 object-cover" 
-                />
-              </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                <img 
-                  src="/5 (1).webp" 
-                  alt="Generated image 5" 
-                  className="w-full h-64 object-cover" 
-                />
-              </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                <img 
-                  src="/6 (1).webp" 
-                  alt="Generated image 6" 
-                  className="w-full h-64 object-cover" 
-                />
-              </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                <img 
-                  src="/7 (1).webp" 
-                  alt="Generated image 7" 
-                  className="w-full h-64 object-cover" 
-                />
-              </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                <img 
-                  src="/8 (1).webp" 
-                  alt="Generated image 8" 
-                  className="w-full h-64 object-cover" 
-                />
-              </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                <img 
-                  src="/9 (1).webp" 
-                  alt="Generated image 9" 
-                  className="w-full h-64 object-cover" 
-                />
-              </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                <img 
-                  src="/10.webp" 
-                  alt="Generated image 10" 
-                  className="w-full h-64 object-cover" 
-                />
-              </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                <img 
-                  src="/11.webp" 
-                  alt="Generated image 11" 
-                  className="w-full h-64 object-cover" 
-                />
-              </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                <img 
-                  src="/12.webp" 
-                  alt="Generated image 12" 
-                  className="w-full h-64 object-cover" 
-                />
-              </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                <img 
-                  src="/13.webp" 
-                  alt="Generated image 13" 
-                  className="w-full h-64 object-cover" 
-                />
-              </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                <img 
-                  src="/14.webp" 
-                  alt="Generated image 14" 
-                  className="w-full h-64 object-cover" 
-                />
-              </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                <img 
-                  src="/15.webp" 
-                  alt="Generated image 15" 
-                  className="w-full h-64 object-cover" 
-                />
-              </div>
-              <div className="bg-[rgb(48,38,30)] rounded-lg overflow-hidden">
-                <img 
-                  src="/16.webp" 
-                  alt="Generated image 16" 
-                  className="w-full h-64 object-cover" 
-                />
-              </div>
-            </div>
 
             {/* Key Features Section */}
             <div className="py-20 bg-[rgb(33,26,20)]">
@@ -302,7 +160,7 @@ function App() {
                       <DollarSign className="w-8 h-8 text-yellow-500" />
                     </div>
                     <h3 className="text-xl font-bold mb-3">Zero-Cost Creation</h3>
-                    <p className="text-gray-400">
+                    <p className="text-gray-400 text-left">
                       The world's first completely free AI image generator with no usage limits or registration requirements.
                     </p>
                   </motion.div>
@@ -317,7 +175,7 @@ function App() {
                       <Star className="w-8 h-8 text-yellow-500" />
                     </div>
                     <h3 className="text-xl font-bold mb-3">State-of-the-Art Quality</h3>
-                    <p className="text-gray-400">
+                    <p className="text-gray-400 text-left">
                       Powered by FLUX.1-Dev model, delivering photorealistic images with exceptional detail and artistic style control.
                     </p>
                   </motion.div>
@@ -332,7 +190,7 @@ function App() {
                       <Languages className="w-8 h-8 text-yellow-500" />
                     </div>
                     <h3 className="text-xl font-bold mb-3">Advanced Text Understanding</h3>
-                    <p className="text-gray-400">
+                    <p className="text-gray-400 text-left">
                       Superior text-to-image capabilities with accurate interpretation of complex prompts and text overlay features.
                     </p>
                   </motion.div>
@@ -347,7 +205,7 @@ function App() {
                       <Zap className="w-8 h-8 text-yellow-500" />
                     </div>
                     <h3 className="text-xl font-bold mb-3">Lightning-Fast Generation</h3>
-                    <p className="text-gray-400">
+                    <p className="text-gray-400 text-left">
                       Optimized inference pipeline ensuring rapid image generation without compromising quality.
                     </p>
                   </motion.div>
@@ -362,7 +220,7 @@ function App() {
                       <Shield className="w-8 h-8 text-yellow-500" />
                     </div>
                     <h3 className="text-xl font-bold mb-3">Enhanced Privacy Protection</h3>
-                    <p className="text-gray-400">
+                    <p className="text-gray-400 text-left">
                       Zero data retention policy - your prompts and generated images are never stored on our servers.
                     </p>
                   </motion.div>
@@ -377,7 +235,7 @@ function App() {
                       <Paintbrush className="w-8 h-8 text-yellow-500" />
                     </div>
                     <h3 className="text-xl font-bold mb-3">Multi-Style Support</h3>
-                    <p className="text-gray-400">
+                    <p className="text-gray-400 text-left">
                       Create images across various artistic styles, from photorealistic to anime, oil paintings to digital art.
                     </p>
                   </motion.div>
