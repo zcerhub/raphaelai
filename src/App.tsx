@@ -1775,7 +1775,7 @@ function App() {
                       <DollarSign className="w-8 h-8 text-[#E5B06E]" />
                     </div>
                     <h3 className="text-2xl font-bold mb-4 text-gray-900">Zero-Cost Creation</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-left">
                       The world's first completely free AI image generator with no usage limits or registration requirements.
                     </p>
                   </motion.div>
@@ -1791,7 +1791,7 @@ function App() {
                       <Star className="w-8 h-8 text-[#E5B06E]" />
                     </div>
                     <h3 className="text-2xl font-bold mb-4 text-gray-900">State-of-the-Art Quality</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-left">
                       Powered by FLUX.1-Dev model, delivering photorealistic images with exceptional detail and artistic style control.
                     </p>
                   </motion.div>
@@ -1807,7 +1807,7 @@ function App() {
                       <Languages className="w-8 h-8 text-[#E5B06E]" />
                     </div>
                     <h3 className="text-2xl font-bold mb-4 text-gray-900">Advanced Text Understanding</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-left">
                       Superior text-to-image capabilities with accurate interpretation of complex prompts and text overlay features.
                     </p>
                   </motion.div>
@@ -1823,7 +1823,7 @@ function App() {
                       <Zap className="w-8 h-8 text-[#E5B06E]" />
                     </div>
                     <h3 className="text-2xl font-bold mb-4 text-gray-900">Lightning-Fast Generation</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-left">
                       Optimized inference pipeline ensuring rapid image generation without compromising quality.
                     </p>
                   </motion.div>
@@ -1839,7 +1839,7 @@ function App() {
                       <Shield className="w-8 h-8 text-[#E5B06E]" />
                     </div>
                     <h3 className="text-2xl font-bold mb-4 text-gray-900">Enhanced Privacy Protection</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-left">
                       Zero data retention policy - your prompts and generated images are never stored on our servers.
                     </p>
                   </motion.div>
@@ -1855,7 +1855,7 @@ function App() {
                       <Paintbrush className="w-8 h-8 text-[#E5B06E]" />
                     </div>
                     <h3 className="text-2xl font-bold mb-4 text-gray-900">Multi-Style Support</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-left">
                       Create images across various artistic styles, from photorealistic to anime, oil paintings to digital art.
                     </p>
                   </motion.div>
