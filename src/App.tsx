@@ -247,7 +247,7 @@ function App() {
                   style={{
                     width: "1280px",
                     height: "2500px",
-                    top: "-298px",  /* 调整为更大的负值，移除上方内容 */
+                    top: "-360px",  /* 调整为更大的负值，移除标题和标签行 */
                     left: "50%",
                     transform: "translateX(-50%) scale(1)",
                     transformOrigin: "top center",
