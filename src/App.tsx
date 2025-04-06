@@ -324,7 +324,7 @@ function App() {
                 
                 {/* 覆盖iframe中红框区域的内容 */}
                 <div 
-                  className="absolute top-[-10px] left-0 z-50 bg-black" 
+                  className="absolute top-[-10px] left-0 z-50 bg-white" 
                   style={{ 
                     height: "60px",
                     width: "45%",
@@ -333,7 +333,7 @@ function App() {
                     border: "0"
                   }}
                 >
-                  <div className="flex items-center justify-center h-full text-gray-600 text-xl font-medium">
+                  <div className="flex items-center justify-center h-full text-gray-800 text-xl font-medium">
                     <span>AI 图像生成</span>
                   </div>
                 </div>
