@@ -2,12 +2,384 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/raphael.png" />
+    <link rel="icon" type="image/png" href="public/raphael.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Raphael AI - Free Unlimited AI Image Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      [data-animate] {
+        animation: fadeInUp 0.5s ease forwards;
+      }
+      [data-animate][data-delay="100"] { animation-delay: 0.1s; }
+      [data-animate][data-delay="200"] { animation-delay: 0.2s; }
+      [data-animate][data-delay="300"] { animation-delay: 0.3s; }
+      [data-animate][data-delay="400"] { animation-delay: 0.4s; }
+      [data-animate][data-delay="500"] { animation-delay: 0.5s; }
+      [data-animate][data-delay="600"] { animation-delay: 0.6s; }
+    </style>
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body class="min-h-screen bg-white text-black">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-lg">
+      <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center space-x-8">
+            <div class="flex items-center">
+              <img src="public/raphael.png" alt="Raphael AI" class="w-8 h-8 rounded-full" />
+              <span class="ml-2 text-xl font-bold text-[rgb(204,144,92)]">Raphael AI</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+              <a href="#features" class="text-gray-600 hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">Features</a>
+              <a href="#faqs" class="text-gray-600 hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">FAQs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="pt-32 pb-20">
+      <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="opacity-0 translate-y-5" data-animate>
+          <div class="flex items-center justify-center mb-5">
+            <div class="flex items-center bg-gray-50 px-8 py-4 rounded-lg border border-gray-200">
+              <img src="public/raphael.png" alt="Raphael AI" class="w-16 h-16 rounded-full" />
+              <div class="ml-4 flex items-baseline">
+                <span class="text-5xl font-bold text-[#FFA500]">Raphael</span>
+                <span class="text-5xl font-bold text-[#808080] ml-2">AI</span>
+              </div>
+            </div>
+          </div>
+
+          <h1 class="text-2xl md:text-2xl font-bold mb-4 text-gray-800">
+            Create stunning AI-generated images in seconds
+          </h1>
+          <p class="text-lg text-yellow-500 mb-4 flex items-center justify-center gap-2">
+            ✨ World's First Unlimited Free AI Image Generator ✨
+          </p>
+          
+          <div class="flex flex-wrap justify-center gap-1 mb-8">
+            <span class="px-3 py-1 rounded-full bg-gray-50 text-yellow-500 text-sm">100% Free</span>
+            <span class="px-3 py-1 rounded-full bg-gray-50 text-emerald-500 text-sm">Powered by Flux.1 Dev</span>
+            <span class="px-3 py-1 rounded-full bg-gray-50 text-blue-500 text-sm">No Login Required</span>
+            <span class="px-3 py-1 rounded-full bg-gray-50 text-purple-500 text-sm">Unlimited Generations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Generator Section -->
+    <div class="py-16 bg-gray-50">
+      <div class="max-w-[1280px] mx-auto px-4">
+        <div class="text-center mb-16 opacity-0 translate-y-5" data-animate>
+          <h2 class="text-4xl font-bold mb-4 text-gray-900">AI Image Generator</h2>
+          <p class="text-xl text-gray-600">
+            Create stunning AI-generated images in seconds
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Generator Input -->
+          <div class="bg-white p-6 rounded-xl shadow-lg opacity-0 translate-y-5" data-animate data-delay="100">
+            <div class="flex flex-col space-y-4">
+              <textarea
+                class="w-full h-32 p-4 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E5B06E] resize-none"
+                placeholder="Describe the image you want to create..."
+              ></textarea>
+              <div class="flex space-x-2">
+                <button class="flex-1 bg-[#E5B06E] text-white px-4 py-2 rounded-lg hover:bg-[#D4A05D] transition">
+                  Generate
+                </button>
+                <button class="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 12h4l3-9 4 18 3-9h4"></path>
+                  </svg>
+                </button>
+                <button class="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preview Area -->
+          <div class="bg-white p-6 rounded-xl shadow-lg opacity-0 translate-y-5" data-animate data-delay="200">
+            <div class="aspect-square bg-gray-100 rounded-lg flex items-center justify-center">
+              <p class="text-gray-500">Your generated image will appear here</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="py-16 bg-gray-50">
+      <div class="max-w-[1280px] mx-auto px-4">
+        <div class="text-center mb-16 opacity-0 translate-y-5" data-animate>
+          <h2 class="text-4xl font-bold mb-4 text-gray-900">Get Inspired</h2>
+          <p class="text-xl text-gray-600">
+            Get inspired by what others are creating with Raphael
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="100">
+            <img src="public/1 (1).webp" alt="Generated image 1" class="w-full h-64 object-cover" />
+          </div>
+          <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="200">
+            <img src="public/2 (1).webp" alt="Generated image 2" class="w-full h-64 object-cover" />
+          </div>
+          <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="300">
+            <img src="public/3 (1).webp" alt="Generated image 3" class="w-full h-64 object-cover" />
+          </div>
+          <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="400">
+            <img src="public/4 (1).webp" alt="Generated image 4" class="w-full h-64 object-cover" />
+          </div>
+          <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="500">
+            <img src="public/5 (1).webp" alt="Generated image 5" class="w-full h-64 object-cover" />
+          </div>
+          <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="600">
+            <img src="public/6 (1).webp" alt="Generated image 6" class="w-full h-64 object-cover" />
+          </div>
+          <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="700">
+            <img src="public/7 (1).webp" alt="Generated image 7" class="w-full h-64 object-cover" />
+          </div>
+          <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="800">
+            <img src="public/8 (1).webp" alt="Generated image 8" class="w-full h-64 object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Features Section -->
+    <div id="features" class="py-20 bg-white">
+      <div class="max-w-[1280px] mx-auto px-4">
+        <div class="text-center mb-16 opacity-0 translate-y-5" data-animate>
+          <h2 class="text-4xl font-bold mb-4 text-gray-900">Key Features of Raphael</h2>
+          <p class="text-xl text-gray-600">
+            Experience the next generation of AI image generation - powerful, free, and privacy-focused.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Zero-Cost Creation -->
+          <div class="flex flex-col opacity-0 translate-y-5" data-animate data-delay="100">
+            <div class="w-16 h-16 mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E5B06E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Zero-Cost Creation</h3>
+            <p class="text-gray-600 text-left">
+              The world's first completely free AI image generator with no usage limits or registration requirements.
+            </p>
+          </div>
+
+          <!-- State-of-the-Art Quality -->
+          <div class="flex flex-col opacity-0 translate-y-5" data-animate data-delay="200">
+            <div class="w-16 h-16 mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E5B06E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">State-of-the-Art Quality</h3>
+            <p class="text-gray-600 text-left">
+              Powered by FLUX.1-Dev model, delivering photorealistic images with exceptional detail and artistic style control.
+            </p>
+          </div>
+
+          <!-- Advanced Text Understanding -->
+          <div class="flex flex-col opacity-0 translate-y-5" data-animate data-delay="300">
+            <div class="w-16 h-16 mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E5B06E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 16 4-4-4-4"></path>
+                <path d="m6 8-4 4 4 4"></path>
+                <path d="m14.5 4-5 16"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Advanced Text Understanding</h3>
+            <p class="text-gray-600 text-left">
+              Superior text-to-image capabilities with accurate interpretation of complex prompts and text overlay features.
+            </p>
+          </div>
+
+          <!-- Lightning-Fast Generation -->
+          <div class="flex flex-col opacity-0 translate-y-5" data-animate data-delay="400">
+            <div class="w-16 h-16 mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E5B06E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Lightning-Fast Generation</h3>
+            <p class="text-gray-600 text-left">
+              Optimized inference pipeline for rapid image generation without compromising on quality.
+            </p>
+          </div>
+
+          <!-- Enhanced Privacy -->
+          <div class="flex flex-col opacity-0 translate-y-5" data-animate data-delay="500">
+            <div class="w-16 h-16 mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E5B06E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Enhanced Privacy</h3>
+            <p class="text-gray-600 text-left">
+              Zero data retention policy - your prompts and generated images are never stored on our servers.
+            </p>
+          </div>
+
+          <!-- Multi-Style Support -->
+          <div class="flex flex-col opacity-0 translate-y-5" data-animate data-delay="600">
+            <div class="w-16 h-16 mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E5B06E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z"></path>
+                <path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"></path>
+                <path d="M14.5 17.5 4.5 15"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Multi-Style Support</h3>
+            <p class="text-gray-600 text-left">
+              Create images in various artistic styles, from photorealistic to anime, from oil paintings to digital art.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="py-20 bg-white" id="faqs">
+      <div class="max-w-[1280px] mx-auto px-4">
+        <div class="text-center mb-12 opacity-0 translate-y-5" data-animate>
+          <span class="inline-block bg-yellow-500/20 text-yellow-500 font-semibold px-4 py-1 rounded-full mb-4">FAQ</span>
+          <h2 class="text-4xl font-bold mb-4 text-gray-800">Frequently Asked Questions</h2>
+          <p class="text-gray-600 text-lg">
+            Have another question? Contact us at support@raphael.app
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="bg-white p-6 rounded-lg opacity-0 translate-y-5" data-animate data-delay="100">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 bg-yellow-500/20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                <span class="text-yellow-500 text-lg font-semibold">1</span>
+              </div>
+              <div class="text-left">
+                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">What is Raphael AI and how does it work?</h3>
+                <p class="text-gray-600 text-left">
+                  Raphael AI is the world's first completely free and unlimited AI image generator powered by the FLUX.1-Dev model. You can create high-quality images from text descriptions with no registration required.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg opacity-0 translate-y-5" data-animate data-delay="200">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 bg-yellow-500/20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                <span class="text-yellow-500 text-lg font-semibold">2</span>
+              </div>
+              <div class="text-left">
+                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">Is Raphael AI really free?</h3>
+                <p class="text-gray-600 text-left">
+                  Yes, Raphael AI is completely free! We aim to be the world's largest and most powerful free AI image generator. There are no hidden fees, credit card requirements, or usage limits.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg opacity-0 translate-y-5" data-animate data-delay="300">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 bg-yellow-500/20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                <span class="text-yellow-500 text-lg font-semibold">3</span>
+              </div>
+              <div class="text-left">
+                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">How is Raphael AI different from other AI image generators?</h3>
+                <p class="text-gray-600 text-left">
+                  Raphael AI is the only platform offering unlimited free access to the powerful FLUX.1-Dev model. We provide superior image quality, fast generation speed, and complete privacy protection with no cost or registration required.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200">
+      <div class="max-w-[1280px] mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="col-span-2">
+            <div class="flex items-center mb-4">
+              <img src="public/raphael.png" alt="Raphael AI" class="w-8 h-8 rounded-full" />
+              <span class="ml-2 text-xl font-bold text-[rgb(204,144,92)]">Raphael AI</span>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Create stunning AI-generated images in seconds with the world's first unlimited free AI Image Generator.
+            </p>
+            <p class="text-sm text-gray-500">© 2024 Raphael AI. All rights reserved.</p>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
+              Product
+            </h3>
+            <ul class="space-y-4">
+              <li>
+                <a href="#features" class="text-gray-500 hover:text-gray-800 transition">
+                  Features
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-800 transition">
+                  Pricing
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-800 transition">
+                  API
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
+              Company
+            </h3>
+            <ul class="space-y-4">
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-800 transition">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-800 transition">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-500 hover:text-gray-800 transition">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
