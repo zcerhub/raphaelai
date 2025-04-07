@@ -455,36 +455,6 @@
               </p>
             </div>
 
-            <!-- Third group of testimonials (hidden initially) -->
-            <div class="bg-white p-6 rounded-xl shadow-md hidden" data-testimonial-group="2">
-              <div class="flex items-center mb-4">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="Daniel Roberts" class="w-12 h-12 rounded-full" />
-                <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">Daniel Roberts</h3>
-                  <p class="text-gray-500 text-sm">Startup Founder</p>
-                </div>
-              </div>
-              <div class="flex text-yellow-500 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-              </div>
-              <p class="text-gray-600 text-left">
-                "As a bootstrapped startup, Raphael AI has been a game-changer for our marketing materials. We can create professional visuals without the hefty price tag of hiring designers or subscribing to paid services."
-              </p>
-            </div>
 
             <div class="bg-white p-6 rounded-xl shadow-md hidden" data-testimonial-group="2">
               <div class="flex items-center mb-4">
@@ -785,23 +755,23 @@
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         // Testimonial navigation
-        const prevBtn = document.getElementById('prev-testimonial-group');
-        const nextBtn = document.getElementById('next-testimonial-group');
+        const prevBtn = document.getElementById('prev-testimonial-group');      
+        const nextBtn = document.getElementById('next-testimonial-group');      
         const testimonialGroups = document.querySelectorAll('[data-testimonial-group]');
-        const dots = document.querySelectorAll('[data-testimonial-dot]');
+        const dots = document.querySelectorAll('[data-testimonial-dot]');       
         let currentGroup = 0;
-        const totalGroups = 3; // We now have 3 groups (0, 1, and 2)
-        
+        const totalGroups = 2; // 只有2组评论
+
         function showTestimonialGroup(groupIndex) {
           // Hide all testimonial groups
           testimonialGroups.forEach(group => {
-            if (group.getAttribute('data-testimonial-group') == groupIndex) {
+            if (group.getAttribute('data-testimonial-group') == groupIndex) {   
               group.classList.remove('hidden');
             } else {
               group.classList.add('hidden');
             }
           });
-          
+
           // Update dots
           dots.forEach((dot, idx) => {
             if (idx === groupIndex) {
@@ -813,7 +783,7 @@
             }
           });
         }
-        
+
         // Initialize
         showTestimonialGroup(currentGroup);
         
