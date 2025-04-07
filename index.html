@@ -87,42 +87,55 @@
             Create stunning AI-generated images in seconds
           </p>
         </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <!-- Generator Input -->
-          <div class="bg-white p-6 rounded-xl shadow-lg opacity-0 translate-y-5" data-animate data-delay="100">
-            <div class="flex flex-col space-y-4">
-              <textarea
-                class="w-full h-32 p-4 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E5B06E] resize-none"
-                placeholder="Describe the image you want to create..."
-              ></textarea>
-              <div class="flex space-x-2">
-                <button class="flex-1 bg-[#E5B06E] text-white px-4 py-2 rounded-lg hover:bg-[#D4A05D] transition">
-                  Generate
-                </button>
-                <button class="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 12h4l3-9 4 18 3-9h4"></path>
-                  </svg>
-                </button>
-                <button class="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 6 6 18"></path>
-                    <path d="m6 6 12 12"></path>
-                  </svg>
-                </button>
+        
+        <div class="bg-white p-6 mb-12 relative border-0">
+          <div class="w-full h-[560px] relative overflow-hidden bg-white border-0">
+            <iframe 
+              src="https://raphaelai.org/" 
+              title="Raphael AI Image Generator"
+              class="absolute border-0"
+              style="width: 1500px; height: 3000px; top: -200px; left: 50%; transform: translateX(-50%) scale(0.9); transform-origin: top center; pointer-events: auto; overflow: hidden;"
+              scrolling="no"
+              sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation allow-downloads"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+              allow="clipboard-write; fullscreen"
+            ></iframe>
+            
+            <!-- 覆盖iframe中红框区域的内容 -->
+            <div 
+              class="absolute top-[-10px] left-0 z-50 bg-white" 
+              style="height: 60px; width: 45%; margin: 0; box-shadow: none; border: 0;"
+            >
+              <div class="flex items-center justify-center h-full text-gray-800 text-xl font-medium">
+                <!-- <span>AI 图像生成</span> -->
+              </div>
+            </div>
+            
+            <!-- 左侧容器，覆盖iframe内容 -->
+            <div 
+              class="absolute bottom-0 left-auto right-[49%] z-50 bg-white" 
+              style="height: 40px; width: 47%; margin: 0 10px 0 0; box-shadow: none; border: 0;"
+            >
+              <!-- 可以添加自定义内容 -->
+              <div class="flex items-center justify-center h-full text-gray-600 text-sm">
+                <!-- <span>Image processing by Raphael</span> -->
+              </div>
+            </div>
+            
+            <!-- 广告覆盖层 - 精确定位在底部广告区域上 -->
+            <div 
+              class="absolute bottom-0 right-0 z-50 bg-white" 
+              style="height: 90px; width: 50%; margin: 0; box-shadow: none; border: 0;"
+            >
+              <!-- 可选：添加一些自定义内容到覆盖层 -->
+              <div class="flex items-center justify-center h-full text-gray-600 text-sm">
+                <!-- <span>Images powered by Raphael AI</span> -->
               </div>
             </div>
           </div>
-
-          <!-- Preview Area -->
-          <div class="bg-white p-6 rounded-xl shadow-lg opacity-0 translate-y-5" data-animate data-delay="200">
-            <div class="aspect-square bg-gray-100 rounded-lg flex items-center justify-center">
-              <p class="text-gray-500">Your generated image will appear here</p>
-            </div>
-          </div>
         </div>
-      </div>
+       </div>
     </div>
 
     <!-- Gallery Section -->
