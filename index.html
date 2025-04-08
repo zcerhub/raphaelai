@@ -78,8 +78,8 @@
     <!-- Generator Section -->
     <div class="py-16 bg-white">
       <div class="max-w-[1280px] mx-auto px-4">
-        <div class="text-center mb-16 opacity-0 translate-y-5" data-animate>
-          <h2 class="text-4xl font-bold mb-4 text-gray-900">AI Image Generator</h2>
+        <div class="text-left mb-16 opacity-0 translate-y-5" data-animate>
+          <h2 class="text-4xl font-bold mb-4 text-gray-900" style="margin-left: 140px;">AI Image Generator</h2>
         </div>
         
         <div class="bg-[#FFFFFF] p-8 mb-12 relative border-0 rounded-xl shadow-sm">
@@ -88,7 +88,7 @@
               src="https://raphaelai.org/" 
               title="Raphael AI Image Generator"
               class="absolute border-0"
-              style="width: 1500px; height: 3000px; top: -200px; left: 50%; transform: translateX(-50%) scale(0.9); transform-origin: top center; pointer-events: auto; overflow: hidden;"
+              style="width: 1500px; height: 3000px; top: -200px; left: -90px; transform: translateX(0) scale(0.9); transform-origin: top left; pointer-events: auto; overflow: hidden;"
               scrolling="no"
               sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation allow-downloads"
               loading="lazy"
@@ -99,20 +99,20 @@
             <!-- 覆盖iframe中红框区域的内容 -->
             <div 
               class="absolute top-[-10px] left-0 z-50 bg-white" 
-              style="height: 60px; width: 45%; margin: 0; box-shadow: none; border: 0;"
+              style="height: 60px; width: 45%; margin: 0 0 0 30px; box-shadow: none; border: 0;"
             >
-              <div class="flex items-center justify-center h-full text-gray-800 text-xl font-medium">
+              <div class="flex items-center justify-start h-full text-gray-800 text-xl font-medium">
                 <!-- <span>AI 图像生成</span> -->
               </div>
             </div>
             
             <!-- 左侧容器，覆盖iframe内容 -->
             <div 
-              class="absolute bottom-0 left-auto right-[49%] z-50 bg-white" 
-              style="height: 40px; width: 47%; margin: 0 10px 0 0; box-shadow: none; border: 0;"
+              class="absolute bottom-0 left-0 z-50 bg-white" 
+              style="height: 40px; width: 47%; margin: 0; box-shadow: none; border: 0;"
             >
               <!-- 可以添加自定义内容 -->
-              <div class="flex items-center justify-center h-full text-gray-600 text-sm">
+              <div class="flex items-center justify-start h-full text-gray-600 text-sm">
                 <!-- <span>Image processing by Raphael</span> -->
               </div>
             </div>
@@ -120,7 +120,7 @@
             <!-- 广告覆盖层 - 精确定位在底部广告区域上 -->
             <div 
               class="absolute bottom-0 right-0 z-50 bg-white" 
-              style="height: 90px; width: 50%; margin: 0; box-shadow: none; border: 0;"
+              style="height: 90px; width: 50%; margin: 0 0 0 auto; box-shadow: none; border: 0;"
             >
               <!-- 可选：添加一些自定义内容到覆盖层 -->
               <div class="flex items-center justify-center h-full text-gray-600 text-sm">
