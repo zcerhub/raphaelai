@@ -58,10 +58,14 @@
               </svg>
             </button>
             
-            <div id="language-dropdown" class="absolute right-0 mt-2 w-36 bg-white rounded-md shadow-lg py-1 hidden z-50">
-              <a href="index.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="en">English 英文</a>
-              <a href="index-zh.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="zh">中文</a>
-              <a href="#" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="es">Español 西班牙语</a>
+            <div id="language-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden z-50">
+              <a href="#" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="en">English</a>
+              <a href="#" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="zh">中文</a>
+              <a href="#" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="es">Español</a>
+              <a href="#" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="fr">Français</a>
+              <a href="#" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="de">Deutsch</a>
+              <a href="#" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="ja">日本語</a>
+              <a href="#" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="ko">한국어</a>
             </div>
           </div>
         </div>
@@ -932,15 +936,21 @@
         // Language selection
         languageOptions.forEach(option => {
           option.addEventListener('click', (e) => {
+            e.preventDefault();
             const lang = option.getAttribute('data-lang');
             const langText = option.textContent;
             
-            // 如果点击的是当前语言，阻止跳转
-            if (currentLanguageText.textContent.trim() === langText.trim()) {
-              e.preventDefault();
-            }
+            // Update current language display
+            currentLanguageText.textContent = langText;
             
-            // 无需其他处理，让链接自然跳转到目标页面
+            // Here you would implement actual language switching
+            // For a simple demo, we'll just update the language attribute
+            document.documentElement.lang = lang;
+            
+            // Additional code for actual translation would go here
+            // This could involve loading different language files or API calls
+            
+            // Close the dropdown
             languageDropdown.classList.add('hidden');
           });
         });
