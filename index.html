@@ -841,6 +841,22 @@
     <!-- Add JavaScript for testimonial navigation -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
+        // Initialize animation on scroll
+        const animatedElements = document.querySelectorAll('[data-animate]');
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+
+        animatedElements.forEach(element => {
+          observer.observe(element);
+        });
+        
         // Testimonial navigation
         const prevBtn = document.getElementById('prev-testimonial-group');      
         const nextBtn = document.getElementById('next-testimonial-group');      
@@ -899,6 +915,45 @@
           currentGroup = (currentGroup + 1) % totalGroups;
           showTestimonialGroup(currentGroup);
         }, 5000);
+        
+        // Language selector functionality
+        const languageSelector = document.getElementById('language-selector');
+        const languageDropdown = document.getElementById('language-dropdown');
+        const languageOptions = document.querySelectorAll('.language-option');
+        const currentLanguageText = document.getElementById('current-language');
+        
+        // Toggle dropdown visibility
+        languageSelector.addEventListener('click', (e) => {
+          e.stopPropagation();
+          languageDropdown.classList.toggle('hidden');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', () => {
+          languageDropdown.classList.add('hidden');
+        });
+        
+        // Language selection
+        languageOptions.forEach(option => {
+          option.addEventListener('click', (e) => {
+            e.preventDefault();
+            const lang = option.getAttribute('data-lang');
+            const langText = option.textContent;
+            
+            // Update current language display
+            currentLanguageText.textContent = langText;
+            
+            // Here you would implement actual language switching
+            // For a simple demo, we'll just update the language attribute
+            document.documentElement.lang = lang;
+            
+            // Additional code for actual translation would go here
+            // This could involve loading different language files or API calls
+            
+            // Close the dropdown
+            languageDropdown.classList.add('hidden');
+          });
+        });
       });
     </script>
   </body>
