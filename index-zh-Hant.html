@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="public/raphael.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raphael AI - Free Unlimited AI Image Generator</title>
+    <title>Raphael AI - 免費無限AI圖像生成器</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @keyframes fadeInUp {
@@ -29,43 +29,44 @@
     </style>
   </head>
   <body class="min-h-screen bg-white text-black">
-    <!-- Navigation -->
+    <!-- 導航欄 -->
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-lg">
       <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center space-x-8">
             <div class="flex items-center">
-              <img src="public/raphael.png" alt="Raphael AI Logo - Free AI Image Generator" class="w-8 h-8 rounded-full" />
+              <img src="public/raphael.png" alt="Raphael AI Logo - 免費AI圖像生成器" class="w-8 h-8 rounded-full" />
               <span class="ml-2 text-xl font-bold text-[rgb(204,144,92)]">Raphael AI</span>
             </div>
             <div class="hidden md:flex items-center space-x-4">
-              <a href="#features" class="text-gray-600 hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">Features</a>
-              <a href="#faqs" class="text-gray-600 hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">FAQs</a>
+              <a href="#features" class="text-gray-600 hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">功能特點</a>
+              <a href="#faqs" class="text-gray-600 hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">常見問題</a>
             </div>
           </div>
           
-          <!-- Language Selector -->
+          <!-- 語言選擇器 -->
           <div class="relative">
             <button id="language-selector" class="flex items-center space-x-2 text-gray-600 hover:text-gray-900 focus:outline-none">
               <span class="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
                 </svg>
-                <span id="current-language">English</span>
+                <span id="current-language">繁體中文</span>
               </span>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
             
-            <div id="language-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden z-50">
-              <a href="#" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="en">English</a>
-              <a href="#" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="zh">中文</a>
+            <div id="language-dropdown" class="absolute right-0 mt-2 w-36 bg-white rounded-md shadow-lg py-1 hidden z-50">
+              <a href="index.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="en">English</a>
+              <a href="index-zh.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="zh">简体中文</a>
+              <a href="index-zh-Hant.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 bg-gray-100 font-medium" data-lang="zh-Hant">繁體中文</a>
+              <a href="index-ko.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="ko">한국어</a>
               <a href="#" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="es">Español</a>
               <a href="#" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="fr">Français</a>
               <a href="#" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="de">Deutsch</a>
               <a href="#" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="ja">日本語</a>
-              <a href="#" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="ko">한국어</a>
             </div>
           </div>
         </div>
@@ -87,14 +88,14 @@
           </div>
 
           <p class="text-lg text-yellow-500 mb-4 flex items-center justify-center gap-2">
-            ✨ Free Unlimited AI Image Generator ✨
+            ✨ 免費無限AI圖像生成器 ✨
           </p>
           
           <div class="flex flex-wrap justify-center gap-1 mb-8">
-            <span class="px-3 py-1 rounded-full bg-gray-50 text-yellow-500 text-sm">100% Free</span>
-            <span class="px-3 py-1 rounded-full bg-gray-50 text-emerald-500 text-sm">Superior Text Understanding Capability</span>
-            <span class="px-3 py-1 rounded-full bg-gray-50 text-blue-500 text-sm">No Login Required</span>
-            <span class="px-3 py-1 rounded-full bg-gray-50 text-purple-500 text-sm">Lightning-Fast Generation Speed</span>
+            <span class="px-3 py-1 rounded-full bg-gray-50 text-yellow-500 text-sm">100% 免費</span>
+            <span class="px-3 py-1 rounded-full bg-gray-50 text-emerald-500 text-sm">卓越的文本理解能力</span>
+            <span class="px-3 py-1 rounded-full bg-gray-50 text-blue-500 text-sm">無需登錄</span>
+            <span class="px-3 py-1 rounded-full bg-gray-50 text-purple-500 text-sm">閃電般生成速度</span>
           </div>
         </div>
       </div>
@@ -104,14 +105,14 @@
     <div class="py-10 bg-white">
       <div class="max-w-[1280px] mx-auto px-4">
         <div class="text-left mb-0 opacity-0 translate-y-5" data-animate style="margin-bottom: -15px; position: relative; z-index: 1000;">
-          <h2 class="text-4xl font-bold mb-0 text-gray-900" style="margin-left: 150px;">AI Image Generator</h2>
+          <h2 class="text-4xl font-bold mb-0 text-gray-900" style="margin-left: 150px;">AI圖像生成器</h2>
         </div>
         
         <div class="bg-[#FFFFFF] p-8 pt-0 mb-12 relative border-0 rounded-xl shadow-sm">
           <div class="w-full h-[560px] relative overflow-hidden bg-[#FFFFFF] border-0">
             <iframe 
               src="https://raphaelai.org/" 
-              title="Raphael AI Image Generator"
+              title="Raphael AI圖像生成器"
               class="absolute border-0"
               style="width: 1500px; height: 3000px; top: -200px; left: -90px; transform: translateX(0) scale(0.9); transform-origin: top left; pointer-events: auto; overflow: hidden;"
               scrolling="no"
@@ -121,35 +122,35 @@
               allow="clipboard-write; fullscreen"
             ></iframe>
             
-            <!-- 覆盖iframe中红框区域的内容 -->
+            <!-- 覆蓋iframe中紅框區域的內容 -->
             <div 
               class="absolute top-[-10px] left-0 z-50 bg-white" 
               style="height: 60px; width: 45%; margin: 0 0 0 30px; box-shadow: none; border: 0;"
             >
               <div class="flex items-center justify-start h-full text-gray-800 text-xl font-medium">
-                <!-- <span>AI 图像生成</span> -->
+                <!-- <span>AI 圖像生成</span> -->
               </div>
             </div>
             
-            <!-- 左侧容器，覆盖iframe内容 -->
+            <!-- 左側容器，覆蓋iframe內容 -->
             <div 
               class="absolute bottom-0 left-0 z-50 bg-white" 
               style="height: 40px; width: 47%; margin: 0; box-shadow: none; border: 0;"
             >
-              <!-- 可以添加自定义内容 -->
+              <!-- 可以添加自定義內容 -->
               <div class="flex items-center justify-start h-full text-gray-600 text-sm">
-                <!-- <span>Image processing by Raphael</span> -->
+                <!-- <span>Raphael圖像處理中</span> -->
               </div>
             </div>
             
-            <!-- 广告覆盖层 - 精确定位在底部广告区域上 -->
+            <!-- 廣告覆蓋層 - 精確定位在底部廣告區域上 -->
             <div 
               class="absolute bottom-0 right-0 z-50 bg-white" 
               style="height: 90px; width: 50%; margin: 0 0 0 auto; box-shadow: none; border: 0;"
             >
-              <!-- 可选：添加一些自定义内容到覆盖层 -->
+              <!-- 可選：添加一些自定義內容到覆蓋層 -->
               <div class="flex items-center justify-center h-full text-gray-600 text-sm">
-                <!-- <span>Images powered by Raphael AI</span> -->
+                <!-- <span>圖像由Raphael AI提供支持</span> -->
               </div>
             </div>
           </div>
@@ -161,9 +162,9 @@
     <div class="py-16 bg-white">
       <div class="max-w-[1280px] mx-auto px-4">
         <div class="text-center mb-16 opacity-0 translate-y-5" data-animate>
-          <h2 class="text-4xl font-bold mb-4 text-gray-900">Explore Amazing Artworks Created with Raphael AI</h2>
+          <h2 class="text-4xl font-bold mb-4 text-gray-900">探索由Raphael AI創建的驚人藝術作品</h2>
           <p class="text-xl text-gray-600">
-            From realistic photos to anime styles, from fantasy scenes to futuristic tech - all made with Raphael AI
+            從逼真照片到動漫風格，從奇幻場景到未來科技 - 全部由Raphael AI製作
           </p>
         </div>
 
@@ -220,18 +221,18 @@
       </div>
     </div>
 
-    <!-- Key Features Section -->
+    <!-- 核心功能部分 -->
     <div id="features" class="py-20 bg-white">
       <div class="max-w-[1280px] mx-auto px-4">
         <div class="text-center mb-16 opacity-0 translate-y-5" data-animate>
-          <h2 class="text-4xl font-bold mb-4 text-gray-900">Key Features of Raphael AI</h2>
+          <h2 class="text-4xl font-bold mb-4 text-gray-900">Raphael AI的核心功能</h2>
           <p class="text-xl text-gray-600">
-            Unleash your creative potential, redefining AI image generation!
+            釋放你的創造潛能，重新定義AI圖像生成！
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Zero-Cost Creation -->
+          <!-- 完全免費使用 -->
           <div class="flex flex-col opacity-0 translate-y-5" data-animate data-delay="100">
             <div class="w-16 h-16 mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E5B06E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -239,26 +240,26 @@
                 <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-900">Completely Free to Use</h3>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">完全免費使用</h3>
             <p class="text-gray-600 text-left">
-              Say goodbye to expensive design fees, enjoy unlimited generations with no hidden charges, no credit card verification required, allowing everyone to create freely.
+              告別昂貴的設計費用，享受無限制生成，沒有隱藏費用，無需信用卡驗證，讓每個人都能自由創作。
             </p>
           </div>
 
-          <!-- State-of-the-Art Quality -->
+          <!-- 專業級輸出質量 -->
           <div class="flex flex-col opacity-0 translate-y-5" data-animate data-delay="200">
             <div class="w-16 h-16 mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E5B06E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-900">Professional-Grade Output Quality</h3>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">專業級輸出質量</h3>
             <p class="text-gray-600 text-left">
-              Utilizing cutting-edge FLUX.1-Dev algorithm to generate detailed, vibrant high-definition images that meet commercial usage standards.
+              採用尖端FLUX.1-Dev算法生成細節豐富、色彩鮮明的高清圖像，滿足商業使用標準。
             </p>
           </div>
 
-          <!-- Advanced Text Understanding -->
+          <!-- 即時渲染技術 -->
           <div class="flex flex-col opacity-0 translate-y-5" data-animate data-delay="300">
             <div class="w-16 h-16 mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E5B06E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -267,39 +268,39 @@
                 <path d="m14.5 4-5 16"></path>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-900">Instant Rendering Technology</h3>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">即時渲染技術</h3>
             <p class="text-gray-600 text-left">
-              Unique optimization algorithm ensures second-level image generation, 3-5 times faster than similar products, so your creativity doesn't have to wait.
+              獨特的優化算法確保秒級圖像生成，比同類產品快3-5倍，讓你的創意不必等待。
             </p>
           </div>
 
-          <!-- Lightning-Fast Generation -->
+          <!-- 數據安全保護 -->
           <div class="flex flex-col opacity-0 translate-y-5" data-animate data-delay="400">
             <div class="w-16 h-16 mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E5B06E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-900">Data Security Protection</h3>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">數據安全保護</h3>
             <p class="text-gray-600 text-left">
-              Strict privacy protection mechanism, all prompts and images are deleted immediately after use, with no data storage, protecting your creative security.
+              嚴格的隱私保護機制，所有提示和圖像在使用後立即刪除，不存儲任何數據，保護您的創意安全。
             </p>
           </div>
 
-          <!-- Enhanced Privacy -->
+          <!-- 隱私保護增強 -->
           <div class="flex flex-col opacity-0 translate-y-5" data-animate data-delay="500">
             <div class="w-16 h-16 mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E5B06E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-900">Enhanced Privacy</h3>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">隱私保護增強</h3>
             <p class="text-gray-600 text-left">
-              Zero data retention policy - your prompts and generated images are never stored on our servers.
+              零數據保留政策 - 您的提示和生成的圖像永遠不會存儲在我們的服務器上。
             </p>
           </div>
 
-          <!-- Multi-Style Support -->
+          <!-- 一鍵操作 -->
           <div class="flex flex-col opacity-0 translate-y-5" data-animate data-delay="600">
             <div class="w-16 h-16 mb-6 rounded-full border border-[#E5B06E] flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E5B06E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -308,9 +309,9 @@
                 <path d="M14.5 17.5 4.5 15"></path>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-900">One-Click Operation</h3>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">一鍵操作</h3>
             <p class="text-gray-600 text-left">
-              Intuitive user interface with zero learning curve, suitable for creators of all ages, from beginners to professional designers.
+              直觀的用戶界面，零學習曲線，適合所有年齡段的創作者，從初學者到專業設計師。
             </p>
           </div>
         </div>
@@ -321,21 +322,21 @@
     <div class="py-20 bg-white">
       <div class="max-w-[1280px] mx-auto text-center">
         <div class="opacity-0 translate-y-5" data-animate>
-          <span class="text-yellow-500 font-semibold mb-4 block">Testimonial</span>
-          <h2 class="text-4xl font-bold mb-4 text-gray-800">What Users Say About Raphael AI</h2>
+          <span class="text-yellow-500 font-semibold mb-4 block">用戶評價</span>
+          <h2 class="text-4xl font-bold mb-4 text-gray-800">用戶如何評價Raphael AI</h2>
           <p class="text-xl text-gray-600 mb-16">
-            Hear what creators and professionals say about using Raphael AI
+            聽聽創作者和專業人士對使用Raphael AI的評價
           </p>
 
-          <!-- Testimonial Carousel -->
+          <!-- 評價輪播 -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- First 3 testimonials -->
+            <!-- 第一組評價 -->
             <div class="bg-white p-6 rounded-xl shadow-md" data-testimonial-group="0">
               <div class="flex items-center mb-4">
-                <img src="public/1 (1).webp" alt="David Thompson" class="w-12 h-12 rounded-full object-cover" />
+                <img src="public/1 (1).webp" alt="大衛·湯普森" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">David Thompson</h3>
-                  <p class="text-gray-500 text-sm">Independent Game Developer</p>
+                  <h3 class="font-semibold text-gray-800">大衛·湯普森</h3>
+                  <p class="text-gray-500 text-sm">獨立遊戲開發者</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -356,46 +357,16 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "As a solo game dev, Raphael AI Image Generator is invaluable. The speed and quality of asset generation are unmatched, and being free means I can focus my budget elsewhere."
-              </p>
-            </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-md" data-testimonial-group="0">
-              <div class="flex items-center mb-4">
-                <img src="public/2 (1).webp" alt="Emily Parker" class="w-12 h-12 rounded-full object-cover" />
-                <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">Emily Parker</h3>
-                  <p class="text-gray-500 text-sm">Content Creator on YouTube</p>
-                </div>
-              </div>
-              <div class="flex text-yellow-500 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-              </div>
-              <p class="text-gray-600 text-left">
-                "I create thumbnails daily using Raphael AI Image Generator. The text understanding is incredible - it captures exactly what I need, and the no-registration policy makes it super convenient."
+                "作為一名獨立遊戲開發者，Raphael AI圖像生成器非常寶貴。資產生成的速度和質量無與倫比，而且免費使用意味著我可以將預算用在其他地方。"
               </p>
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-md" data-testimonial-group="0">
               <div class="flex items-center mb-4">
-                <img src="public/3 (1).webp" alt="Robert Wilson" class="w-12 h-12 rounded-full object-cover" />
+                <img src="public/2 (1).webp" alt="艾米麗·帕克" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">Robert Wilson</h3>
-                  <p class="text-gray-500 text-sm">UI/UX Designer at TechFlow</p>
+                  <h3 class="font-semibold text-gray-800">艾米麗·帕克</h3>
+                  <p class="text-gray-500 text-sm">YouTube內容創作者</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -416,17 +387,47 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "The FLUX.1-Dev model in Raphael AI Image Generator produces the most consistent and high-quality results I've seen. It's become our go-to tool for generating mockup images."
+                "我每天使用Raphael AI圖像生成器創建縮略圖。它的文本理解能力令人難以置信——能準確捕捉我需要的內容，而且無需註冊的政策讓它使用起來超級方便。"
               </p>
             </div>
 
-            <!-- Second 3 testimonials (hidden initially) -->
+            <div class="bg-white p-6 rounded-xl shadow-md" data-testimonial-group="0">
+              <div class="flex items-center mb-4">
+                <img src="public/3 (1).webp" alt="羅伯特·威爾遜" class="w-12 h-12 rounded-full object-cover" />
+                <div class="ml-4 text-left">
+                  <h3 class="font-semibold text-gray-800">羅伯特·威爾遜</h3>
+                  <p class="text-gray-500 text-sm">TechFlow的UI/UX設計師</p>
+                </div>
+              </div>
+              <div class="flex text-yellow-500 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <p class="text-gray-600 text-left">
+                "Raphael AI圖像生成器中的FLUX.1-Dev模型產生了我見過的最一致和高質量的結果。它已成為我們生成模型圖像的首選工具。"
+              </p>
+            </div>
+
+            <!-- 第二組評價（初始隱藏） -->
             <div class="bg-white p-6 rounded-xl shadow-md hidden" data-testimonial-group="1">
               <div class="flex items-center mb-4">
-                <img src="public/4 (1).webp" alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover" />
+                <img src="public/4 (1).webp" alt="莎拉·約翰遜" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">Sarah Johnson</h3>
-                  <p class="text-gray-500 text-sm">Marketing Director at CreativeCo</p>
+                  <h3 class="font-semibold text-gray-800">莎拉·約翰遜</h3>
+                  <p class="text-gray-500 text-sm">CreativeCo營銷總監</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -447,16 +448,16 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "Our marketing team uses Raphael AI for all our social media visuals. The quality is exceptional, and the fact that it's free means we can create as many variations as we need without worrying about costs."
+                "我們的營銷團隊使用Raphael AI為所有社交媒體視覺效果創作素材。質量非常出色，而且它免費意味著我們可以創建任意多的變體，而不必擔心成本。"
               </p>
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-md hidden" data-testimonial-group="1">
               <div class="flex items-center mb-4">
-                <img src="public/5 (1).webp" alt="Michael Chen" class="w-12 h-12 rounded-full object-cover" />
+                <img src="public/5 (1).webp" alt="邁克爾·陳" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">Michael Chen</h3>
-                  <p class="text-gray-500 text-sm">Digital Artist & Illustrator</p>
+                  <h3 class="font-semibold text-gray-800">邁克爾·陳</h3>
+                  <p class="text-gray-500 text-sm">數字藝術家和插畫師</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -477,16 +478,16 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "I use Raphael AI to generate reference images for my digital art. The quality is incredible, and the ability to create unlimited images for free has completely transformed my workflow."
+                "我使用Raphael AI為我的數字藝術生成參考圖像。質量令人難以置信，能夠免費創建無限圖像完全改變了我的工作流程。"
               </p>
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-md hidden" data-testimonial-group="1">
               <div class="flex items-center mb-4">
-                <img src="public/6 (1).webp" alt="Jennifer Lee" class="w-12 h-12 rounded-full object-cover" />
+                <img src="public/6 (1).webp" alt="詹妮弗·李" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">Jennifer Lee</h3>
-                  <p class="text-gray-500 text-sm">E-commerce Store Owner</p>
+                  <h3 class="font-semibold text-gray-800">詹妮弗·李</h3>
+                  <p class="text-gray-500 text-sm">電子商務店主</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -507,189 +508,7 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "Raphael AI has revolutionized my product photography. I can now create professional-looking product images without hiring a photographer, saving me thousands of dollars."
-              </p>
-            </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-md hidden" data-testimonial-group="2">
-              <div class="flex items-center mb-4">
-                <img src="public/7 (1).webp" alt="Sophia Zhang" class="w-12 h-12 rounded-full object-cover" />
-                <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">Sophia Zhang</h3>
-                  <p class="text-gray-500 text-sm">Architectural Visualizer</p>
-                </div>
-              </div>
-              <div class="flex text-yellow-500 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-              </div>
-              <p class="text-gray-600 text-left">
-                "I use Raphael AI to generate concept art for architectural projects. The detailed interior and exterior renderings help my clients visualize spaces before we begin construction. Simply brilliant!"
-              </p>
-            </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-md hidden" data-testimonial-group="2">
-              <div class="flex items-center mb-4">
-                <img src="public/8 (1).webp" alt="Thomas Wright" class="w-12 h-12 rounded-full object-cover" />
-                <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">Thomas Wright</h3>
-                  <p class="text-gray-500 text-sm">Educational Content Creator</p>
-                </div>
-              </div>
-              <div class="flex text-yellow-500 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-              </div>
-              <p class="text-gray-600 text-left">
-                "Raphael AI helps me create engaging visuals for my online courses. Students respond better to illustrated concepts, and I can generate exactly what I need to explain complex topics without any design skills."
-              </p>
-            </div>
-
-            <!-- James Rodriguez testimonial for Group 2 -->
-            <div class="bg-white p-6 rounded-xl shadow-md hidden" data-testimonial-group="2">
-              <div class="flex items-center mb-4">
-                <img src="public/9 (1).webp" alt="James Rodriguez" class="w-12 h-12 rounded-full object-cover" />
-                <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">James Rodriguez</h3>
-                  <p class="text-gray-500 text-sm">Product Photographer</p>
-                </div>
-              </div>
-              <div class="flex text-yellow-500 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-              </div>
-              <p class="text-gray-600 text-left">
-                "Raphael AI helps me brainstorm creative product shots before I ever pick up my camera. I can test different compositions and lighting setups virtually, which has improved my final photographs tremendously."
-              </p>
-            </div>
-
-            <!-- 第三组评论 (Group 3) -->
-            <div class="bg-white p-6 rounded-xl shadow-md hidden" data-testimonial-group="3">
-              <div class="flex items-center mb-4">
-                <img src="public/10.webp" alt="Olivia Taylor" class="w-12 h-12 rounded-full object-cover" />
-                <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">Olivia Taylor</h3>
-                  <p class="text-gray-500 text-sm">Fiction Author</p>
-                </div>
-              </div>
-              <div class="flex text-yellow-500 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-              </div>
-              <p class="text-gray-600 text-left">
-                "I visualize my characters and scenes before writing using Raphael AI. Being able to see what I'm imagining helps me craft more detailed descriptions. It's become an essential part of my creative process."
-              </p>
-            </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-md hidden" data-testimonial-group="3">
-              <div class="flex items-center mb-4">
-                <img src="public/11.webp" alt="Alex Morgan" class="w-12 h-12 rounded-full object-cover" />
-                <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">Alex Morgan</h3>
-                  <p class="text-gray-500 text-sm">Indie Filmmaker</p>
-                </div>
-              </div>
-              <div class="flex text-yellow-500 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-              </div>
-              <p class="text-gray-600 text-left">
-                "Raphael AI is a breakthrough for indie filmmakers. I use it for storyboarding, concept art, and even poster creation. It's like having a full art department at your fingertips without the budget constraints."
-              </p>
-            </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-md hidden" data-testimonial-group="3">
-              <div class="flex items-center mb-4">
-                <img src="public/12.webp" alt="Marcus Brown" class="w-12 h-12 rounded-full object-cover" />
-                <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">Marcus Brown</h3>
-                  <p class="text-gray-500 text-sm">App Developer</p>
-                </div>
-              </div>
-              <div class="flex text-yellow-500 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-              </div>
-              <p class="text-gray-600 text-left">
-                "For UI mockups and app store assets, Raphael AI is unbeatable. I can quickly generate professional graphics that make my apps look polished and appealing to potential users. A must-have tool for solo developers."
+                "Raphael AI徹底改變了我的產品攝影。我現在可以創建專業外觀的產品圖片，而無需聘請攝影師，為我節省了數千美元。"
               </p>
             </div>
           </div>
@@ -721,10 +540,10 @@
     <div class="py-20 bg-white" id="faqs">
       <div class="max-w-[1280px] mx-auto px-4">
         <div class="text-center mb-12 opacity-0 translate-y-5" data-animate>
-          <span class="inline-block bg-yellow-500/20 text-yellow-500 font-semibold px-4 py-1 rounded-full mb-4">FAQ</span>
-          <h2 class="text-4xl font-bold mb-4 text-gray-800">Frequently Asked Questions</h2>
+          <span class="inline-block bg-yellow-500/20 text-yellow-500 font-semibold px-4 py-1 rounded-full mb-4">常見問題</span>
+          <h2 class="text-4xl font-bold mb-4 text-gray-800">常見問題解答</h2>
           <p class="text-gray-600 text-lg">
-            Have another question? Contact us at support@raphaelai.xyz
+            還有其他問題？請通過 support@raphaelai.xyz 聯繫我們
           </p>
         </div>
 
@@ -735,9 +554,9 @@
                 <span class="text-yellow-500 text-lg font-semibold">1</span>
               </div>
               <div class="text-left">
-                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">What is Raphael AI and how does it work?</h3>
+                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">什麼是Raphael AI，它是如何工作的？</h3>
                 <p class="text-gray-600 text-left">
-                  Raphael AI is the world's first completely free and unlimited AI image generator powered by the FLUX.1-Dev model. You can create high-quality images from text descriptions with no registration required.
+                  Raphael AI是全球首個完全免費且無限制的AI圖像生成器，由FLUX.1-Dev模型提供支持。您可以從文本描述創建高質量圖像，無需註冊。
                 </p>
               </div>
             </div>
@@ -749,9 +568,9 @@
                 <span class="text-yellow-500 text-lg font-semibold">2</span>
               </div>
               <div class="text-left">
-                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">Is Raphael AI really free?</h3>
+                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">Raphael AI真的是免費的嗎？</h3>
                 <p class="text-gray-600 text-left">
-                  Yes, Raphael AI is completely free! We aim to be the world's largest and most powerful free AI image generator. There are no hidden fees, credit card requirements, or usage limits.
+                  是的，Raphael AI完全免費！我們的目標是成為世界上最大、最強大的免費AI圖像生成器。沒有隱藏費用，無需信用卡，也沒有使用限制。
                 </p>
               </div>
             </div>
@@ -763,9 +582,9 @@
                 <span class="text-yellow-500 text-lg font-semibold">3</span>
               </div>
               <div class="text-left">
-                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">How is Raphael AI different from other AI image generators?</h3>
+                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">Raphael AI與其他AI圖像生成器有何不同？</h3>
                 <p class="text-gray-600 text-left">
-                  Raphael AI is the only platform offering unlimited free access to the powerful FLUX.1-Dev model. We provide superior image quality, fast generation speed, and complete privacy protection with no cost or registration required.
+                  Raphael AI是唯一提供無限免費訪問強大FLUX.1-Dev模型的平台。我們提供卓越的圖像質量、快速的生成速度和完整的隱私保護，無需任何費用或註冊。
                 </p>
               </div>
             </div>
@@ -784,29 +603,29 @@
               <span class="ml-2 text-xl font-bold text-[rgb(204,144,92)]">Raphael AI</span>
             </div>
             <p class="text-gray-600 mb-4">
-              Create stunning AI-generated images in seconds with the world's first unlimited free AI Image Generator.
+              使用全球首個無限免費的AI圖像生成器，在幾秒鐘內創建令人驚嘆的AI生成圖像。
             </p>
-            <p class="text-sm text-gray-500">© 2024 Raphael AI. All rights reserved.</p>
+            <p class="text-sm text-gray-500">© 2024 Raphael AI. 保留所有權利。</p>
           </div>
 
           <div>
             <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-              Product
+              產品
             </h3>
             <ul class="space-y-4">
               <li>
                 <a href="#features" class="text-gray-500 hover:text-gray-800 transition">
-                  Features
+                  功能特點
                 </a>
               </li>
               <li>
                 <a href="#" class="text-gray-500 hover:text-gray-800 transition">
-                  Pricing
+                  價格
                 </a>
               </li>
               <li>
                 <a href="#" class="text-gray-500 hover:text-gray-800 transition">
-                  API
+                  API接口
                 </a>
               </li>
             </ul>
@@ -814,22 +633,22 @@
 
           <div>
             <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-              Company
+              公司
             </h3>
             <ul class="space-y-4">
               <li>
                 <a href="#" class="text-gray-500 hover:text-gray-800 transition">
-                  About
+                  關於我們
                 </a>
               </li>
               <li>
                 <a href="#" class="text-gray-500 hover:text-gray-800 transition">
-                  Blog
+                  博客
                 </a>
               </li>
               <li>
                 <a href="#" class="text-gray-500 hover:text-gray-800 transition">
-                  Contact
+                  聯繫我們
                 </a>
               </li>
             </ul>
@@ -863,7 +682,7 @@
         const testimonialGroups = document.querySelectorAll('[data-testimonial-group]');
         const dots = document.querySelectorAll('[data-testimonial-dot]');       
         let currentGroup = 0;
-        const totalGroups = 4; // 更新为4组评论
+        const totalGroups = 4; // 更新為4組評論
 
         function showTestimonialGroup(groupIndex) {
           // Hide all testimonial groups
@@ -936,21 +755,15 @@
         // Language selection
         languageOptions.forEach(option => {
           option.addEventListener('click', (e) => {
-            e.preventDefault();
             const lang = option.getAttribute('data-lang');
             const langText = option.textContent;
             
-            // Update current language display
-            currentLanguageText.textContent = langText;
+            // 如果點擊的是當前語言，阻止跳轉
+            if (currentLanguageText.textContent.trim() === langText.trim()) {
+              e.preventDefault();
+            }
             
-            // Here you would implement actual language switching
-            // For a simple demo, we'll just update the language attribute
-            document.documentElement.lang = lang;
-            
-            // Additional code for actual translation would go here
-            // This could involve loading different language files or API calls
-            
-            // Close the dropdown
+            // 無需其他處理，讓鏈接自然跳轉到目標頁面
             languageDropdown.classList.add('hidden');
           });
         });

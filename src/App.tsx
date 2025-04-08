@@ -176,9 +176,9 @@ const translations: Record<string, Translation> = {
       }
     ]
   },
-  '简体中文': {
-    features: '特点',
-    faqs: '常见问题',
+  '繁體中文': {
+    features: '特點',
+    faqs: '常見問題',
     title: '几秒钟内创建令人惊叹的AI生成图像',
     subtitle: '世界首个免费无限制AI图像生成器',
     free: '100%免费',
@@ -416,6 +416,124 @@ const translations: Record<string, Translation> = {
       }
     ]
   },
+  '繁體中文': {
+    features: '特點',
+    faqs: '常見問題',
+    title: '幾秒鐘內創建令人驚嘆的AI生成圖像',
+    subtitle: '世界首個免費無限制AI圖像生成器',
+    free: '100%免費',
+    poweredBy: '由Flux.1 Dev提供支持',
+    noLogin: '無需登錄',
+    unlimited: '無限生成',
+    generator: 'AI圖像生成器',
+    getInspired: '獲取靈感',
+    getInspiredDesc: '從其他人使用Raphael創建的作品中獲取靈感',
+    testimonial: '用戶評價',
+    testimonialTitle: '用戶對Raphael AI的評價',
+    testimonialDesc: '聽聽每天使用我們AI圖像生成器的創作者和專業人士的意見。',
+    faqTitle: '常見問題解答',
+    faqContact: '還有其他問題？請聯繫我們：support@raphael.app',
+    copyright: '© 2024 Raphael AI. 保留所有權利。',
+    footerDesc: '使用世界首個免費無限制的AI圖像生成器，幾秒鐘內創建令人驚嘆的AI生成圖像。',
+    product: '製品',
+    company: '公司',
+    about: '會社概要',
+    blog: '部落格',
+    contact: '聯繫我們',
+    api: 'API',
+    pricing: '價格',
+    keyFeaturesTitle: 'Raphael 的主要特點',
+    keyFeaturesDesc: '體驗下一代 AI 圖像生成 - 強大、免費且注重隱私',
+    zeroCost: '零成本創作',
+    zeroCostDesc: '世界首個完全免費的 AI 圖像生成器，無使用限制，無需註冊',
+    stateArt: '頂尖品質',
+    stateArtDesc: '由 FLUX.1-Dev 模型驅動，生成照片級別的圖像，具有出色的細節和藝術風格控制',
+    textUnderstanding: '高級文本理解',
+    textUnderstandingDesc: '出色的文本到圖像能力，準確理解複雜提示和文本疊加功能',
+    lightningFast: '閃電般速度',
+    lightningFastDesc: '優化的推理管道，確保快速生成圖像而不影響質量',
+    privacy: '增強隱私保護',
+    privacyDesc: '零數據保留政策 - 您的提示和生成的圖像永遠不會存儲在我們的服務器上',
+    multiStyle: '多樣風格支持',
+    multiStyleDesc: '創建各種藝術風格的圖像，從照片級真實到動漫風格，從油畫到數字藝術',
+    faqItems: [
+      {
+        question: 'Raphael AI是什麼，它是如何工作的？',
+        answer: 'Raphael AI是世界上第一個完全免費、無限制的AI圖像生成器，由FLUX.1-Dev模型提供支持。它允許您從文本描述中創建高質量圖像，無需任何註冊或使用限制。'
+      },
+      {
+        question: 'Raphael AI真的免費使用嗎？',
+        answer: '是的，Raphael AI完全免費使用！我們致力於成為世界上最大、最強大的免費AI圖像生成器。沒有隱藏費用，無需信用卡，也沒有使用限制。'
+      },
+      {
+        question: 'Raphael AI與其他AI圖像生成器有何不同？',
+        answer: 'Raphael AI是唯一一個提供無限免費訪問強大FLUX.1-Dev模型的平台。我們提供卓越的圖像質量、快速的生成速度和完整的隱私保護，所有這些都不需要任何費用或註冊要求。'
+      },
+      {
+        question: '我需要創建賬戶才能使用Raphael AI嗎？',
+        answer: '不，您不需要創建賬戶或註冊。只需訪問raphael.app並立即開始生成圖像。我們相信讓AI技術無障礙地為所有人所用。'
+      },
+      {
+        question: '我可以用Raphael AI創建哪些類型的圖像？',
+        answer: '您可以創建各種各樣的圖像，包括逼真的場景、藝術插圖、數字藝術、動漫風格圖像等。FLUX.1-Dev模型擅長理解複雜提示並生成多樣化的視覺風格。'
+      },
+      {
+        question: 'Raphael AI如何保護我的隱私？',
+        answer: '我們非常重視隱私。我們不會在服務器上存儲您的提示或生成的圖像，也不需要任何個人信息。您的創作完全保持私密，並在生成後被刪除。'
+      },
+      {
+        question: 'FLUX.1-Dev模型是什麼？',
+        answer: 'FLUX.1-Dev是一個最先進的AI模型，以其卓越的圖像質量、提示準確性和風格多樣性而聞名。它通常使用成本較高，但Raphael使它免費提供給所有人。'
+      },
+      {
+        question: '使用Raphael AI有什麼限制嗎？',
+        answer: '雖然Raphael AI是免費且無限制的，但我們維持標準內容指南以確保適當使用。該平台目前為網頁設計，移動應用計劃在未來推出。'
+      },
+      {
+        question: '我可以將生成的圖像用於商業用途嗎？',
+        answer: '是的，您擁有使用Raphael AI生成的圖像的權利。您可以將它們用於個人和商業目的，這使它成為創作者和企業的理想選擇。'
+      },
+      {
+        question: 'Raphael AI在移動設備上可用嗎？',
+        answer: '目前，Raphael AI可通過我們的網站raphael.app訪問，在移動瀏覽器上運行良好。我們正在積極開發專用移動應用，以便不久後提供更好的體驗。'
+      },
+      {
+        question: '如何提供反饋或報告問題？',
+        answer: '我們歡迎您的反饋！您可以通過support@raphael.app聯繫我們的支持團隊。您的反饋有助於我們改進和維護最好的免費AI圖像生成服務。'
+      },
+      {
+        question: 'Raphael AI的未來計劃是什麼？',
+        answer: '我們不斷通過定期更新AI模型和用戶界面來改進我們的服務。未來計劃包括移動應用和額外的創意功能，同時保持我們完全免費的承諾。'
+      }
+    ],
+    testimonials: [
+      {
+        name: '大衛·湯普森',
+        role: '獨立遊戲開發者',
+        answer: '"作為一名獨立遊戲開發者，Raphael AI圖像生成器價值連城。資源生成的速度和質量無與倫比，而且免費使用讓我能夠將預算用在其他地方。"'
+      },
+      {
+        name: '艾米麗·帕克',
+        role: 'YouTube內容創作者',
+        answer: '"我每天都使用Raphael AI圖像生成器創建縮略圖。它對文本的理解能力令人難以置信——能精確捕捉我所需要的內容，而且無需註冊的政策使它非常便捷。"'
+      },
+      {
+        name: '羅伯特·威爾遜',
+        role: 'TechFlow的UI/UX設計師',
+        answer: '"Raphael AI圖像生成器中的FLUX.1-Dev模型產生了我所見過的最一致和高質量的結果。它已經成為我們生成模型圖像的首選工具。"'
+      },
+      {
+        name: '珍妮弗·亞當斯',
+        role: '電子商務企業主',
+        answer: '"經營線上商店需要持續創建圖像。Raphael的免費AI圖像生成器幫助我即時創建專業的產品照片。它實實在地在為我的企業節省了數千元成本。"'
+      },
+      {
+        name: '邁克爾·安德森',
+        role: 'ArtStation的數字藝術家',
+        answer: '"Raphael的AI圖像生成器是一個改變遊戲規則的工具。FLUX.1-Dev模型生成的細節豐富的圖像，我將其用作概念藝術。它完全免費的事實令人難以置信！"'
+      }
+    ]
+  },
   '日本語': {
     features: '機能',
     faqs: 'よくある質問',
@@ -516,124 +634,6 @@ const translations: Record<string, Translation> = {
         name: 'エミリー・パーカー',
         role: 'YouTubeコンテンツクリエイター',
         answer: '"Raphael AIイメージジェネレーターを使って毎日サムネイルを作成しています。テキストの理解力が素晴らしく、必要なものを正確に捉え、登録不要なのも便利です。」'
-      },
-      {
-        name: 'ロバート・ウィルソン',
-        role: 'TechFlowのUI/UXデザイナー',
-        answer: '"Raphael AIイメージジェネレーターのFLUX.1-Devモデルは、私が見た中で最も一貫性が高く、高品質な結果を生み出します。モックアップ画像の生成に欠かせないツールとなっています。」'
-      },
-      {
-        name: 'ジェニファー・アダムス',
-        role: 'Eコマース事業主',
-        answer: '"オンラインストアの運営には常に画像作成が必要です。Raphaelの無料AIイメージジェネレーターのおかげで、プロフェッショナルな商品写真を即座に作成できます。文字通り、ビジネスの何千ドルもの節約になっています。」'
-      },
-      {
-        name: 'マイケル・アンダーソン',
-        role: 'ArtStationのデジタルアーティスト',
-        answer: '"RaphaelのAI イメージジェネレーターは革命的です。FLUX.1-Dev モデルは、私が見た中で最も細かい画像を生成します。それをコンセプトアートとして使用します。完全に無料であることは驚きです！"'
-      }
-    ]
-  },
-  '한국어': {
-    features: '기능',
-    faqs: '자주 묻는 질문',
-    title: '몇 초 만에 AI가 생성하는 놀라운 이미지 만들기',
-    subtitle: '세계 최초의 무제한 무료 AI 이미지 생성기',
-    free: '100% 무료',
-    poweredBy: 'Flux.1 Dev 구동',
-    noLogin: '로그인 불필요',
-    unlimited: '무제한 생성',
-    generator: 'AI 이미지 생성기',
-    getInspired: '영감 얻기',
-    getInspiredDesc: '다른 사용자들이 Raphael로 만든 작품에서 영감을 얻으세요',
-    testimonial: '사용자 후기',
-    testimonialTitle: 'Raphael AI에 대한 사용자 평가',
-    testimonialDesc: '우리의 AI 이미지 생성기를 매일 사용하는 크리에이터와 전문가들의 의견을 들어보세요.',
-    faqTitle: '자주 묻는 질문',
-    faqContact: '다른 질문이 있으신가요? support@raphael.app로 문의해 주세요',
-    copyright: '© 2024 Raphael AI. All rights reserved.',
-    footerDesc: '세계 최초의 무제한 무료 AI 이미지 생성기로 몇 초 만에 놀라운 AI 생성 이미지를 만드세요.',
-    product: '제품',
-    company: '회사',
-    about: '회사 소개',
-    blog: '블로그',
-    contact: '문의하기',
-    api: 'API',
-    pricing: '가격',
-    keyFeaturesTitle: 'Raphael의 주요 특성',
-    keyFeaturesDesc: '다음 세대 AI 이미지 생성 - 강력하고 무료이며 사생활에도 배려한 것',
-    zeroCost: '제로 코스트 창의',
-    zeroCostDesc: '세계 최초의 완전 무료 AI 이미지 생성기. 사용 제한 없이, 등록 필요 없음',
-    stateArt: '최상급 품질',
-    stateArtDesc: 'FLUX.1-Dev 모델을 탑재한 세계 최초의 완전 무료 AI 이미지 생성기. 사진 수준의 이미지를 생성하면서 뛰어난 아트 스타일 제어도 가능합니다.',
-    textUnderstanding: '고급 텍스트 이해',
-    textUnderstandingDesc: '복잡한 프롬프트에 대응하는 텍스트 오버레이 기능을 갖춘, 뛰어난 텍스트에서 이미지로의 변환 능력.',
-    lightningFast: '번개 같은 속도',
-    lightningFastDesc: '품질을 유지하면서 고속으로 이미지를 생성하는 최적화된 추론 파이프라인.',
-    privacy: '강화된 사생활 보호',
-    privacyDesc: '제로 데이터 보존 정책 - 당신의 프롬프트와 생성된 이미지는 언제든지 당사의 서버에 저장되지 않습니다.',
-    multiStyle: '다양한 스타일 지원',
-    multiStyleDesc: '다양한 아트 스타일의 이미지를 만들 수 있습니다. 사진 수준의 진짜 같은 장면에서 애니메이션 스타일, 유화, 디지털 아트까지.',
-    faqItems: [
-      {
-        question: 'Raphael AI란 무엇이며 어떻게 작동하나요?',
-        answer: 'Raphael AI는 FLUX.1-Dev 모델을 기반으로 한 세계 최초의 완전 무료, 무제한 AI 이미지 생성기입니다. 가입이나 사용 제한 없이 텍스트 설명으로부터 고품질 이미지를 생성할 수 있습니다.'
-      },
-      {
-        question: 'Raphael AI는 정말로 무료인가요?',
-        answer: '네, Raphael AI는 완전 무료입니다! 우리는 세계에서 가장 크고 강력한 무료 AI 이미지 생성기가 되고자 합니다. 숨겨진 비용이나 신용카드 요구, 사용 제한이 전혀 없습니다.'
-      },
-      {
-        question: 'Raphael AI와 다른 AI 이미지 생성기의 차이점은 무엇인가요?',
-        answer: 'Raphael AI는 강력한 FLUX.1-Dev 모델에 무제한으로 무료 접근할 수 있는 유일한 플랫폼입니다. 비용이나 가입 없이도 우수한 이미지 품질, 빠른 생성 속도, 완벽한 개인정보 보호를 제공합니다.'
-      },
-      {
-        question: 'Raphael AI를 사용하려면 계정을 만들어야 하나요?',
-        answer: '아니요, 계정 생성이나 가입이 필요하지 않습니다. raphael.app에 방문하여 바로 이미지 생성을 시작할 수 있습니다. 우리는 모든 사람이 장벽 없이 AI에 접근할 수 있어야 한다고 믿습니다.'
-      },
-      {
-        question: 'Raphael AI로 어떤 종류의 이미지를 만들 수 있나요?',
-        answer: '사실적인 장면, 예술적 일러스트레이션, 디지털 아트, 애니메이션 스타일 이미지 등 다양한 이미지를 만들 수 있습니다. FLUX.1-Dev 모델은 복잡한 프롬프트를 이해하고 다양한 시각적 스타일을 생성하는 데 뛰어납니다.'
-      },
-      {
-        question: 'Raphael AI는 개인정보를 어떻게 보호하나요?',
-        answer: '우리는 개인정보 보호를 매우 중요하게 생각합니다. 프롬프트나 생성된 이미지를 서버에 저장하지 않으며, 개인정보도 요구하지 않습니다. 귀하의 창작물은 완전히 비공개이며 생성 후 삭제됩니다.'
-      },
-      {
-        question: 'FLUX.1-Dev 모델이란 무엇인가요?',
-        answer: 'FLUX.1-Dev는 뛰어난 이미지 품질, 프롬프트 정확성, 스타일 다양성으로 알려진 최첨단 AI 모델입니다. 일반적으로 사용 비용이 높지만, Raphael은 모든 사람이 무료로 이용할 수 있게 합니다.'
-      },
-      {
-        question: 'Raphael AI 사용에 제한이 있나요?',
-        answer: 'Raphael AI는 무료이며 무제한이지만, 적절한 사용을 보장하기 위한 표준 콘텐츠 가이드라인을 유지합니다. 현재는 웹용으로 설계되었으며, 모바일 앱은 향후 출시될 예정입니다.'
-      },
-      {
-        question: '생성된 이미지를 상업적으로 사용할 수 있나요?',
-        answer: '네, Raphael AI로 생성한 이미지에 대한 권리는 귀하에게 있습니다. 개인적 용도와 상업적 용도 모두 가능하여 크리에이터와 기업에 이상적입니다.'
-      },
-      {
-        question: 'Raphael AI를 모바일 기기에서 사용할 수 있나요?',
-        answer: '현재 Raphael AI는 raphael.app 웹사이트를 통해 이용 가능하며 모바일 브라우저에서도 잘 작동합니다. 더 나은 경험을 제공하기 위한 전용 모바일 앱을 현재 개발 중입니다.'
-      },
-      {
-        question: '피드백이나 문제를 어떻게 보고할 수 있나요?',
-        answer: '피드백을 환영합니다! support@raphael.app로 우리 지원팀에 연락하실 수 있습니다. 귀하의 의견은 최고의 무료 AI 이미지 생성 서비스를 개선하고 유지하는 데 도움이 됩니다.'
-      },
-      {
-        question: 'Raphael AI의 향후 계획은 무엇인가요?',
-        answer: 'AI 모델과 사용자 인터페이스의 정기적인 업데이트를 통해 서비스를 지속적으로 개선하고 있습니다. 완전 무료 약속을 지키면서 모바일 앱과 추가 창의적 기능 등의 향후 계획을 진행하고 있습니다.'
-      }
-    ],
-    testimonials: [
-      {
-        name: '데이비드 톰슨',
-        role: '독립 게임 개발자',
-        answer: '"독립 게임 개발자로서 Raphael AI 이미지 생성기는 매우 가치 있습니다. 에셋 생성의 속도와 품질이 타의 추종을 불허하며, 무료라서 예산을 다른 곳에 투자할 수 있습니다."'
-      },
-      {
-        name: '에밀리 파커',
-        role: 'YouTube 콘텐츠 크리에이터',
-        answer: '"매일 Raphael AI 이미지 생성기로 썸네일을 만듭니다. 텍스트 이해력이 놀랍고 필요한 것을 정확히 포착하며, 가입이 필요 없어 매우 편리합니다."'
       },
       {
         name: '로버트 윌슨',
