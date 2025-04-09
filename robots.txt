@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Sitemap: https://raphaelai.org/sitemap.xml
+
+# Allow all web crawlers to access all content
+User-agent: *
+Disallow:
+
+# Sitemap location
+Sitemap: https://raphaelai.org/sitemap.xml 

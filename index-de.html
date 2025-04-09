@@ -1,19 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-012NFF1SQS"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-012NFF1SQS');
-    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="public/raphael.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raphael AI - Free Unlimited AI Image Generator</title>
+    <title>Raphael AI - Kostenloser unbegrenzter KI-Bildgenerator</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @keyframes fadeInUp {
@@ -48,7 +39,7 @@
               <span class="ml-2 text-xl font-bold text-[rgb(204,144,92)]">Raphael AI</span>
             </div>
             <div class="hidden md:flex items-center space-x-4">
-              <a href="#features" class="text-gray-600 hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">Features</a>
+              <a href="#features" class="text-gray-600 hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">Funktionen</a>
               <a href="#faqs" class="text-gray-600 hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">FAQs</a>
             </div>
           </div>
@@ -60,7 +51,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
                 </svg>
-                <span id="current-language">English</span>
+                <span id="current-language">Deutsch</span>
               </span>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -68,7 +59,13 @@
             </button>
             
             <div id="language-dropdown" class="absolute right-0 mt-2 w-36 bg-white rounded-md shadow-lg py-1 hidden z-50">
-              <a href="index.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 bg-gray-100 font-medium" data-lang="en">English</a>
+              <a href="index.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="en">English</a>
+              <a href="index-zh.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="zh">简体中文</a>
+              <a href="index-zh-Hant.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="zh-Hant">繁體中文</a>
+              <a href="index-ko.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="ko">한국어</a>
+              <a href="index-jp.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="jp">日本語</a>
+              <a href="#" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="es">Español</a>
+              <a href="index-de.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 bg-gray-100 font-medium" data-lang="de">Deutsch</a>
             </div>
           </div>
         </div>
@@ -90,14 +87,14 @@
           </div>
 
           <p class="text-lg text-yellow-500 mb-4 flex items-center justify-center gap-2">
-            ✨ Free Unlimited AI Image Generator ✨
+            ✨ Kostenloser unbegrenzter KI-Bildgenerator ✨
           </p>
           
           <div class="flex flex-wrap justify-center gap-1 mb-8">
-            <span class="px-3 py-1 rounded-full bg-gray-50 text-yellow-500 text-sm">100% Free</span>
-            <span class="px-3 py-1 rounded-full bg-gray-50 text-emerald-500 text-sm">Superior Text Understanding Capability</span>
-            <span class="px-3 py-1 rounded-full bg-gray-50 text-blue-500 text-sm">No Login Required</span>
-            <span class="px-3 py-1 rounded-full bg-gray-50 text-purple-500 text-sm">Lightning-Fast Generation Speed</span>
+            <span class="px-3 py-1 rounded-full bg-gray-50 text-yellow-500 text-sm">100% Kostenlos</span>
+            <span class="px-3 py-1 rounded-full bg-gray-50 text-emerald-500 text-sm">Überlegene Textverständnisfähigkeit</span>
+            <span class="px-3 py-1 rounded-full bg-gray-50 text-blue-500 text-sm">Keine Anmeldung erforderlich</span>
+            <span class="px-3 py-1 rounded-full bg-gray-50 text-purple-500 text-sm">Blitzschnelle Generierungsgeschwindigkeit</span>
           </div>
         </div>
       </div>
@@ -107,7 +104,7 @@
     <div class="py-10 bg-white">
       <div class="max-w-[1280px] mx-auto px-4">
         <div class="text-left mb-0 opacity-0 translate-y-5" data-animate style="margin-bottom: -15px; position: relative; z-index: 1000;">
-          <h2 class="text-4xl font-bold mb-0 text-gray-900" style="margin-left: 150px;">AI Image Generator</h2>
+          <h2 class="text-4xl font-bold mb-0 text-gray-900" style="margin-left: 150px;">KI-Bildgenerator</h2>
         </div>
         
         <div class="bg-[#FFFFFF] p-8 pt-0 mb-12 relative border-0 rounded-xl shadow-sm">
@@ -164,9 +161,9 @@
     <div class="py-16 bg-white">
       <div class="max-w-[1280px] mx-auto px-4">
         <div class="text-center mb-16 opacity-0 translate-y-5" data-animate>
-          <h2 class="text-4xl font-bold mb-4 text-gray-900">Explore Amazing Artworks Created with Raphael AI</h2>
+          <h2 class="text-4xl font-bold mb-4 text-gray-900">Entdecken Sie erstaunliche Kunstwerke, erstellt mit Raphael AI</h2>
           <p class="text-xl text-gray-600">
-            From realistic photos to anime styles, from fantasy scenes to futuristic tech - all made with Raphael AI
+            Von realistischen Fotos bis zu Anime-Stilen, von Fantasy-Szenen bis zu futuristischer Technik - alles erstellt mit Raphael AI
           </p>
         </div>
 
@@ -227,9 +224,9 @@
     <div id="features" class="py-20 bg-white">
       <div class="max-w-[1280px] mx-auto px-4">
         <div class="text-center mb-16 opacity-0 translate-y-5" data-animate>
-          <h2 class="text-4xl font-bold mb-4 text-gray-900">Key Features of Raphael AI</h2>
+          <h2 class="text-4xl font-bold mb-4 text-gray-900">Hauptfunktionen von Raphael AI</h2>
           <p class="text-xl text-gray-600">
-            Unleash your creative potential, redefining AI image generation!
+            Entfesseln Sie Ihr kreatives Potenzial und definieren Sie die KI-Bildgenerierung neu!
           </p>
         </div>
 
@@ -242,9 +239,9 @@
                 <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-900">Completely Free to Use</h3>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Völlig kostenlos nutzbar</h3>
             <p class="text-gray-600 text-left">
-              Say goodbye to expensive design fees, enjoy unlimited generations with no hidden charges, no credit card verification required, allowing everyone to create freely.
+              Verabschieden Sie sich von teuren Designgebühren, genießen Sie unbegrenzte Generierungen ohne versteckte Kosten, keine Kreditkartenprüfung erforderlich, sodass jeder frei erstellen kann.
             </p>
           </div>
 
@@ -255,9 +252,9 @@
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-900">Professional-Grade Output Quality</h3>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Professionelle Ausgabequalität</h3>
             <p class="text-gray-600 text-left">
-              Utilizing cutting-edge FLUX.1-Dev algorithm to generate detailed, vibrant high-definition images that meet commercial usage standards.
+              Verwendung des hochmodernen FLUX.1-Dev-Algorithmus zur Generierung detaillierter, lebendiger Bilder in hoher Auflösung, die den Standards für kommerzielle Nutzung entsprechen.
             </p>
           </div>
 
@@ -270,9 +267,9 @@
                 <path d="m14.5 4-5 16"></path>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-900">Instant Rendering Technology</h3>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Sofortige Rendering-Technologie</h3>
             <p class="text-gray-600 text-left">
-              Unique optimization algorithm ensures second-level image generation, 3-5 times faster than similar products, so your creativity doesn't have to wait.
+              Einzigartiger Optimierungsalgorithmus sorgt für sekundenschnelle Bildgenerierung, 3-5 mal schneller als ähnliche Produkte, damit Ihre Kreativität nicht warten muss.
             </p>
           </div>
 
@@ -283,9 +280,9 @@
                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-900">Data Security Protection</h3>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Datensicherheitsschutz</h3>
             <p class="text-gray-600 text-left">
-              Strict privacy protection mechanism, all prompts and images are deleted immediately after use, with no data storage, protecting your creative security.
+              Strenger Datenschutzmechanismus, alle Eingabeaufforderungen und Bilder werden sofort nach der Verwendung gelöscht, ohne Datenspeicherung, zum Schutz Ihrer kreativen Sicherheit.
             </p>
           </div>
 
@@ -296,9 +293,9 @@
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-900">Enhanced Privacy</h3>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Verbesserter Datenschutz</h3>
             <p class="text-gray-600 text-left">
-              Zero data retention policy - your prompts and generated images are never stored on our servers.
+              Null-Daten-Aufbewahrungsrichtlinie - Ihre Eingabeaufforderungen und generierten Bilder werden niemals auf unseren Servern gespeichert.
             </p>
           </div>
 
@@ -311,9 +308,9 @@
                 <path d="M14.5 17.5 4.5 15"></path>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-900">One-Click Operation</h3>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Ein-Klick-Bedienung</h3>
             <p class="text-gray-600 text-left">
-              Intuitive user interface with zero learning curve, suitable for creators of all ages, from beginners to professional designers.
+              Intuitive Benutzeroberfläche ohne Lernkurve, geeignet für Kreative aller Altersgruppen, von Anfängern bis zu professionellen Designern.
             </p>
           </div>
         </div>
@@ -324,10 +321,10 @@
     <div class="py-20 bg-white">
       <div class="max-w-[1280px] mx-auto text-center">
         <div class="opacity-0 translate-y-5" data-animate>
-          <span class="text-yellow-500 font-semibold mb-4 block">Testimonial</span>
-          <h2 class="text-4xl font-bold mb-4 text-gray-800">What Users Say About Raphael AI</h2>
+          <span class="text-yellow-500 font-semibold mb-4 block">Kundenbewertungen</span>
+          <h2 class="text-4xl font-bold mb-4 text-gray-800">Was Benutzer über Raphael AI sagen</h2>
           <p class="text-xl text-gray-600 mb-16">
-            Hear what creators and professionals say about using Raphael AI
+            Erfahren Sie, was Kreative und Fachleute über die Nutzung von Raphael AI berichten
           </p>
 
           <!-- Testimonial Carousel -->
@@ -338,7 +335,7 @@
                 <img src="public/1 (1).webp" alt="David Thompson" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
                   <h3 class="font-semibold text-gray-800">David Thompson</h3>
-                  <p class="text-gray-500 text-sm">Independent Game Developer</p>
+                  <p class="text-gray-500 text-sm">Unabhängiger Spieleentwickler</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -359,7 +356,7 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "As a solo game dev, Raphael AI Image Generator is invaluable. The speed and quality of asset generation are unmatched, and being free means I can focus my budget elsewhere."
+                "Als Solo-Spieleentwickler ist der Raphael AI Bildgenerator unschätzbar wertvoll. Die Geschwindigkeit und Qualität der Asset-Generierung sind unübertroffen, und da er kostenlos ist, kann ich mein Budget anderweitig einsetzen."
               </p>
             </div>
 
@@ -368,7 +365,7 @@
                 <img src="public/2 (1).webp" alt="Emily Parker" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
                   <h3 class="font-semibold text-gray-800">Emily Parker</h3>
-                  <p class="text-gray-500 text-sm">Content Creator on YouTube</p>
+                  <p class="text-gray-500 text-sm">Content Creator auf YouTube</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -389,7 +386,7 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "I create thumbnails daily using Raphael AI Image Generator. The text understanding is incredible - it captures exactly what I need, and the no-registration policy makes it super convenient."
+                "Ich erstelle täglich Thumbnails mit dem Raphael AI Bildgenerator. Das Textverständnis ist unglaublich - es erfasst genau, was ich brauche, und die No-Registration-Richtlinie macht es super bequem."
               </p>
             </div>
 
@@ -398,7 +395,7 @@
                 <img src="public/3 (1).webp" alt="Robert Wilson" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
                   <h3 class="font-semibold text-gray-800">Robert Wilson</h3>
-                  <p class="text-gray-500 text-sm">UI/UX Designer at TechFlow</p>
+                  <p class="text-gray-500 text-sm">UI/UX Designer bei TechFlow</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -419,7 +416,7 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "The FLUX.1-Dev model in Raphael AI Image Generator produces the most consistent and high-quality results I've seen. It's become our go-to tool for generating mockup images."
+                "Das FLUX.1-Dev-Modell im Raphael AI Bildgenerator liefert die konsistentesten und qualitativ hochwertigsten Ergebnisse, die ich je gesehen habe. Es ist zu unserem bevorzugten Tool für die Erstellung von Mockup-Bildern geworden."
               </p>
             </div>
 
@@ -429,7 +426,7 @@
                 <img src="public/4 (1).webp" alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
                   <h3 class="font-semibold text-gray-800">Sarah Johnson</h3>
-                  <p class="text-gray-500 text-sm">Marketing Director at CreativeCo</p>
+                  <p class="text-gray-500 text-sm">Marketingleiterin bei CreativeCo</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -450,7 +447,7 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "Our marketing team uses Raphael AI for all our social media visuals. The quality is exceptional, and the fact that it's free means we can create as many variations as we need without worrying about costs."
+                "Unser Marketingteam verwendet Raphael AI für alle unsere Social-Media-Visuals. Die Qualität ist außergewöhnlich, und die Tatsache, dass es kostenlos ist, bedeutet, dass wir so viele Variationen erstellen können, wie wir benötigen, ohne uns über Kosten Gedanken zu machen."
               </p>
             </div>
 
@@ -459,7 +456,7 @@
                 <img src="public/5 (1).webp" alt="Michael Chen" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
                   <h3 class="font-semibold text-gray-800">Michael Chen</h3>
-                  <p class="text-gray-500 text-sm">Digital Artist & Illustrator</p>
+                  <p class="text-gray-500 text-sm">Digitaler Künstler & Illustrator</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -480,7 +477,7 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "I use Raphael AI to generate reference images for my digital art. The quality is incredible, and the ability to create unlimited images for free has completely transformed my workflow."
+                "Ich verwende Raphael AI, um Referenzbilder für meine digitale Kunst zu erstellen. Die Qualität ist unglaublich, und die Möglichkeit, unbegrenzt kostenlose Bilder zu erstellen, hat meinen Arbeitsablauf komplett verändert."
               </p>
             </div>
 
@@ -489,7 +486,7 @@
                 <img src="public/6 (1).webp" alt="Jennifer Lee" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
                   <h3 class="font-semibold text-gray-800">Jennifer Lee</h3>
-                  <p class="text-gray-500 text-sm">E-commerce Store Owner</p>
+                  <p class="text-gray-500 text-sm">Inhaberin eines E-Commerce-Shops</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -510,7 +507,7 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "Raphael AI has revolutionized my product photography. I can now create professional-looking product images without hiring a photographer, saving me thousands of dollars."
+                "Raphael AI hat die Art und Weise, wie ich meine Produktbilder erstelle, revolutioniert. Es ist unglaublich einfach zu bedienen und die Ergebnisse sind hervorragend. Kein Wunder, dass meine Verkaufszahlen gestiegen sind!"
               </p>
             </div>
 
@@ -519,7 +516,7 @@
                 <img src="public/7 (1).webp" alt="Sophia Zhang" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
                   <h3 class="font-semibold text-gray-800">Sophia Zhang</h3>
-                  <p class="text-gray-500 text-sm">Architectural Visualizer</p>
+                  <p class="text-gray-500 text-sm">Architekturvisualisierer</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -540,7 +537,7 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "I use Raphael AI to generate concept art for architectural projects. The detailed interior and exterior renderings help my clients visualize spaces before we begin construction. Simply brilliant!"
+                "Ich verwende Raphael AI, um Konzeptbilder für architektonische Projekte zu erstellen. Die detaillierten Innen- und Außenrenders helfen meinen Kunden, die Räume vor Beginn der Konstruktion zu visualisieren. Einfach genial!"
               </p>
             </div>
 
@@ -549,7 +546,7 @@
                 <img src="public/8 (1).webp" alt="Thomas Wright" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
                   <h3 class="font-semibold text-gray-800">Thomas Wright</h3>
-                  <p class="text-gray-500 text-sm">Educational Content Creator</p>
+                  <p class="text-gray-500 text-sm">Ersteller von Bildungsinhalten</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -570,7 +567,7 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "Raphael AI helps me create engaging visuals for my online courses. Students respond better to illustrated concepts, and I can generate exactly what I need to explain complex topics without any design skills."
+                "Raphael AI hilft mir, ansprechende Visualisierungen für meine Online-Kurse zu erstellen. Studenten reagieren besser auf illustrierte Konzepte, und ich kann genau das erstellen, was ich brauche, um komplexe Themen ohne Designkenntnisse zu erklären."
               </p>
             </div>
 
@@ -580,7 +577,7 @@
                 <img src="public/9 (1).webp" alt="James Rodriguez" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
                   <h3 class="font-semibold text-gray-800">James Rodriguez</h3>
-                  <p class="text-gray-500 text-sm">Product Photographer</p>
+                  <p class="text-gray-500 text-sm">Produktfotograf</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -601,7 +598,7 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "Raphael AI helps me brainstorm creative product shots before I ever pick up my camera. I can test different compositions and lighting setups virtually, which has improved my final photographs tremendously."
+                "Raphael AI hilft mir, kreative Produktaufnahmen zu planen, bevor ich überhaupt meine Kamera in die Hand nehme. Ich kann verschiedene Kompositionen und Beleuchtungseinstellungen virtuell testen, was meine endgültigen Fotografien enorm verbessert hat."
               </p>
             </div>
 
@@ -611,7 +608,7 @@
                 <img src="public/10.webp" alt="Olivia Taylor" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
                   <h3 class="font-semibold text-gray-800">Olivia Taylor</h3>
-                  <p class="text-gray-500 text-sm">Fiction Author</p>
+                  <p class="text-gray-500 text-sm">Belletristik-Autorin</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -632,7 +629,7 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "I visualize my characters and scenes before writing using Raphael AI. Being able to see what I'm imagining helps me craft more detailed descriptions. It's become an essential part of my creative process."
+                "Ich visualisiere meine Charaktere und Szenen vor dem Schreiben mit Raphael AI. Die Möglichkeit zu sehen, was ich mir vorstelle, hilft mir, detailliertere Beschreibungen zu verfassen. Es ist zu einem wesentlichen Teil meines kreativen Prozesses geworden."
               </p>
             </div>
 
@@ -641,7 +638,7 @@
                 <img src="public/11.webp" alt="Alex Morgan" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
                   <h3 class="font-semibold text-gray-800">Alex Morgan</h3>
-                  <p class="text-gray-500 text-sm">Indie Filmmaker</p>
+                  <p class="text-gray-500 text-sm">Unabhängiger Filmemacher</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -662,7 +659,7 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "Raphael AI is a breakthrough for indie filmmakers. I use it for storyboarding, concept art, and even poster creation. It's like having a full art department at your fingertips without the budget constraints."
+                "Raphael AI ist ein Durchbruch für unabhängige Filmemacher. Ich verwende es für Storyboarding, Konzeptkunst und sogar Postererstellung. Es ist, als hätte man eine komplette Kunstabteilung zur Verfügung, ohne Budgetbeschränkungen."
               </p>
             </div>
 
@@ -671,7 +668,7 @@
                 <img src="public/12.webp" alt="Marcus Brown" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
                   <h3 class="font-semibold text-gray-800">Marcus Brown</h3>
-                  <p class="text-gray-500 text-sm">App Developer</p>
+                  <p class="text-gray-500 text-sm">App-Entwickler</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -692,7 +689,7 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "For UI mockups and app store assets, Raphael AI is unbeatable. I can quickly generate professional graphics that make my apps look polished and appealing to potential users. A must-have tool for solo developers."
+                "Für UI-Mockups und App-Store-Assets ist Raphael AI unschlagbar. Ich kann schnell professionelle Grafiken erstellen, die meine Apps poliert und ansprechend für potenzielle Benutzer machen. Ein unverzichtbares Tool für Einzelentwickler."
               </p>
             </div>
           </div>
@@ -725,9 +722,9 @@
       <div class="max-w-[1280px] mx-auto px-4">
         <div class="text-center mb-12 opacity-0 translate-y-5" data-animate>
           <span class="inline-block bg-yellow-500/20 text-yellow-500 font-semibold px-4 py-1 rounded-full mb-4">FAQ</span>
-          <h2 class="text-4xl font-bold mb-4 text-gray-800">Frequently Asked Questions</h2>
+          <h2 class="text-4xl font-bold mb-4 text-gray-800">Häufig gestellte Fragen</h2>
           <p class="text-gray-600 text-lg">
-            Have another question? Contact us at support@raphaelai.xyz
+            Haben Sie eine andere Frage? Kontaktieren Sie uns unter support@raphaelai.xyz
           </p>
         </div>
 
@@ -738,9 +735,9 @@
                 <span class="text-yellow-500 text-lg font-semibold">1</span>
               </div>
               <div class="text-left">
-                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">What is Raphael AI and how does it work?</h3>
+                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">Was ist Raphael AI und wie funktioniert es?</h3>
                 <p class="text-gray-600 text-left">
-                  Raphael AI is the world's first completely free and unlimited AI image generator powered by the FLUX.1-Dev model. You can create high-quality images from text descriptions with no registration required.
+                  Raphael AI ist der weltweit erste völlig kostenlose und unbegrenzte KI-Bildgenerator, der vom FLUX.1-Dev-Modell angetrieben wird. Sie können hochwertige Bilder aus Textbeschreibungen erstellen, ohne dass eine Registrierung erforderlich ist.
                 </p>
               </div>
             </div>
@@ -752,9 +749,9 @@
                 <span class="text-yellow-500 text-lg font-semibold">2</span>
               </div>
               <div class="text-left">
-                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">Is Raphael AI really free?</h3>
+                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">Ist Raphael AI wirklich kostenlos?</h3>
                 <p class="text-gray-600 text-left">
-                  Yes, Raphael AI is completely free! We aim to be the world's largest and most powerful free AI image generator. There are no hidden fees, credit card requirements, or usage limits.
+                  Ja, Raphael AI ist völlig kostenlos! Wir möchten der größte und leistungsstärkste kostenlose KI-Bildgenerator der Welt sein. Es gibt keine versteckten Gebühren, Kreditkartenanforderungen oder Nutzungsbeschränkungen.
                 </p>
               </div>
             </div>
@@ -766,9 +763,9 @@
                 <span class="text-yellow-500 text-lg font-semibold">3</span>
               </div>
               <div class="text-left">
-                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">How is Raphael AI different from other AI image generators?</h3>
+                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">Wie unterscheidet sich Raphael AI von anderen KI-Bildgeneratoren?</h3>
                 <p class="text-gray-600 text-left">
-                  Raphael AI is the only platform offering unlimited free access to the powerful FLUX.1-Dev model. We provide superior image quality, fast generation speed, and complete privacy protection with no cost or registration required.
+                  Raphael AI ist die einzige Plattform, die unbegrenzten kostenlosen Zugang zum leistungsstarken FLUX.1-Dev-Modell bietet. Wir bieten überlegene Bildqualität, schnelle Generierungsgeschwindigkeit und vollständigen Datenschutz ohne Kosten oder Registrierungsanforderungen.
                 </p>
               </div>
             </div>
@@ -787,24 +784,24 @@
               <span class="ml-2 text-xl font-bold text-[rgb(204,144,92)]">Raphael AI</span>
             </div>
             <p class="text-gray-600 mb-4">
-              Create stunning AI-generated images in seconds with the world's first unlimited free AI Image Generator.
+              Erstellen Sie atemberaubende KI-generierte Bilder in Sekunden mit dem weltweit ersten unbegrenzten kostenlosen KI-Bildgenerator.
             </p>
-            <p class="text-sm text-gray-500">© 2024 Raphael AI. All rights reserved.</p>
+            <p class="text-sm text-gray-500">© 2024 Raphael AI. Alle Rechte vorbehalten.</p>
           </div>
 
           <div>
             <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-              Product
+              Produkt
             </h3>
             <ul class="space-y-4">
               <li>
                 <a href="#features" class="text-gray-500 hover:text-gray-800 transition">
-                  Features
+                  Funktionen
                 </a>
               </li>
               <li>
                 <a href="#" class="text-gray-500 hover:text-gray-800 transition">
-                  Pricing
+                  Preise
                 </a>
               </li>
               <li>
@@ -817,12 +814,12 @@
 
           <div>
             <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-              Company
+              Unternehmen
             </h3>
             <ul class="space-y-4">
               <li>
                 <a href="#" class="text-gray-500 hover:text-gray-800 transition">
-                  About
+                  Über uns
                 </a>
               </li>
               <li>
@@ -832,7 +829,7 @@
               </li>
               <li>
                 <a href="#" class="text-gray-500 hover:text-gray-800 transition">
-                  Contact
+                  Kontakt
                 </a>
               </li>
             </ul>
@@ -844,7 +841,7 @@
     <!-- Add JavaScript for testimonial navigation -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        // Initialize animation on scroll
+        // Initialisierung der Animation beim Scrollen
         const animatedElements = document.querySelectorAll('[data-animate]');
         const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
@@ -860,16 +857,16 @@
           observer.observe(element);
         });
         
-        // Testimonial navigation
+        // Testimonial-Navigation
         const prevBtn = document.getElementById('prev-testimonial-group');      
         const nextBtn = document.getElementById('next-testimonial-group');      
         const testimonialGroups = document.querySelectorAll('[data-testimonial-group]');
         const dots = document.querySelectorAll('[data-testimonial-dot]');       
         let currentGroup = 0;
-        const totalGroups = 4; // 更新为4组评论
+        const totalGroups = 4; // Aktualisiert auf 4 Testimonial-Gruppen
 
         function showTestimonialGroup(groupIndex) {
-          // Hide all testimonial groups
+          // Alle Testimonial-Gruppen ausblenden
           testimonialGroups.forEach(group => {
             if (group.getAttribute('data-testimonial-group') == groupIndex) {   
               group.classList.remove('hidden');
@@ -878,7 +875,7 @@
             }
           });
 
-          // Update dots
+          // Punkte aktualisieren
           dots.forEach((dot, idx) => {
             if (idx === groupIndex) {
               dot.classList.remove('bg-gray-300');
@@ -890,22 +887,22 @@
           });
         }
 
-        // Initialize
+        // Initialisierung
         showTestimonialGroup(currentGroup);
         
-        // Previous button
+        // Vorheriger-Button
         prevBtn.addEventListener('click', () => {
           currentGroup = (currentGroup - 1 + totalGroups) % totalGroups;
           showTestimonialGroup(currentGroup);
         });
         
-        // Next button
+        // Nächster-Button
         nextBtn.addEventListener('click', () => {
           currentGroup = (currentGroup + 1) % totalGroups;
           showTestimonialGroup(currentGroup);
         });
         
-        // Dot navigation
+        // Punkt-Navigation
         dots.forEach((dot, idx) => {
           dot.addEventListener('click', () => {
             currentGroup = idx;
@@ -913,25 +910,43 @@
           });
         });
         
-        // Auto-rotate testimonials every 5 seconds
+        // Automatische Rotation der Testimonials alle 5 Sekunden
         setInterval(() => {
           currentGroup = (currentGroup + 1) % totalGroups;
           showTestimonialGroup(currentGroup);
         }, 5000);
         
-        // Language selector functionality
+        // Sprachauswahl-Funktionalität
         const languageSelector = document.getElementById('language-selector');
         const languageDropdown = document.getElementById('language-dropdown');
+        const languageOptions = document.querySelectorAll('.language-option');
+        const currentLanguageText = document.getElementById('current-language');
         
-        // Toggle dropdown visibility
+        // Dropdown-Sichtbarkeit umschalten
         languageSelector.addEventListener('click', (e) => {
           e.stopPropagation();
           languageDropdown.classList.toggle('hidden');
         });
         
-        // Close dropdown when clicking outside
+        // Dropdown schließen, wenn außerhalb geklickt wird
         document.addEventListener('click', () => {
           languageDropdown.classList.add('hidden');
+        });
+        
+        // Sprachauswahl
+        languageOptions.forEach(option => {
+          option.addEventListener('click', (e) => {
+            const lang = option.getAttribute('data-lang');
+            const langText = option.textContent;
+            
+            // Wenn auf die aktuelle Sprache geklickt wird, Weiterleitung verhindern
+            if (currentLanguageText.textContent.trim() === langText.trim()) {
+              e.preventDefault();
+            }
+            
+            // Keine weitere Behandlung erforderlich, Link zur Zielseite natürlich weiterleiten lassen
+            languageDropdown.classList.add('hidden');
+          });
         });
       });
     </script>
