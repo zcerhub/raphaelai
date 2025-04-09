@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="public/raphael.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raphael AI - 무제한 무료 AI 이미지 생성기</title>
+    <title>Raphael AI - 無制限無料AI画像生成ツール</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @keyframes fadeInUp {
@@ -29,29 +29,29 @@
     </style>
   </head>
   <body class="min-h-screen bg-white text-black">
-    <!-- 네비게이션 -->
+    <!-- ナビゲーション -->
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-lg">
       <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center space-x-8">
             <div class="flex items-center">
-              <img src="public/raphael.png" alt="Raphael AI 로고 - 무료 AI 이미지 생성기" class="w-8 h-8 rounded-full" />
+              <img src="public/raphael.png" alt="Raphael AI ロゴ - 無料AI画像生成ツール" class="w-8 h-8 rounded-full" />
               <span class="ml-2 text-xl font-bold text-[rgb(204,144,92)]">Raphael AI</span>
             </div>
             <div class="hidden md:flex items-center space-x-4">
-              <a href="#features" class="text-gray-600 hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">특징</a>
-              <a href="#faqs" class="text-gray-600 hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">FAQ</a>
+              <a href="#features" class="text-gray-600 hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">機能</a>
+              <a href="#faqs" class="text-gray-600 hover:bg-[#E5B06E] hover:text-white px-3 py-2 rounded-lg transition">よくある質問</a>
             </div>
           </div>
           
-          <!-- 언어 선택기 -->
+          <!-- 言語選択 -->
           <div class="relative">
             <button id="language-selector" class="flex items-center space-x-2 text-gray-600 hover:text-gray-900 focus:outline-none">
               <span class="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
                 </svg>
-                <span id="current-language">한국어</span>
+                <span id="current-language">日本語</span>
               </span>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -62,8 +62,8 @@
               <a href="index.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="en">English</a>
               <a href="index-zh.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="zh">中文</a>
               <a href="index-zh-Hant.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="zh-Hant">繁體中文</a>
-              <a href="index-ko.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 bg-gray-100 font-medium" data-lang="ko">한국어</a>
-              <a href="index-jp.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="jp">日本語</a>
+              <a href="index-ko.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="ko">한국어</a>
+              <a href="index-jp.html" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 bg-gray-100 font-medium" data-lang="jp">日本語</a>
               <a href="#" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="es">Español</a>
             </div>
           </div>
@@ -71,7 +71,7 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ヒーローセクション -->
     <div class="pt-32 pb-20">
       <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="opacity-0 translate-y-5" data-animate>
@@ -86,24 +86,24 @@
           </div>
 
           <p class="text-lg text-yellow-500 mb-4 flex items-center justify-center gap-2">
-            ✨ 무제한 무료 AI 이미지 생성기 ✨
+            ✨ 無制限無料AI画像生成ツール ✨
           </p>
           
           <div class="flex flex-wrap justify-center gap-1 mb-8">
-            <span class="px-3 py-1 rounded-full bg-gray-50 text-yellow-500 text-sm">100% 무료</span>
-            <span class="px-3 py-1 rounded-full bg-gray-50 text-emerald-500 text-sm">우수한 텍스트 이해 능력</span>
-            <span class="px-3 py-1 rounded-full bg-gray-50 text-blue-500 text-sm">로그인 불필요</span>
-            <span class="px-3 py-1 rounded-full bg-gray-50 text-purple-500 text-sm">빠른 생성 속도</span>
+            <span class="px-3 py-1 rounded-full bg-gray-50 text-yellow-500 text-sm">100%無料</span>
+            <span class="px-3 py-1 rounded-full bg-gray-50 text-emerald-500 text-sm">優れたテキスト理解能力</span>
+            <span class="px-3 py-1 rounded-full bg-gray-50 text-blue-500 text-sm">ログイン不要</span>
+            <span class="px-3 py-1 rounded-full bg-gray-50 text-purple-500 text-sm">超高速生成</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Generator Section -->
+    <!-- 生成器セクション -->
     <div class="py-10 bg-white">
       <div class="max-w-[1280px] mx-auto px-4">
         <div class="text-left mb-0 opacity-0 translate-y-5" data-animate style="margin-bottom: -15px; position: relative; z-index: 1000;">
-          <h2 class="text-4xl font-bold mb-0 text-gray-900" style="margin-left: 150px;">AI 이미지 생성기</h2>
+          <h2 class="text-4xl font-bold mb-0 text-gray-900" style="margin-left: 150px;">AI画像生成ツール</h2>
         </div>
         
         <div class="bg-[#FFFFFF] p-8 pt-0 mb-12 relative border-0 rounded-xl shadow-sm">
@@ -120,35 +120,33 @@
               allow="clipboard-write; fullscreen"
             ></iframe>
             
-            <!-- 覆盖iframe中红框区域的内容 -->
+            <!-- iframeの赤枠部分をカバー -->
             <div 
               class="absolute top-[-10px] left-0 z-50 bg-white" 
               style="height: 60px; width: 45%; margin: 0 0 0 30px; box-shadow: none; border: 0;"
             >
               <div class="flex items-center justify-start h-full text-gray-800 text-xl font-medium">
-                <!-- <span>AI 图像生成</span> -->
+                <!-- <span>AI画像生成</span> -->
               </div>
             </div>
             
-            <!-- 左侧容器，覆盖iframe内容 -->
+            <!-- 左側コンテナ、iframe内容をカバー -->
             <div 
               class="absolute bottom-0 left-0 z-50 bg-white" 
               style="height: 40px; width: 47%; margin: 0; box-shadow: none; border: 0;"
             >
-              <!-- 可以添加自定义内容 -->
               <div class="flex items-center justify-start h-full text-gray-600 text-sm">
-                <!-- <span>Image processing by Raphael</span> -->
+                <!-- <span>Raphaelによる画像処理</span> -->
               </div>
             </div>
             
-            <!-- 广告覆盖层 - 精确定位在底部广告区域上 -->
+            <!-- 広告オーバーレイ - 底部広告エリアに正確に配置 -->
             <div 
               class="absolute bottom-0 right-0 z-50 bg-white" 
               style="height: 90px; width: 50%; margin: 0 0 0 auto; box-shadow: none; border: 0;"
             >
-              <!-- 可选：添加一些自定义内容到覆盖层 -->
               <div class="flex items-center justify-center h-full text-gray-600 text-sm">
-                <!-- <span>Images powered by Raphael AI</span> -->
+                <!-- <span>画像はRaphael AIによって提供</span> -->
               </div>
             </div>
           </div>
@@ -156,64 +154,64 @@
        </div>
     </div>
 
-    <!-- Gallery Section -->
+    <!-- ギャラリーセクション -->
     <div class="py-16 bg-white">
       <div class="max-w-[1280px] mx-auto px-4">
         <div class="text-center mb-16 opacity-0 translate-y-5" data-animate>
-          <h2 class="text-4xl font-bold mb-4 text-gray-900">Explore Amazing Artworks Created with Raphael AI</h2>
+          <h2 class="text-4xl font-bold mb-4 text-gray-900">Raphael AIで作成された素晴らしいアートワークを探索</h2>
           <p class="text-xl text-gray-600">
-            From realistic photos to anime styles, from fantasy scenes to futuristic tech - all made with Raphael AI
+            リアルな写真からアニメスタイルまで、ファンタジーシーンから未来的なテクノロジーまで - すべてRaphael AIで作成
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="100">
-            <img src="public/1 (1).webp" alt="Raphael AI Generated Image - Photorealistic Portrait" class="w-full h-64 object-cover" />
+            <img src="public/1 (1).webp" alt="Raphael AI生成画像 - フォトリアリスティックポートレート" class="w-full h-64 object-cover" />
           </div>
           <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="200">
-            <img src="public/2 (1).webp" alt="Raphael AI Generated Image - Fantasy Landscape" class="w-full h-64 object-cover" />
+            <img src="public/2 (1).webp" alt="Raphael AI生成画像 - ファンタジー風景" class="w-full h-64 object-cover" />
           </div>
           <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="300">
-            <img src="public/3 (1).webp" alt="Raphael AI Generated Image - Sci-Fi Concept Art" class="w-full h-64 object-cover" />
+            <img src="public/3 (1).webp" alt="Raphael AI生成画像 - SFコンセプトアート" class="w-full h-64 object-cover" />
           </div>
           <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="400">
-            <img src="public/4 (1).webp" alt="Raphael AI Generated Image - Abstract Digital Art" class="w-full h-64 object-cover" />
+            <img src="public/4 (1).webp" alt="Raphael AI生成画像 - 抽象的デジタルアート" class="w-full h-64 object-cover" />
           </div>
           <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="500">
-            <img src="public/5 (1).webp" alt="Raphael AI Generated Image - Artistic Illustration" class="w-full h-64 object-cover" />
+            <img src="public/5 (1).webp" alt="Raphael AI生成画像 - 芸術的イラスト" class="w-full h-64 object-cover" />
           </div>
           <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="600">
-            <img src="public/6 (1).webp" alt="Raphael AI Generated Image - Nature Scene" class="w-full h-64 object-cover" />
+            <img src="public/6 (1).webp" alt="Raphael AI生成画像 - 自然風景" class="w-full h-64 object-cover" />
           </div>
           <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="700">
-            <img src="public/7 (1).webp" alt="Raphael AI Generated Image - Character Design" class="w-full h-64 object-cover" />
+            <img src="public/7 (1).webp" alt="Raphael AI生成画像 - キャラクターデザイン" class="w-full h-64 object-cover" />
           </div>
           <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="800">
-            <img src="public/8 (1).webp" alt="Raphael AI Generated Image - Anime Style Artwork" class="w-full h-64 object-cover" />
+            <img src="public/8 (1).webp" alt="Raphael AI生成画像 - アニメスタイルアートワーク" class="w-full h-64 object-cover" />
           </div>
           <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="900">
-            <img src="public/9 (1).webp" alt="Raphael AI Generated Image - Urban Cityscape" class="w-full h-64 object-cover" />
+            <img src="public/9 (1).webp" alt="Raphael AI生成画像 - 都市風景" class="w-full h-64 object-cover" />
           </div>
           <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="1000">
-            <img src="public/10.webp" alt="Raphael AI Generated Image - Fantasy Character" class="w-full h-64 object-cover" />
+            <img src="public/10.webp" alt="Raphael AI生成画像 - ファンタジーキャラクター" class="w-full h-64 object-cover" />
           </div>
           <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="1100">
-            <img src="public/11.webp" alt="Raphael AI Generated Image - Futuristic Technology" class="w-full h-64 object-cover" />
+            <img src="public/11.webp" alt="Raphael AI生成画像 - 未来的テクノロジー" class="w-full h-64 object-cover" />
           </div>
           <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="1200">
-            <img src="public/12.webp" alt="Raphael AI Generated Image - Vibrant Landscape" class="w-full h-64 object-cover" />
+            <img src="public/12.webp" alt="Raphael AI生成画像 - 鮮やかな風景" class="w-full h-64 object-cover" />
           </div>
           <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="1300">
-            <img src="public/13.webp" alt="Raphael AI Generated Image - Abstract Concept" class="w-full h-64 object-cover" />
+            <img src="public/13.webp" alt="Raphael AI生成画像 - 抽象的コンセプト" class="w-full h-64 object-cover" />
           </div>
           <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="1400">
-            <img src="public/14.webp" alt="Raphael AI Generated Image - Dramatic Scene" class="w-full h-64 object-cover" />
+            <img src="public/14.webp" alt="Raphael AI生成画像 - ドラマチックなシーン" class="w-full h-64 object-cover" />
           </div>
           <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="1500">
-            <img src="public/15.webp" alt="Raphael AI Generated Image - Digital Artwork" class="w-full h-64 object-cover" />
+            <img src="public/15.webp" alt="Raphael AI生成画像 - デジタルアートワーク" class="w-full h-64 object-cover" />
           </div>
           <div class="bg-white overflow-hidden rounded-lg opacity-0 translate-y-5" data-animate data-delay="1600">
-            <img src="public/16.webp" alt="Raphael AI Generated Image - Creative Illustration" class="w-full h-64 object-cover" />
+            <img src="public/16.webp" alt="Raphael AI生成画像 - クリエイティブイラスト" class="w-full h-64 object-cover" />
           </div>
         </div>
       </div>
@@ -223,9 +221,9 @@
     <div id="features" class="py-20 bg-white">
       <div class="max-w-[1280px] mx-auto px-4">
         <div class="text-center mb-16 opacity-0 translate-y-5" data-animate>
-          <h2 class="text-4xl font-bold mb-4 text-gray-900">Raphael AI의 주요 기능</h2>
+          <h2 class="text-4xl font-bold mb-4 text-gray-900">Raphael AIの主な機能</h2>
           <p class="text-xl text-gray-600">
-            창의적 잠재력을 발휘하고, AI 이미지 생성을 재정의하세요!
+            創造的な可能性を解き放ち、AI画像生成を再定義しましょう！
           </p>
         </div>
 
@@ -238,9 +236,9 @@
                 <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-900">완전 무료 사용</h3>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">完全無料で利用可能</h3>
             <p class="text-gray-600 text-left">
-              비싼 디자인 비용에 작별을 고하고, 숨겨진 요금 없이 무제한 생성을 즐기세요. 신용카드 인증이 필요 없어 누구나 자유롭게 창작할 수 있습니다.
+              高額なデザイン費用にさよならを告げ、隠れた料金なしで無制限の生成を楽しめます。クレジットカード認証も不要で、誰もが自由に創作できます。
             </p>
           </div>
 
@@ -251,9 +249,9 @@
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-900">전문적인 출력 품질</h3>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">プロフェッショナル品質の出力</h3>
             <p class="text-gray-600 text-left">
-              최첨단 FLUX.1-Dev 알고리즘을 사용하여 상업적 사용 기준을 충족하는 세부적이고 생생한 고화질 이미지를 생성합니다.
+              最先端のFLUX.1-Devアルゴリズムを使用して、商業利用基準を満たす詳細で鮮明な高品質画像を生成します。
             </p>
           </div>
 
@@ -266,9 +264,9 @@
                 <path d="m14.5 4-5 16"></path>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-900">즉시 렌더링 기술</h3>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">瞬時レンダリング技術</h3>
             <p class="text-gray-600 text-left">
-              독특한 최적화 알고리즘으로 초 단위 이미지 생성을 보장하며, 유사 제품보다 3-5배 빨라 창의성을 기다릴 필요가 없습니다.
+              独自の最適化アルゴリズムで数秒での画像生成を保証し、類似製品より3〜5倍高速なので、創造性を待つ必要はありません。
             </p>
           </div>
 
@@ -279,9 +277,9 @@
                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-900">데이터 보안 보호</h3>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">データセキュリティ保護</h3>
             <p class="text-gray-600 text-left">
-              엄격한 개인정보 보호 메커니즘으로 모든 프롬프트와 이미지는 사용 후 즉시 삭제되며, 데이터를 저장하지 않아 창작물이 안전하게 보호됩니다.
+              厳格なプライバシー保護メカニズムにより、すべてのプロンプトと画像は使用後すぐに削除され、データを保存しないため創作物が安全に保護されます。
             </p>
           </div>
 
@@ -292,9 +290,9 @@
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-900">강화된 개인정보 보호</h3>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">強化されたプライバシー保護</h3>
             <p class="text-gray-600 text-left">
-              제로 데이터 보존 정책 - 프롬프트와 생성된 이미지는 절대 서버에 저장되지 않습니다.
+              ゼロデータ保持ポリシー - プロンプトと生成された画像は決してサーバーに保存されません。
             </p>
           </div>
 
@@ -307,9 +305,9 @@
                 <path d="M14.5 17.5 4.5 15"></path>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-900">원클릭 조작</h3>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">ワンクリック操作</h3>
             <p class="text-gray-600 text-left">
-              직관적인 사용자 인터페이스와 학습이 필요 없는 시스템으로, 초보자부터 전문 디자이너까지 모든 연령대의 창작자에게 적합합니다.
+              直感的なユーザーインターフェースと学習不要のシステムで、初心者からプロのデザイナーまで、あらゆる年齢層のクリエイターに適しています。
             </p>
           </div>
         </div>
@@ -320,21 +318,21 @@
     <div class="py-20 bg-white">
       <div class="max-w-[1280px] mx-auto text-center">
         <div class="opacity-0 translate-y-5" data-animate>
-          <span class="text-yellow-500 font-semibold mb-4 block">사용자 평가</span>
-          <h2 class="text-4xl font-bold mb-4 text-gray-800">사용자들이 Raphael AI에 대해 말하는 것</h2>
+          <span class="text-yellow-500 font-semibold mb-4 block">ユーザーレビュー</span>
+          <h2 class="text-4xl font-bold mb-4 text-gray-800">ユーザーがRaphael AIについて語ること</h2>
           <p class="text-xl text-gray-600 mb-16">
-            창작자와 전문가들이 Raphael AI 사용에 대해 어떻게 평가하는지 들어보세요
+            クリエイターや専門家がRaphael AIの使用についてどのように評価しているかを聞いてみましょう
           </p>
 
-          <!-- 평가 캐러셀 -->
+          <!-- 評価カルーセル -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- 첫 번째 그룹 평가 -->
+            <!-- 第1グループの評価 -->
             <div class="bg-white p-6 rounded-xl shadow-md" data-testimonial-group="0">
               <div class="flex items-center mb-4">
-                <img src="public/1 (1).webp" alt="데이비드 톰슨" class="w-12 h-12 rounded-full object-cover" />
+                <img src="public/1 (1).webp" alt="デイビッド・トンプソン" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">데이비드 톰슨</h3>
-                  <p class="text-gray-500 text-sm">독립 게임 개발자</p>
+                  <h3 class="font-semibold text-gray-800">デイビッド・トンプソン</h3>
+                  <p class="text-gray-500 text-sm">インディーゲーム開発者</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -355,46 +353,16 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "독립 게임 개발자로서 Raphael AI 이미지 생성기는 매우 귀중합니다. 에셋 생성 속도와 품질이 타의 추종을 불허하며, 무료로 사용할 수 있어 예산을 다른 곳에 사용할 수 있습니다."
-              </p>
-            </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-md" data-testimonial-group="0">
-              <div class="flex items-center mb-4">
-                <img src="public/2 (1).webp" alt="에밀리 파커" class="w-12 h-12 rounded-full object-cover" />
-                <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">에밀리 파커</h3>
-                  <p class="text-gray-500 text-sm">YouTube 콘텐츠 크리에이터</p>
-                </div>
-              </div>
-              <div class="flex text-yellow-500 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-              </div>
-              <p class="text-gray-600 text-left">
-                "저는 매일 Raphael AI 이미지 생성기를 사용하여 썸네일을 만듭니다. 텍스트 이해 능력이 믿을 수 없을 정도로 정확하게 필요한 내용을 포착하며, 회원가입이 필요 없어 매우 편리합니다."
+                "インディーゲーム開発者として、Raphael AI画像生成ツールは非常に貴重です。アセット生成の速度と品質は比類なく、無料で使用できるため、予算を他の用途に回せます。"
               </p>
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-md" data-testimonial-group="0">
               <div class="flex items-center mb-4">
-                <img src="public/3 (1).webp" alt="로버트 윌슨" class="w-12 h-12 rounded-full object-cover" />
+                <img src="public/2 (1).webp" alt="エミリー・パーカー" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">로버트 윌슨</h3>
-                  <p class="text-gray-500 text-sm">TechFlow의 UI/UX 디자이너</p>
+                  <h3 class="font-semibold text-gray-800">エミリー・パーカー</h3>
+                  <p class="text-gray-500 text-sm">YouTubeコンテンツクリエイター</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -415,17 +383,16 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "Raphael AI 이미지 생성기의 FLUX.1-Dev 모델은 제가 본 중 가장 일관되고 고품질의 결과물을 생성합니다. 모델 이미지 생성을 위한 우리의 선호 도구가 되었습니다."
+                "私は毎日Raphael AI画像生成ツールを使用してサムネイルを作成しています。テキスト理解能力が信じられないほど正確に必要な内容を捉え、会員登録が不要で非常に便利です。"
               </p>
             </div>
 
-            <!-- 두 번째 그룹 평가 (초기에 숨김) -->
-            <div class="bg-white p-6 rounded-xl shadow-md hidden" data-testimonial-group="1">
+            <div class="bg-white p-6 rounded-xl shadow-md" data-testimonial-group="0">
               <div class="flex items-center mb-4">
-                <img src="public/4 (1).webp" alt="사라 존슨" class="w-12 h-12 rounded-full object-cover" />
+                <img src="public/3 (1).webp" alt="ロバート・ウィルソン" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">사라 존슨</h3>
-                  <p class="text-gray-500 text-sm">CreativeCo 마케팅 디렉터</p>
+                  <h3 class="font-semibold text-gray-800">ロバート・ウィルソン</h3>
+                  <p class="text-gray-500 text-sm">TechFlowのUI/UXデザイナー</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -446,16 +413,47 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "우리 마케팅 팀은 모든 소셜 미디어 시각 자료를 위해 Raphael AI를 사용합니다. 품질이 뛰어나고 무료라 비용에 대한 걱정 없이 원하는 만큼 다양한 변형을 만들 수 있습니다."
+                "Raphael AI画像生成ツールのFLUX.1-Devモデルは、私が見た中で最も一貫性のある高品質な結果を生成します。モデル画像生成のための私たちの優先ツールになりました。"
+              </p>
+            </div>
+
+            <!-- 第2グループの評価 (初期に非表示) -->
+            <div class="bg-white p-6 rounded-xl shadow-md hidden" data-testimonial-group="1">
+              <div class="flex items-center mb-4">
+                <img src="public/4 (1).webp" alt="サラ・ジョンソン" class="w-12 h-12 rounded-full object-cover" />
+                <div class="ml-4 text-left">
+                  <h3 class="font-semibold text-gray-800">サラ・ジョンソン</h3>
+                  <p class="text-gray-500 text-sm">CreativeCoマーケティングディレクター</p>
+                </div>
+              </div>
+              <div class="flex text-yellow-500 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <p class="text-gray-600 text-left">
+                "私たちのマーケティングチームはすべてのソーシャルメディアビジュアルのためにRaphael AIを使用しています。品質が優れており、無料なので、コストを気にせず好きなだけ様々なバリエーションを作成できます。"
               </p>
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-md hidden" data-testimonial-group="1">
               <div class="flex items-center mb-4">
-                <img src="public/5 (1).webp" alt="마이클 첸" class="w-12 h-12 rounded-full object-cover" />
+                <img src="public/5 (1).webp" alt="マイケル・チェン" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">마이클 첸</h3>
-                  <p class="text-gray-500 text-sm">디지털 아티스트 및 일러스트레이터</p>
+                  <h3 class="font-semibold text-gray-800">マイケル・チェン</h3>
+                  <p class="text-gray-500 text-sm">デジタルアーティスト＆イラストレーター</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -476,16 +474,16 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "저는 디지털 아트를 위한 참조 이미지를 생성하기 위해 Raphael AI를 사용합니다. 품질이 믿을 수 없을 정도로 좋고, 무제한으로 무료 이미지를 만들 수 있어 작업 흐름이 완전히 바뀌었습니다."
+                "私はデジタルアート用の参照画像を生成するためにRaphael AIを使用しています。品質が信じられないほど良く、無制限に無料画像を作成できるので、作業の流れが完全に変わりました。"
               </p>
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-md hidden" data-testimonial-group="1">
               <div class="flex items-center mb-4">
-                <img src="public/6 (1).webp" alt="제니퍼 리" class="w-12 h-12 rounded-full object-cover" />
+                <img src="public/6 (1).webp" alt="ジェニファー・リー" class="w-12 h-12 rounded-full object-cover" />
                 <div class="ml-4 text-left">
-                  <h3 class="font-semibold text-gray-800">제니퍼 리</h3>
-                  <p class="text-gray-500 text-sm">전자상거래 상점 주인</p>
+                  <h3 class="font-semibold text-gray-800">ジェニファー・リー</h3>
+                  <p class="text-gray-500 text-sm">Eコマースストアオーナー</p>
                 </div>
               </div>
               <div class="flex text-yellow-500 mb-4">
@@ -506,12 +504,12 @@
                 </svg>
               </div>
               <p class="text-gray-600 text-left">
-                "Raphael AI는 제 제품 사진 작업을 완전히 바꿔 놓았습니다. 이제 사진작가를 고용하지 않고도 전문적인 제품 이미지를 만들 수 있어 수천 달러를 절약할 수 있게 되었습니다."
+                "Raphael AIは私の製品写真の作業を完全に変えました。今では写真家を雇わなくても、プロフェッショナルな製品画像を作成できるようになり、何千ドルも節約できるようになりました。"
               </p>
             </div>
           </div>
 
-          <!-- 평가 네비게이션 -->
+          <!-- 評価ナビゲーション -->
           <div class="flex justify-center mt-8 space-x-4">
             <button id="prev-testimonial-group" class="px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -539,9 +537,9 @@
       <div class="max-w-[1280px] mx-auto px-4">
         <div class="text-center mb-12 opacity-0 translate-y-5" data-animate>
           <span class="inline-block bg-yellow-500/20 text-yellow-500 font-semibold px-4 py-1 rounded-full mb-4">FAQ</span>
-          <h2 class="text-4xl font-bold mb-4 text-gray-800">Frequently Asked Questions</h2>
+          <h2 class="text-4xl font-bold mb-4 text-gray-800">よくある質問</h2>
           <p class="text-gray-600 text-lg">
-            Have another question? Contact us at support@raphaelai.xyz
+            他にご質問がありますか？support@raphaelai.xyzまでお問い合わせください
           </p>
         </div>
 
@@ -552,9 +550,9 @@
                 <span class="text-yellow-500 text-lg font-semibold">1</span>
               </div>
               <div class="text-left">
-                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">What is Raphael AI and how does it work?</h3>
+                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">Raphael AIとは何ですか？どのように機能しますか？</h3>
                 <p class="text-gray-600 text-left">
-                  Raphael AI is the world's first completely free and unlimited AI image generator powered by the FLUX.1-Dev model. You can create high-quality images from text descriptions with no registration required.
+                  Raphael AIは、FLUX.1-Devモデルを搭載した世界初の完全無料かつ無制限のAI画像生成ツールです。登録不要で、テキスト説明から高品質な画像を作成できます。
                 </p>
               </div>
             </div>
@@ -566,9 +564,9 @@
                 <span class="text-yellow-500 text-lg font-semibold">2</span>
               </div>
               <div class="text-left">
-                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">Is Raphael AI really free?</h3>
+                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">Raphael AIは本当に無料ですか？</h3>
                 <p class="text-gray-600 text-left">
-                  Yes, Raphael AI is completely free! We aim to be the world's largest and most powerful free AI image generator. There are no hidden fees, credit card requirements, or usage limits.
+                  はい、Raphael AIは完全に無料です！私たちは世界最大かつ最も強力な無料AI画像生成ツールを目指しています。隠れた料金、クレジットカード要件、利用制限は一切ありません。
                 </p>
               </div>
             </div>
@@ -580,9 +578,9 @@
                 <span class="text-yellow-500 text-lg font-semibold">3</span>
               </div>
               <div class="text-left">
-                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">How is Raphael AI different from other AI image generators?</h3>
+                <h3 class="text-xl font-bold mb-3 text-left text-gray-800">Raphael AIは他のAI画像生成ツールとどう違いますか？</h3>
                 <p class="text-gray-600 text-left">
-                  Raphael AI is the only platform offering unlimited free access to the powerful FLUX.1-Dev model. We provide superior image quality, fast generation speed, and complete privacy protection with no cost or registration required.
+                  Raphael AIは強力なFLUX.1-Devモデルへの無制限無料アクセスを提供する唯一のプラットフォームです。優れた画像品質、高速生成、完全なプライバシー保護を、費用や登録なしで提供します。
                 </p>
               </div>
             </div>
@@ -601,24 +599,24 @@
               <span class="ml-2 text-xl font-bold text-[rgb(204,144,92)]">Raphael AI</span>
             </div>
             <p class="text-gray-600 mb-4">
-              Create stunning AI-generated images in seconds with the world's first unlimited free AI Image Generator.
+              世界初の無制限無料AI画像生成ツールで、数秒で素晴らしいAI生成画像を作成できます。
             </p>
             <p class="text-sm text-gray-500">© 2024 Raphael AI. All rights reserved.</p>
           </div>
 
           <div>
             <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-              Product
+              製品
             </h3>
             <ul class="space-y-4">
               <li>
                 <a href="#features" class="text-gray-500 hover:text-gray-800 transition">
-                  Features
+                  機能
                 </a>
               </li>
               <li>
                 <a href="#" class="text-gray-500 hover:text-gray-800 transition">
-                  Pricing
+                  料金
                 </a>
               </li>
               <li>
@@ -631,22 +629,22 @@
 
           <div>
             <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-              Company
+              会社
             </h3>
             <ul class="space-y-4">
               <li>
                 <a href="#" class="text-gray-500 hover:text-gray-800 transition">
-                  About
+                  会社概要
                 </a>
               </li>
               <li>
                 <a href="#" class="text-gray-500 hover:text-gray-800 transition">
-                  Blog
+                  ブログ
                 </a>
               </li>
               <li>
                 <a href="#" class="text-gray-500 hover:text-gray-800 transition">
-                  Contact
+                  お問い合わせ
                 </a>
               </li>
             </ul>
@@ -655,10 +653,10 @@
       </div>
     </footer>
 
-    <!-- Add JavaScript for testimonial navigation -->
+    <!-- 評価ナビゲーション用JavaScript -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        // Initialize animation on scroll
+        // スクロール時のアニメーション初期化
         const animatedElements = document.querySelectorAll('[data-animate]');
         const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
@@ -674,16 +672,16 @@
           observer.observe(element);
         });
         
-        // Testimonial navigation
+        // 評価ナビゲーション
         const prevBtn = document.getElementById('prev-testimonial-group');      
         const nextBtn = document.getElementById('next-testimonial-group');      
         const testimonialGroups = document.querySelectorAll('[data-testimonial-group]');
         const dots = document.querySelectorAll('[data-testimonial-dot]');       
         let currentGroup = 0;
-        const totalGroups = 4; // 更新为4组评论
+        const totalGroups = 4; // 4グループの評価に更新
 
         function showTestimonialGroup(groupIndex) {
-          // Hide all testimonial groups
+          // すべての評価グループを非表示
           testimonialGroups.forEach(group => {
             if (group.getAttribute('data-testimonial-group') == groupIndex) {   
               group.classList.remove('hidden');
@@ -692,7 +690,7 @@
             }
           });
 
-          // Update dots
+          // ドットの更新
           dots.forEach((dot, idx) => {
             if (idx === groupIndex) {
               dot.classList.remove('bg-gray-300');
@@ -704,22 +702,22 @@
           });
         }
 
-        // Initialize
+        // 初期化
         showTestimonialGroup(currentGroup);
         
-        // Previous button
+        // 前へボタン
         prevBtn.addEventListener('click', () => {
           currentGroup = (currentGroup - 1 + totalGroups) % totalGroups;
           showTestimonialGroup(currentGroup);
         });
         
-        // Next button
+        // 次へボタン
         nextBtn.addEventListener('click', () => {
           currentGroup = (currentGroup + 1) % totalGroups;
           showTestimonialGroup(currentGroup);
         });
         
-        // Dot navigation
+        // ドットナビゲーション
         dots.forEach((dot, idx) => {
           dot.addEventListener('click', () => {
             currentGroup = idx;
@@ -727,41 +725,41 @@
           });
         });
         
-        // Auto-rotate testimonials every 5 seconds
+        // 5秒ごとに評価を自動回転
         setInterval(() => {
           currentGroup = (currentGroup + 1) % totalGroups;
           showTestimonialGroup(currentGroup);
         }, 5000);
         
-        // Language selector functionality
+        // 言語選択機能
         const languageSelector = document.getElementById('language-selector');
         const languageDropdown = document.getElementById('language-dropdown');
         const languageOptions = document.querySelectorAll('.language-option');
         const currentLanguageText = document.getElementById('current-language');
         
-        // Toggle dropdown visibility
+        // ドロップダウン表示切替
         languageSelector.addEventListener('click', (e) => {
           e.stopPropagation();
           languageDropdown.classList.toggle('hidden');
         });
         
-        // Close dropdown when clicking outside
+        // 外部クリックでドロップダウンを閉じる
         document.addEventListener('click', () => {
           languageDropdown.classList.add('hidden');
         });
         
-        // Language selection
+        // 言語選択
         languageOptions.forEach(option => {
           option.addEventListener('click', (e) => {
             const lang = option.getAttribute('data-lang');
             const langText = option.textContent;
             
-            // 如果点击的是当前语言，阻止跳转
+            // 現在の言語をクリックした場合、リダイレクトを防止
             if (currentLanguageText.textContent.trim() === langText.trim()) {
               e.preventDefault();
             }
             
-            // 无需其他处理，让链接自然跳转到目标页面
+            // 他の処理は不要、リンクが自然にターゲットページにリダイレクト
             languageDropdown.classList.add('hidden');
           });
         });
