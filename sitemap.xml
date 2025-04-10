@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- English (Main) -->
   <url>
-    <loc>https://raphaelai.xyz/</loc>
+    <loc>https://www.raphaelai.xyz/</loc>
     <lastmod>2024-04-09T05:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -10,7 +10,7 @@
   
   <!-- Feature Pages -->
   <url>
-    <loc>https://raphaelai.xyz/#features</loc>
+    <loc>https://www.raphaelai.xyz/#features</loc>
     <lastmod>2024-04-09T05:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -18,7 +18,7 @@
   
   <!-- FAQ Pages -->
   <url>
-    <loc>https://raphaelai.xyz/#faqs</loc>
+    <loc>https://www.raphaelai.xyz/#faqs</loc>
     <lastmod>2024-04-09T05:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
