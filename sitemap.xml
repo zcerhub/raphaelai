@@ -1,121 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- English (Main) -->
   <url>
-    <loc>https://raphaelai.org/</loc>
+    <loc>https://raphaelai.xyz/</loc>
     <lastmod>2024-04-09T05:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <!-- Language Alternates -->
-    <xhtml:link rel="alternate" hreflang="en" href="https://raphaelai.org/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://raphaelai.org/index-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://raphaelai.org/index-zh-Hant.html"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://raphaelai.org/index-ko.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://raphaelai.org/index-jp.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://raphaelai.org/index-de.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://raphaelai.org/index-fr.html"/>
-  </url>
-  
-  <!-- Simplified Chinese -->
-  <url>
-    <loc>https://raphaelai.org/index-zh.html</loc>
-    <lastmod>2024-04-09T05:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <!-- Language Alternates -->
-    <xhtml:link rel="alternate" hreflang="en" href="https://raphaelai.org/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://raphaelai.org/index-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://raphaelai.org/index-zh-Hant.html"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://raphaelai.org/index-ko.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://raphaelai.org/index-jp.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://raphaelai.org/index-de.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://raphaelai.org/index-fr.html"/>
-  </url>
-  
-  <!-- Traditional Chinese -->
-  <url>
-    <loc>https://raphaelai.org/index-zh-Hant.html</loc>
-    <lastmod>2024-04-09T05:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <!-- Language Alternates -->
-    <xhtml:link rel="alternate" hreflang="en" href="https://raphaelai.org/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://raphaelai.org/index-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://raphaelai.org/index-zh-Hant.html"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://raphaelai.org/index-ko.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://raphaelai.org/index-jp.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://raphaelai.org/index-de.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://raphaelai.org/index-fr.html"/>
-  </url>
-  
-  <!-- Korean -->
-  <url>
-    <loc>https://raphaelai.org/index-ko.html</loc>
-    <lastmod>2024-04-09T05:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <!-- Language Alternates -->
-    <xhtml:link rel="alternate" hreflang="en" href="https://raphaelai.org/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://raphaelai.org/index-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://raphaelai.org/index-zh-Hant.html"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://raphaelai.org/index-ko.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://raphaelai.org/index-jp.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://raphaelai.org/index-de.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://raphaelai.org/index-fr.html"/>
-  </url>
-  
-  <!-- Japanese -->
-  <url>
-    <loc>https://raphaelai.org/index-jp.html</loc>
-    <lastmod>2024-04-09T05:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <!-- Language Alternates -->
-    <xhtml:link rel="alternate" hreflang="en" href="https://raphaelai.org/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://raphaelai.org/index-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://raphaelai.org/index-zh-Hant.html"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://raphaelai.org/index-ko.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://raphaelai.org/index-jp.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://raphaelai.org/index-de.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://raphaelai.org/index-fr.html"/>
-  </url>
-  
-  <!-- German -->
-  <url>
-    <loc>https://raphaelai.org/index-de.html</loc>
-    <lastmod>2024-04-09T05:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <!-- Language Alternates -->
-    <xhtml:link rel="alternate" hreflang="en" href="https://raphaelai.org/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://raphaelai.org/index-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://raphaelai.org/index-zh-Hant.html"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://raphaelai.org/index-ko.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://raphaelai.org/index-jp.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://raphaelai.org/index-de.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://raphaelai.org/index-fr.html"/>
-  </url>
-  
-  <!-- French -->
-  <url>
-    <loc>https://raphaelai.org/index-fr.html</loc>
-    <lastmod>2024-04-09T05:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <!-- Language Alternates -->
-    <xhtml:link rel="alternate" hreflang="en" href="https://raphaelai.org/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://raphaelai.org/index-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://raphaelai.org/index-zh-Hant.html"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://raphaelai.org/index-ko.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://raphaelai.org/index-jp.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://raphaelai.org/index-de.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://raphaelai.org/index-fr.html"/>
   </url>
   
   <!-- Feature Pages -->
   <url>
-    <loc>https://raphaelai.org/#features</loc>
+    <loc>https://raphaelai.xyz/#features</loc>
     <lastmod>2024-04-09T05:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -123,7 +18,7 @@
   
   <!-- FAQ Pages -->
   <url>
-    <loc>https://raphaelai.org/#faqs</loc>
+    <loc>https://raphaelai.xyz/#faqs</loc>
     <lastmod>2024-04-09T05:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
