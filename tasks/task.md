@@ -16,6 +16,13 @@ https://www.caricaturemaker.art/这个是新开发的我的网站。 我想在�
 
 修改测试下呀，鼠标的hover效果需要和其他导航栏的Features、FAQs按钮一样呀一样呀，
 
+给出转化率高的方案，网页中的内容都是英文呀
+风格需要和首页的风格一致呀
+
 # 任务2
 
 加载/Users/a1-6/Desktop/code/skills-hub这个skill  
+
+
+# 任务3
+发现导航栏引流的效果不明显，应该咋办？是不是提示框会好些？
