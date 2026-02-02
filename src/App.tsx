@@ -2043,6 +2043,37 @@ function App() {
               </div>
             </div>
 
+            {currentLanguage === 'English' && (
+              <div className="w-full mb-14">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
+                  <a
+                    href="https://www.caricaturemaker.art/"
+                    target="_blank"
+                    rel="noopener sponsored"
+                    data-cta="caricature"
+                    className="px-5 py-3 rounded-lg bg-[#E5B06E] text-white font-semibold text-center hover:bg-[#E5B06E] hover:text-white transition"
+                  >
+                    Try Caricature Maker
+                  </a>
+                  <a
+                    href="https://www.gamsgo.com/partner/mAQw8"
+                    target="_blank"
+                    rel="noopener sponsored"
+                    data-cta="gamsgo"
+                    className="px-5 py-3 rounded-lg border border-[#E5B06E] text-[#8A6A3E] font-semibold text-center hover:bg-[#E5B06E] hover:text-white transition"
+                  >
+                    Affordable Digital Subscriptions - GamsGo
+                  </a>
+                </div>
+                <p className="text-sm text-gray-600 mt-3">
+                  Instant delivery, 24/7 support, and a 24-hour refund guarantee.
+                </p>
+                <p className="text-xs text-gray-500 mt-1">
+                  Affiliate disclosure: We may earn a commission if you buy through this link.
+                </p>
+              </div>
+            )}
+
             <h2 className="text-3xl font-bold mb-4 text-gray-800">{t.getInspired}</h2>
             <p className="text-gray-600 text-lg mb-8">
               {t.getInspiredDesc}
