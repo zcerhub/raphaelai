@@ -75,8 +75,35 @@
 </head>
 
 <body class="min-h-screen bg-white text-black">
+  <!-- Top Partner Bar -->
+  <div id="gamsgo-topbar" class="fixed top-0 inset-x-0 z-[60] bg-white/90 backdrop-blur-lg border-b border-[#E5B06E]/30">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-12 flex items-center gap-3">
+        <div class="flex items-center gap-2 text-sm text-gray-700 min-w-0">
+          <span class="inline-flex items-center px-2 py-0.5 text-[10px] font-bold rounded-full bg-[#E5B06E] text-white">
+            Partner
+          </span>
+          <span class="truncate">
+            Save more on subscriptions with our GamsGo partner offer.
+          </span>
+        </div>
+        <div class="ml-auto flex items-center gap-2">
+          <a href="https://www.gamsgo.com/partner/mAQw8" target="_blank" rel="noopener sponsored" data-cta="gamsgo-topbar"
+            class="hidden sm:inline-flex items-center justify-center px-3 py-1.5 bg-[#E5B06E] text-white text-sm font-semibold rounded-lg hover:bg-[#d9a35f] transition-colors">
+            Get GamsGo Deal
+          </a>
+          <button id="gamsgo-topbar-close"
+            class="w-7 h-7 rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-gray-700 transition"
+            aria-label="Close">
+            &times;
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Navigation -->
-  <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-lg">
+  <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-lg top-12">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <div class="flex items-center space-x-8">
@@ -1181,6 +1208,43 @@
       document.addEventListener('click', () => {
         languageDropdown.classList.add('hidden');
       });
+
+      // Top partner bar logic
+      const topbar = document.getElementById('gamsgo-topbar');
+      const topbarClose = document.getElementById('gamsgo-topbar-close');
+      const navBar = document.querySelector('nav');
+      const topbarStorageKey = 'gamsgoTopbarClosedAt';
+      const topbarCooldownMs = 1000 * 60 * 60 * 24;
+
+      function hideTopbar() {
+        if (topbar) topbar.classList.add('hidden');
+        if (navBar) {
+          navBar.classList.remove('top-12');
+          navBar.classList.add('top-0');
+        }
+      }
+
+      function showTopbar() {
+        if (topbar) topbar.classList.remove('hidden');
+        if (navBar) {
+          navBar.classList.add('top-12');
+          navBar.classList.remove('top-0');
+        }
+      }
+
+      if (topbar && topbarClose) {
+        const lastClosed = Number(localStorage.getItem(topbarStorageKey) || 0);
+        if (Date.now() - lastClosed < topbarCooldownMs) {
+          hideTopbar();
+        } else {
+          showTopbar();
+        }
+
+        topbarClose.addEventListener('click', () => {
+          localStorage.setItem(topbarStorageKey, String(Date.now()));
+          hideTopbar();
+        });
+      }
 
       // GamsGo popup logic (non-blocking)
       const gamsgoPopup = document.getElementById('gamsgo-popup');
