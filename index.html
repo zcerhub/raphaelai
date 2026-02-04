@@ -155,7 +155,7 @@
 
         <!-- High Conversion Banner -->
         <div class="mb-10 flex justify-center w-full px-4" data-animate data-delay="100">
-          <a href="https://www.caricaturemaker.art/" target="_blank"
+          <a href="https://www.gamsgo.com/partner/mAQw8" target="_blank" rel="noopener sponsored"
             class="group relative w-full max-w-3xl bg-white border border-[#E5B06E]/40 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between hover:shadow-lg hover:border-[#E5B06E] transition-all duration-300 hover:-translate-y-1 text-decoration-none ring-1 ring-[#E5B06E]/10 hover:ring-[#E5B06E]/30">
 
             <div class="flex items-center gap-4 mb-3 sm:mb-0">
@@ -171,10 +171,10 @@
               </div>
               <div class="text-left">
                 <h3 class="font-bold text-gray-900 text-lg group-hover:text-[#E5B06E] transition-colors">
-                  New: Free AI Caricature Maker
+                  Exclusive GamsGo Partner Offer
                 </h3>
                 <p class="text-sm text-gray-600">
-                  Turn photos into funny cartoons instantly!
+                  Save more on subscriptions with our partner deal.
                 </p>
               </div>
             </div>
@@ -182,7 +182,7 @@
             <div class="flex-shrink-0">
               <span
                 class="inline-flex items-center justify-center px-5 py-2.5 bg-[#E5B06E] text-white font-bold rounded-lg group-hover:bg-[#d9a35f] transition-colors shadow-sm">
-                Try it Now
+                Get GamsGo Deal
                 <svg xmlns="http://www.w3.org/2000/svg"
                   class="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24"
                   stroke="currentColor">
@@ -242,17 +242,13 @@
 
       <div class="w-full mb-14">
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
-          <a href="https://www.caricaturemaker.art/" target="_blank" rel="noopener sponsored" data-cta="caricature"
-            class="px-5 py-3 rounded-lg bg-[#E5B06E] text-white font-semibold text-center hover:bg-[#E5B06E] hover:text-white transition">
-            Try Caricature Maker
-          </a>
           <a href="https://www.gamsgo.com/partner/mAQw8" target="_blank" rel="noopener sponsored" data-cta="gamsgo"
-            class="px-5 py-3 rounded-lg border border-[#E5B06E] text-[#8A6A3E] font-semibold text-center hover:bg-[#E5B06E] hover:text-white transition">
-            Affordable Digital Subscriptions - GamsGo
+            class="px-5 py-3 rounded-lg bg-[#E5B06E] text-white font-semibold text-center hover:bg-[#E5B06E] hover:text-white transition">
+            Get GamsGo Deal
           </a>
         </div>
         <p class="text-sm text-gray-600 mt-3">
-          Instant delivery, 24/7 support, and a 24-hour refund guarantee.
+          Exclusive partner offer: save more on subscriptions with instant delivery and 24/7 support.
         </p>
         <p class="text-xs text-gray-500 mt-1">
           Affiliate disclosure: We may earn a commission if you buy through this link.
@@ -1059,6 +1055,40 @@
     </div>
   </footer>
 
+  <!-- GamsGo Partner Popup -->
+  <div id="gamsgo-popup" class="fixed bottom-6 right-6 z-50 hidden">
+    <div class="relative w-[320px] max-w-[90vw] bg-white border border-[#E5B06E]/40 rounded-xl shadow-xl p-4">
+      <button id="gamsgo-popup-close"
+        class="absolute top-2 right-2 w-7 h-7 rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-gray-700 transition"
+        aria-label="Close">
+        &times;
+      </button>
+      <div class="flex items-start gap-3">
+        <div
+          class="w-10 h-10 flex-shrink-0 rounded-full border border-[#E5B06E] flex items-center justify-center bg-yellow-50/50">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="#E5B06E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+            <path d="M12 10a5 5 0 0 1 5 5v2"></path>
+            <path d="M7 17v-2a5 5 0 0 1 5-5"></path>
+          </svg>
+        </div>
+        <div class="text-left">
+          <p class="text-xs font-semibold text-[#E5B06E] uppercase tracking-wide">Partner Offer</p>
+          <h3 class="text-base font-bold text-gray-900">Exclusive GamsGo Deal</h3>
+          <p class="text-sm text-gray-600 mt-1">
+            Save more on subscriptions with our partner recommendation.
+          </p>
+        </div>
+      </div>
+      <a href="https://www.gamsgo.com/partner/mAQw8" target="_blank" rel="noopener sponsored" data-cta="gamsgo-popup"
+        class="mt-3 inline-flex items-center justify-center w-full px-4 py-2.5 bg-[#E5B06E] text-white font-semibold rounded-lg hover:bg-[#d9a35f] transition-colors">
+        Get GamsGo Deal
+      </a>
+    </div>
+  </div>
+
   <!-- Add JavaScript for testimonial navigation -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -1151,6 +1181,27 @@
       document.addEventListener('click', () => {
         languageDropdown.classList.add('hidden');
       });
+
+      // GamsGo popup logic (non-blocking)
+      const gamsgoPopup = document.getElementById('gamsgo-popup');
+      const gamsgoPopupClose = document.getElementById('gamsgo-popup-close');
+      const popupStorageKey = 'gamsgoPopupClosedAt';
+      const popupDelayMs = 2500;
+      const popupCooldownMs = 1000 * 60 * 60 * 24;
+
+      if (gamsgoPopup && gamsgoPopupClose) {
+        const lastClosed = Number(localStorage.getItem(popupStorageKey) || 0);
+        if (Date.now() - lastClosed > popupCooldownMs) {
+          setTimeout(() => {
+            gamsgoPopup.classList.remove('hidden');
+          }, popupDelayMs);
+        }
+
+        gamsgoPopupClose.addEventListener('click', () => {
+          gamsgoPopup.classList.add('hidden');
+          localStorage.setItem(popupStorageKey, String(Date.now()));
+        });
+      }
     });
   </script>
 
