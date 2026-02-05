@@ -41,3 +41,11 @@ https://www.caricaturemaker.art/这个是新开发的我的网站。 我想在�
 - 目前主推gamsgo，
 - 先给方案后等待我的反馈
 - 使用中文回复
+
+
+# 任务6
+- 去掉右下角弹框cta，请给出方案后等待我的反馈
+
+
+# 任务7
+移除红框中的内容![alt text](image.png)
