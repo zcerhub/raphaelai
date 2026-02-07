@@ -75,35 +75,8 @@
 </head>
 
 <body class="min-h-screen bg-white text-black">
-  <!-- Top Partner Bar -->
-  <div id="gamsgo-topbar" class="fixed top-0 inset-x-0 z-[60] bg-white/90 backdrop-blur-lg border-b border-[#E5B06E]/30">
-    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="h-12 flex items-center gap-3">
-        <div class="flex items-center gap-2 text-sm text-gray-700 min-w-0">
-          <span class="inline-flex items-center px-2 py-0.5 text-[10px] font-bold rounded-full bg-[#E5B06E] text-white">
-            Partner
-          </span>
-          <span class="truncate">
-            Save more on subscriptions with our GamsGo partner offer.
-          </span>
-        </div>
-        <div class="ml-auto flex items-center gap-2">
-          <a href="https://www.gamsgo.com/partner/mAQw8" target="_blank" rel="noopener sponsored" data-cta="gamsgo-topbar"
-            class="hidden sm:inline-flex items-center justify-center px-3 py-1.5 bg-[#E5B06E] text-white text-sm font-semibold rounded-lg hover:bg-[#d9a35f] transition-colors">
-            Get GamsGo Deal
-          </a>
-          <button id="gamsgo-topbar-close"
-            class="w-7 h-7 rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-gray-700 transition"
-            aria-label="Close">
-            &times;
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Navigation -->
-  <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-lg top-12">
+  <nav class="sticky w-full z-50 bg-white/80 backdrop-blur-lg top-0 border-b border-gray-100">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <div class="flex items-center space-x-8">
@@ -155,7 +128,7 @@
   </nav>
 
   <!-- Hero Section -->
-  <div class="pt-32 pb-20">
+  <div class="pt-8 pb-20">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div class="opacity-0 translate-y-5" data-animate>
         <div class="flex items-center justify-center mb-5">
@@ -178,46 +151,6 @@
             Capability</span>
           <span class="px-3 py-1 rounded-full bg-gray-50 text-blue-500 text-sm">No Login Required</span>
           <span class="px-3 py-1 rounded-full bg-gray-50 text-purple-500 text-sm">Lightning-Fast Generation Speed</span>
-        </div>
-
-        <!-- High Conversion Banner -->
-        <div class="mb-10 flex justify-center w-full px-4" data-animate data-delay="100">
-          <a href="https://www.gamsgo.com/partner/mAQw8" target="_blank" rel="noopener sponsored"
-            class="group relative w-full max-w-3xl bg-white border border-[#E5B06E]/40 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between hover:shadow-lg hover:border-[#E5B06E] transition-all duration-300 hover:-translate-y-1 text-decoration-none ring-1 ring-[#E5B06E]/10 hover:ring-[#E5B06E]/30">
-
-            <div class="flex items-center gap-4 mb-3 sm:mb-0">
-              <div
-                class="w-12 h-12 flex-shrink-0 rounded-full border border-[#E5B06E] flex items-center justify-center bg-yellow-50/50 group-hover:scale-105 transition-transform duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="#E5B06E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                  <path d="M12 10a5 5 0 0 1 5 5v2"></path>
-                  <path d="M7 17v-2a5 5 0 0 1 5-5"></path>
-                </svg>
-              </div>
-              <div class="text-left">
-                <h3 class="font-bold text-gray-900 text-lg group-hover:text-[#E5B06E] transition-colors">
-                  Exclusive GamsGo Partner Offer
-                </h3>
-                <p class="text-sm text-gray-600">
-                  Save more on subscriptions with our partner deal.
-                </p>
-              </div>
-            </div>
-
-            <div class="flex-shrink-0">
-              <span
-                class="inline-flex items-center justify-center px-5 py-2.5 bg-[#E5B06E] text-white font-bold rounded-lg group-hover:bg-[#d9a35f] transition-colors shadow-sm">
-                Get GamsGo Deal
-                <svg xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </span>
-            </div>
-          </a>
         </div>
       </div>
     </div>
@@ -1160,43 +1093,6 @@
       document.addEventListener('click', () => {
         languageDropdown.classList.add('hidden');
       });
-
-      // Top partner bar logic
-      const topbar = document.getElementById('gamsgo-topbar');
-      const topbarClose = document.getElementById('gamsgo-topbar-close');
-      const navBar = document.querySelector('nav');
-      const topbarStorageKey = 'gamsgoTopbarClosedAt';
-      const topbarCooldownMs = 1000 * 60 * 60 * 24;
-
-      function hideTopbar() {
-        if (topbar) topbar.classList.add('hidden');
-        if (navBar) {
-          navBar.classList.remove('top-12');
-          navBar.classList.add('top-0');
-        }
-      }
-
-      function showTopbar() {
-        if (topbar) topbar.classList.remove('hidden');
-        if (navBar) {
-          navBar.classList.add('top-12');
-          navBar.classList.remove('top-0');
-        }
-      }
-
-      if (topbar && topbarClose) {
-        const lastClosed = Number(localStorage.getItem(topbarStorageKey) || 0);
-        if (Date.now() - lastClosed < topbarCooldownMs) {
-          hideTopbar();
-        } else {
-          showTopbar();
-        }
-
-        topbarClose.addEventListener('click', () => {
-          localStorage.setItem(topbarStorageKey, String(Date.now()));
-          hideTopbar();
-        });
-      }
 
     });
   </script>
