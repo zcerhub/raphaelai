@@ -49,3 +49,19 @@ https://www.caricaturemaker.art/这个是新开发的我的网站。 我想在�
 
 # 任务7
 移除红框中的内容![alt text](image.png)
+
+
+# 任务8
+- ![alt text](image-1.png)将上面红框中的弹框提醒改为随页面的移动而移动，去掉下面的弹框提醒
+- 修改完成后测试下
+
+
+
+# 任务9
+- 移除掉页面所有GamsGo的内容
+- 先给出方案后再等我的反馈
+
+
+# 任务10
+- 目前是vercel上部署https://vercel.com/zcerhubs-projects/raphaelai-v1这个项目里面，目前使用的是哪个首页呀，是app里面的换是index。html文件，将没有用的首页给去掉
+- 先给出方案后再等我的反馈
