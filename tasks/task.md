@@ -65,3 +65,7 @@ https://www.caricaturemaker.art/这个是新开发的我的网站。 我想在�
 # 任务10
 - 目前是vercel上部署https://vercel.com/zcerhubs-projects/raphaelai-v1这个项目里面，目前使用的是哪个首页呀，是app里面的换是index。html文件，将没有用的首页给去掉
 - 先给出方案后再等我的反馈
+
+# 任务11
+- 现在需要给导航栏的上面添加GamsGo的内容
+- 先给出方案后再等我的反馈
